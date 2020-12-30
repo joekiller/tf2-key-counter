@@ -4,7 +4,7 @@
 	const REC = /Reclaimed Metal/g;
 	const SCRAP = /Scrap Metal/g;
 	let src = 'example.PNG';
-	let value = 'Mann Co. Supply Crate Key';
+	let value = '';
 	const matches = (v: string, m: RegExp) => {
 		const result = v.match(m);
 		return result ? result.length : 0;
@@ -21,7 +21,7 @@
 <main>
 	<h1>TF2 Key Counter</h1>
 	<p>{key} Key{key === 1 ? '' : 's'}, {ref} Refined</p>
-	<textarea bind:value></textarea>
+	<textarea bind:value placeholder="Mann Co. Supply Crate Key"></textarea>
 	<img src={src} alt="Example text you can highlight in Steam Trade history for counting">
 	<p>Paste your trade text above to calculate keys and refined.</p>
 </main>
