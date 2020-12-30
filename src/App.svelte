@@ -22,8 +22,8 @@
 	<h1>TF2 Key Counter</h1>
 	<p>{key} Key{key === 1 ? '' : 's'}, {ref} Refined</p>
 	<textarea bind:value placeholder="Mann Co. Supply Crate Key"></textarea>
-	<img src={src} alt="Example text you can highlight in Steam Trade history for counting">
-	<p>Paste your trade text above to calculate keys and refined.</p>
+	<img src={src} alt="+ Unusual Bazaar Bauble\n\n- Refined Metal, Refined Metal, Mann Co. Supply Crate Key, Mann Co. Supply Crate Key\nMann Co. Supply Crate Key, Mann Co. Supply Crate Key, Mann Co. Supply Crate Key,\nMann Co. Supply Crate Key, Refined Metal, Refined Metal, Refined Metal">
+	<p>Paste your trade history text above to count total Mann Co. Supply Crate Key and Refined Metal items from Team Fortress 2.</p>
 </main>
 
 <style>
