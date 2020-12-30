@@ -55,7 +55,7 @@ By default, sirv will only respond to requests that match files in `public`. Thi
 If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
 
 ```js
-"start": "sirv public --single"
+"start": "sirv docs --single"
 ```
 
 ## Using TypeScript

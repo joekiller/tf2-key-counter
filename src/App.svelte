@@ -1,5 +1,4 @@
 <script lang="ts" xmlns="http://www.w3.org/1999/html">
-	export let name: string;
 	const KEY = /Mann Co\. Supply Crate Key/g;
 	const REF = /Refined Metal/g;
 	const REC = /Reclaimed Metal/g;
@@ -23,7 +22,7 @@
 	<h1>TF2 Key Counter</h1>
 	<p>{key} Key{key === 1 ? '' : 's'}, {ref} Refined</p>
 	<textarea bind:value></textarea>
-	<img src={src}>
+	<img src={src} alt="Example text you can highlight in Steam Trade history for counting">
 	<p>Paste your trade text above to calculate keys and refined.</p>
 </main>
 
