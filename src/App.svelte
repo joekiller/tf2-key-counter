@@ -29,7 +29,10 @@
 	<h2>Helpful Links</h2>
 	<div class="links">
 		<a href="https://manic.tf/keyprice/">TF2 Key Price History</a>
+		<a href="https://calculator.tf/">TF2 Currency Converter</a>
 		<a href="https://github.com/joekiller/tf2-key-counter">site src and licenses</a>
+		<a href="all/render/index.html">TF2 Spell Counts</a>
+		<a href="allpostlife/render/index.html">TF2 Post Life Spell Counts</a>
 	</div>
 </footer>
 
