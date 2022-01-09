@@ -19,12 +19,19 @@
 </script>
 
 <main>
-	<h1>TF2 Key Counter</h1>
+	<h1>TF2 Key and Refined Counter</h1>
 	<p>{key} Key{key === 1 ? '' : 's'}, {ref} Refined</p>
 	<textarea bind:value placeholder="Mann Co. Supply Crate Key"></textarea>
-	<img src={src} alt="+ Unusual Bazaar Bauble\n\n- Refined Metal, Refined Metal, Mann Co. Supply Crate Key, Mann Co. Supply Crate Key\nMann Co. Supply Crate Key, Mann Co. Supply Crate Key, Mann Co. Supply Crate Key,\nMann Co. Supply Crate Key, Refined Metal, Refined Metal, Refined Metal">
-	<p>Paste your trade history text above to count total Mann Co. Supply Crate Key and Refined Metal items from Team Fortress 2.</p>
+	<img src={src} alt="Steam Inventory History Screenshot with an Unusual and TF2 Key and Metal Text">
+	<p>Paste the text of a trade from <a href="https://steamcommunity.com/id/joekiller/inventoryhistory/">steam inventory history</a> above to count the total Mann Co. Supply Crate Key and Refined Metal items from Team Fortress 2 were included in the trade.</p>
 </main>
+<footer>
+	<h2>Helpful Links</h2>
+	<div class="links">
+		<a href="https://manic.tf/keyprice/">TF2 Key Price History</a>
+		<a href="https://github.com/joekiller/tf2-key-counter">site src and licenses</a>
+	</div>
+</footer>
 
 <style>
 	main {
@@ -32,6 +39,25 @@
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
+	}
+
+	footer {
+		padding: 1em;
+		font-size: 0.75em;
+		display: flex;
+		align-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	footer h2 {
+		padding-right: 20px;
+	}
+
+	footer a {
+		padding-right: 10px;
+		display: inline-block;
 	}
 
 	h1 {
