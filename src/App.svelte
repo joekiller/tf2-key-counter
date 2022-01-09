@@ -35,6 +35,7 @@
 
 <style>
 	main {
+		justify-content: center;
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
@@ -67,11 +68,11 @@
 		font-weight: 100;
 	}
 
-	@media (min-width: 640px) {
+	@media (min-width: 400px) {
 		main {
 			max-width: none;
 		}
 	}
 
-	textarea { width: 100%; height: 200px; }
+	textarea { width: 80%; height: 200px; }
 </style>
