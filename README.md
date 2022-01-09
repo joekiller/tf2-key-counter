@@ -1,5 +1,5 @@
 # tf2 key counter
 
-Be lazy and count your trade items at [TF2 Key Refined Counter](https://www.counter.tf/)
+Be lazy and count your trade items at [TF2 Key and Refined Counter Website](https://www.counter.tf/)
 
-[[docs/example.PNG|Example]]
+![An example of the TF2 Key and Refined Counter Website](docs/example.PNG "TF2 Key and Refined Counter Website Screenshot")
