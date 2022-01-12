@@ -45,25 +45,6 @@
 		margin: 0 auto;
 	}
 
-	footer {
-		padding: 1em;
-		font-size: 0.75em;
-		display: flex;
-		align-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	footer h2 {
-		padding-right: 20px;
-	}
-
-	footer a {
-		padding-right: 10px;
-		display: inline-block;
-	}
-
 	h1 {
 		color: #ff3e00;
 		text-transform: uppercase;
