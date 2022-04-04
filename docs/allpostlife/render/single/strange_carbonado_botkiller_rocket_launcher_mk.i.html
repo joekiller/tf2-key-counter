@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,14 +12,35 @@
     <link rel="stylesheet" href="../../../build/bundle.css">
     <link rel="shortcut icon" href="../../../key-solid.svg" type="image/png">
     <title>single spelled strange carbonado botkiller rocket launcher mk.i</title>
+    <script>
+        function searchLi() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('spellSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("spellList");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main class="spell-list">
 <h1>strange carbonado botkiller rocket launcher mk.i</h1>
-<h2>Estimated Total: 10</h2>
-<ul>
-<li>Pumpkin Bombs: 2</li>
+        <h2>Estimated Total: 11</h2>
+        <input type="text" id="spellSearch" onkeyup="searchLi()" placeholder="Search for names..">
+        <ul id="spellList">
+<li>Pumpkin Bombs: 3</li>
 <li>Exorcism: 8</li>
 </ul>
     </main>
@@ -26,12 +48,12 @@
         <h2 class="svelte-1mqzehu">Helpful Links</h2>
         <div class="links">
             <a href="https://github.com/joekiller/tf2-key-counter" class="svelte-1mqzehu">site src and licenses</a>
-            <a href="../index.html" class="svelte-1mqzehu">TF2 Spell Counts</a>
+            <a href="../../../all/render/index.html" class="svelte-1mqzehu">TF2 Spell Counts</a>
             <a href="../../../allpostlife/render/index.html" class="svelte-1mqzehu">TF2 Post Life Spell Counts</a>
         </div>
         <div class="break"></div>
         <div class="finalfooter">
-            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Jan 16 2022</p>
+            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Mon Apr 04 2022</p>
         </div>
     </footer>
 </body>

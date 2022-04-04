@@ -11,10 +11,33 @@
     <link rel="stylesheet" href="../../../build/bundle.css">
     <link rel="shortcut icon" href="../../../key-solid.svg" type="image/png">
     <title>All Postlife Index</title>
+    <script>
+        function searchLi() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('spellSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("spellList");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main class="spell-list">
+    <input type="text" id="spellSearch" onkeyup="searchLi()" placeholder="Search for names..">
+        <ul id="spellList">
 <li><a href="all/genuine_tomb_readers.html">all postlife spelled genuine tomb readers</a></li>
 <li><a href="all/genuine_brimstone.html">all postlife spelled genuine brimstone</a></li>
 <li><a href="all/unusual_german_gonzila.html">all postlife spelled unusual german gonzila</a></li>
@@ -552,6 +575,7 @@
 <li><a href="all/combat_slacks.html">all postlife spelled combat slacks</a></li>
 <li><a href="all/dark_age_defender.html">all postlife spelled dark age defender</a></li>
 <li><a href="all/vive_la_france.html">all postlife spelled vive la france</a></li>
+<li><a href="all/strange_ullapool_caber.html">all postlife spelled strange ullapool caber</a></li>
 <li><a href="all/greased_lightning.html">all postlife spelled greased lightning</a></li>
 <li><a href="all/trash_toter.html">all postlife spelled trash toter</a></li>
 <li><a href="all/phlogistinator.html">all postlife spelled phlogistinator</a></li>
@@ -732,9 +756,9 @@
 <li><a href="all/strange_enforcer.html">all postlife spelled strange enforcer</a></li>
 <li><a href="all/ticket_boy.html">all postlife spelled ticket boy</a></li>
 <li><a href="all/hurt_locher.html">all postlife spelled hurt locher</a></li>
-<li><a href="all/strange_ullapool_caber.html">all postlife spelled strange ullapool caber</a></li>
 <li><a href="all/back_scatter.html">all postlife spelled back scatter</a></li>
 <li><a href="all/handyman's_handle.html">all postlife spelled handyman's handle</a></li>
+<li><a href="all/strange_all-father.html">all postlife spelled strange all-father</a></li>
 <li><a href="all/breather_bag.html">all postlife spelled breather bag</a></li>
 <li><a href="all/camera_beard.html">all postlife spelled camera beard</a></li>
 <li><a href="all/unusual_pirate_bandana.html">all postlife spelled unusual pirate bandana</a></li>
@@ -773,6 +797,7 @@
 <li><a href="all/heer's_helmet.html">all postlife spelled heer's helmet</a></li>
 <li><a href="all/captain_cardbeard_cutthroat.html">all postlife spelled captain cardbeard cutthroat</a></li>
 <li><a href="all/slick_cut.html">all postlife spelled slick cut</a></li>
+<li><a href="all/eye-catcher.html">all postlife spelled eye-catcher</a></li>
 <li><a href="all/el_duderino.html">all postlife spelled el duderino</a></li>
 <li><a href="all/strange_unusual_white_russian.html">all postlife spelled strange unusual white russian</a></li>
 <li><a href="all/strange_commissar's_coat.html">all postlife spelled strange commissar's coat</a></li>
@@ -872,8 +897,12 @@
 <li><a href="all/strange_pomson_6000.html">all postlife spelled strange pomson 6000</a></li>
 <li><a href="all/ghastlierest_gibus.html">all postlife spelled ghastlierest gibus</a></li>
 <li><a href="all/hard-headed_hardware.html">all postlife spelled hard-headed hardware</a></li>
+<li><a href="all/festive_black_box.html">all postlife spelled festive black box</a></li>
 <li><a href="all/ham_shank.html">all postlife spelled ham shank</a></li>
 <li><a href="all/das_ubersternmann.html">all postlife spelled das ubersternmann</a></li>
+<li><a href="all/strange_crusader's_crossbow.html">all postlife spelled strange crusader's crossbow</a></li>
+<li><a href="all/madame_dixie.html">all postlife spelled madame dixie</a></li>
+<li><a href="all/whirly_warrior.html">all postlife spelled whirly warrior</a></li>
 <li><a href="single/genuine_tomb_readers.html">single postlife spelled genuine tomb readers</a></li>
 <li><a href="single/genuine_brimstone.html">single postlife spelled genuine brimstone</a></li>
 <li><a href="single/unusual_german_gonzila.html">single postlife spelled unusual german gonzila</a></li>
@@ -1383,6 +1412,7 @@
 <li><a href="single/combat_slacks.html">single postlife spelled combat slacks</a></li>
 <li><a href="single/dark_age_defender.html">single postlife spelled dark age defender</a></li>
 <li><a href="single/vive_la_france.html">single postlife spelled vive la france</a></li>
+<li><a href="single/strange_ullapool_caber.html">single postlife spelled strange ullapool caber</a></li>
 <li><a href="single/greased_lightning.html">single postlife spelled greased lightning</a></li>
 <li><a href="single/trash_toter.html">single postlife spelled trash toter</a></li>
 <li><a href="single/phlogistinator.html">single postlife spelled phlogistinator</a></li>
@@ -1556,9 +1586,9 @@
 <li><a href="single/ticket_boy.html">single postlife spelled ticket boy</a></li>
 <li><a href="single/hurt_locher.html">single postlife spelled hurt locher</a></li>
 <li><a href="single/strange_lord_cockswain's_novelty_mutton_chops_and_pipe.html">single postlife spelled strange lord cockswain's novelty mutton chops and pipe</a></li>
-<li><a href="single/strange_ullapool_caber.html">single postlife spelled strange ullapool caber</a></li>
 <li><a href="single/back_scatter.html">single postlife spelled back scatter</a></li>
 <li><a href="single/handyman's_handle.html">single postlife spelled handyman's handle</a></li>
+<li><a href="single/strange_all-father.html">single postlife spelled strange all-father</a></li>
 <li><a href="single/breather_bag.html">single postlife spelled breather bag</a></li>
 <li><a href="single/camera_beard.html">single postlife spelled camera beard</a></li>
 <li><a href="single/unusual_pirate_bandana.html">single postlife spelled unusual pirate bandana</a></li>
@@ -1595,6 +1625,7 @@
 <li><a href="single/heer's_helmet.html">single postlife spelled heer's helmet</a></li>
 <li><a href="single/captain_cardbeard_cutthroat.html">single postlife spelled captain cardbeard cutthroat</a></li>
 <li><a href="single/slick_cut.html">single postlife spelled slick cut</a></li>
+<li><a href="single/eye-catcher.html">single postlife spelled eye-catcher</a></li>
 <li><a href="single/strange_rotation_sensation.html">single postlife spelled strange rotation sensation</a></li>
 <li><a href="single/el_duderino.html">single postlife spelled el duderino</a></li>
 <li><a href="single/strange_unusual_white_russian.html">single postlife spelled strange unusual white russian</a></li>
@@ -1691,7 +1722,11 @@
 <li><a href="single/strange_pomson_6000.html">single postlife spelled strange pomson 6000</a></li>
 <li><a href="single/ghastlierest_gibus.html">single postlife spelled ghastlierest gibus</a></li>
 <li><a href="single/hard-headed_hardware.html">single postlife spelled hard-headed hardware</a></li>
+<li><a href="single/festive_black_box.html">single postlife spelled festive black box</a></li>
 <li><a href="single/ham_shank.html">single postlife spelled ham shank</a></li>
+<li><a href="single/strange_crusader's_crossbow.html">single postlife spelled strange crusader's crossbow</a></li>
+<li><a href="single/madame_dixie.html">single postlife spelled madame dixie</a></li>
+<li><a href="single/whirly_warrior.html">single postlife spelled whirly warrior</a></li>
 <li><a href="double/unusual_rimmed_raincatcher.html">double postlife spelled unusual rimmed raincatcher</a></li>
 <li><a href="double/strange_australium_black_box.html">double postlife spelled strange australium black box</a></li>
 <li><a href="double/unusual_one-man_army.html">double postlife spelled unusual one-man army</a></li>
@@ -1849,7 +1884,7 @@
 <li><a href="processed-Q-S.html">processed-Q-S</a></li>
 <li><a href="processed-S.html">processed-S</a></li>
 <li><a href="processed-Empty.html">processed-Empty</a></li>
-</ul>
+</ul></main>
 <footer class="svelte-1mqzehu"><div class="finalfooter">
-            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Jan 16 2022</p>
-        </div></footer>
+            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Mon Apr 04 2022</p>
+        </div></footer></body></html>

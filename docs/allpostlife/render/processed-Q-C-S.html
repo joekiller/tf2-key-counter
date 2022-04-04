@@ -11,11 +11,32 @@
     <link rel="stylesheet" href="../../../build/bundle.css">
     <link rel="shortcut icon" href="../../../key-solid.svg" type="image/png">
     <title>Summary of All Postlife  -Q-C-S</title>
+    <script>
+        function searchLi() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('spellSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("spellList");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main class="spell-list">
-<ul>
+    <input type="text" id="spellSearch" onkeyup="searchLi()" placeholder="Search for names..">
+        <ul id="spellList">
 <li>Aces High Unusual Chromatic Corruption Voices from Below Large Luchadore: 1</li>
 <li>Aces High Unusual Chromatic Corruption Voices from Below Rimmed Raincatcher: 1</li>
 <li>Aces High Unusual Putrescent Pigmentation Cloud Crasher: 1</li>
@@ -88,6 +109,7 @@
 <li>Chromatic Corruption Double Dog Dare Demo Pants: 1</li>
 <li>Chromatic Corruption Executioner: 1</li>
 <li>Chromatic Corruption Exquisite Rack: 1</li>
+<li>Chromatic Corruption Eye-Catcher: 1</li>
 <li>Chromatic Corruption Face Full of Festive: 1</li>
 <li>Chromatic Corruption Fast Learner: 1</li>
 <li>Chromatic Corruption Flapjack: 1</li>
@@ -98,6 +120,7 @@
 <li>Chromatic Corruption Hero's Hachimaki: 1</li>
 <li>Chromatic Corruption Lunatic's Leathers: 1</li>
 <li>Chromatic Corruption Lurker's Leathers: 1</li>
+<li>Chromatic Corruption Madame Dixie: 1</li>
 <li>Chromatic Corruption Marksman's Mohair: 1</li>
 <li>Chromatic Corruption Medicine Manpurse: 1</li>
 <li>Chromatic Corruption Merc's Mohawk: 1</li>
@@ -204,6 +227,7 @@
 <li>Decorated Exorcism Sniper Rifle: 1</li>
 <li>Decorated Halloween Fire Exorcism Flame Thrower: 1</li>
 <li>Decorated Pumpkin Bombs Exorcism Rocket Launcher: 1</li>
+<li>Decorated Pumpkin Bombs Rocket Launcher: 1</li>
 <li>Decorated Pumpkin Bombs Stickybomb Launcher: 1</li>
 <li>Die Job Apparition's Aspect: 1</li>
 <li>Die Job Bearded Bombardier: 1</li>
@@ -240,6 +264,7 @@
 <li>Die Job Juggernaut Jacket: 1</li>
 <li>Die Job Killer's Kabuto: 1</li>
 <li>Die Job Lord Cockswain's Novelty Mutton Chops and Pipe: 1</li>
+<li>Die Job Lunatic's Leathers: 1</li>
 <li>Die Job Lurker's Leathers: 1</li>
 <li>Die Job Made Man: 1</li>
 <li>Die Job Marksman's Mohair: 1</li>
@@ -313,7 +338,6 @@
 <li>Exorcism Phlogistinator: 1</li>
 <li>Exorcism Pistol: 1</li>
 <li>Exorcism Postal Pummeler: 1</li>
-<li>Exorcism Scattergun: 1</li>
 <li>Exorcism Scorch Shot: 1</li>
 <li>Exorcism Scottish Handshake: 1</li>
 <li>Exorcism Shooting Star: 1</li>
@@ -466,6 +490,7 @@
 <li>Pumpkin Bombs Exorcism Eureka Effect: 1</li>
 <li>Pumpkin Bombs Exorcism Loose Cannon: 1</li>
 <li>Pumpkin Bombs Exorcism Stickybomb Launcher: 1</li>
+<li>Pumpkin Bombs Festive Black Box: 1</li>
 <li>Pumpkin Bombs Liberty Launcher: 1</li>
 <li>Pumpkin Bombs Stickybomb Launcher: 1</li>
 <li>Purple Confetti Unusual Voices from Below Dr's Dapper Topper: 1</li>
@@ -568,6 +593,7 @@
 <li>Putrescent Pigmentation Ye Olde Baker Boy: 1</li>
 <li>Roboactive Unusual Voices from Below Towering Pillar of Hats: 1</li>
 <li>Rooftop Wrangler (Battle Scarred) Pumpkin Bombs Stickybomb Launcher: 1</li>
+<li>Rooftop Wrangler (Field-Tested) Pumpkin Bombs Stickybomb Launcher: 1</li>
 <li>Rotten Orange Footprints Antarctic Parka: 1</li>
 <li>Rotten Orange Footprints Bruiser's Bandanna: 1</li>
 <li>Rotten Orange Footprints Cold Snap Coat: 1</li>
@@ -744,6 +770,7 @@
 <li>Spectral Spectrum Voices from Below Teufort Tooth Kicker: 1</li>
 <li>Spectral Spectrum Voices from Below Texas Ten Gallon: 1</li>
 <li>Spectral Spectrum Wet Works: 1</li>
+<li>Spectral Spectrum Whirly Warrior: 1</li>
 <li>Spectral Spectrum White Russian: 1</li>
 <li>Stormy Storm Unusual Chromatic Corruption Pom-Pommed Provocateur: 1</li>
 <li>Stormy Storm Unusual Die Job Wet Works: 1</li>
@@ -848,6 +875,7 @@
 <li>Strange Exorcism Carbonado Botkiller Stickybomb Launcher Mk.I: 1</li>
 <li>Strange Exorcism Chargin' Targe: 1</li>
 <li>Strange Exorcism Cleaner's Carbine: 1</li>
+<li>Strange Exorcism Crusader's Crossbow: 1</li>
 <li>Strange Exorcism Degreaser: 1</li>
 <li>Strange Exorcism Diamond Botkiller Flame Thrower Mk.I: 1</li>
 <li>Strange Exorcism Diamond Botkiller Minigun Mk.I: 1</li>
@@ -858,7 +886,6 @@
 <li>Strange Exorcism Eyelander: 1</li>
 <li>Strange Exorcism Family Business: 1</li>
 <li>Strange Exorcism Festive Axtinguisher: 1</li>
-<li>Strange Exorcism Flare Gun: 1</li>
 <li>Strange Exorcism Frying Pan: 1</li>
 <li>Strange Exorcism Giger Counter: 1</li>
 <li>Strange Exorcism Gold Botkiller Flame Thrower Mk.II: 1</li>
@@ -893,7 +920,6 @@
 <li>Strange Exorcism Solemn Vow: 1</li>
 <li>Strange Exorcism Tribalman's Shiv: 1</li>
 <li>Strange Exorcism Ubersaw: 1</li>
-<li>Strange Exorcism Ullapool Caber: 1</li>
 <li>Strange Exorcism Widowmaker: 1</li>
 <li>Strange Exorcism Your Eternal Reward: 1</li>
 <li>Strange Flash Fryer (Battle Scarred)Exorcism Flame Thrower: 1</li>
@@ -1063,8 +1089,10 @@
 <li>Strange Turbine Torcher (Field-Tested)Exorcism Flame Thrower: 1</li>
 <li>Strange Turbine Torcher (Minimal Wear)Exorcism Flame Thrower: 1</li>
 <li>Strange Turbine Torcher (Well-Worn)Halloween Fire Exorcism Flame Thrower: 1</li>
+<li>Strange Violent Violet Footprints Cold Snap Coat: 1</li>
 <li>Strange Violent Violet Footprints Lurker's Leathers: 1</li>
 <li>Strange Violent Violet Footprints Voices from Below Rotation Sensation: 1</li>
+<li>Strange Voices from Below All-Father: 1</li>
 <li>Strange Voices from Below Bonk Boy: 1</li>
 <li>Strange Voices from Below Boston Boom-Bringer: 1</li>
 <li>Strange Voices from Below Bruce's Bonnet: 1</li>
@@ -1149,7 +1177,6 @@
 <li>Voices from Below Chronomancer: 1</li>
 <li>Voices from Below Chronoscarf: 1</li>
 <li>Voices from Below Clan Pride: 1</li>
-<li>Voices from Below Co-Pilot: 1</li>
 <li>Voices from Below Cockfighter: 1</li>
 <li>Voices from Below Cold Killer: 1</li>
 <li>Voices from Below Cold Snap Coat: 1</li>
@@ -1250,7 +1277,6 @@
 <li>Chromatic Corruption Insulated Inventor: 2</li>
 <li>Chromatic Corruption Merc's Muffler: 2</li>
 <li>Chromatic Corruption Pyromancer's Hood: 2</li>
-<li>Chromatic Corruption Rogue's Robe: 2</li>
 <li>Chromatic Corruption Rotation Sensation: 2</li>
 <li>Chromatic Corruption Sheriff's Stetson: 2</li>
 <li>Cool Unusual Exorcism Minigun: 2</li>
@@ -1259,7 +1285,6 @@
 <li>Cool Unusual Pumpkin Bombs Rocket Launcher: 2</li>
 <li>Cool Unusual Pumpkin Bombs Stickybomb Launcher: 2</li>
 <li>Decorated Halloween Fire Flame Thrower: 2</li>
-<li>Decorated Pumpkin Bombs Rocket Launcher: 2</li>
 <li>Die Job All-Father: 2</li>
 <li>Die Job Anger: 2</li>
 <li>Die Job Bomber's Bucket Hat: 2</li>
@@ -1283,6 +1308,7 @@
 <li>Exorcism Bat Outta Hell: 2</li>
 <li>Exorcism Nostromo Napalmer: 2</li>
 <li>Exorcism Rocket Launcher: 2</li>
+<li>Exorcism Scattergun: 2</li>
 <li>Exorcism Shotgun: 2</li>
 <li>Exorcism Sniper Rifle: 2</li>
 <li>Gangreen Footprints Graybanns: 2</li>
@@ -1311,7 +1337,6 @@
 <li>Pumpkin Bombs Loch-n-Load: 2</li>
 <li>Pumpkin Bombs Rocket Launcher: 2</li>
 <li>Pumpkin Bombs Scottish Resistance: 2</li>
-<li>Purple Range (Minimal Wear) Exorcism Sniper Rifle: 2</li>
 <li>Putrescent Pigmentation Anger: 2</li>
 <li>Putrescent Pigmentation Brütal Bouffant: 2</li>
 <li>Putrescent Pigmentation Captain Cardbeard Cutthroat: 2</li>
@@ -1399,6 +1424,7 @@
 <li>Strange Exorcism Diamond Botkiller Scattergun Mk.I: 2</li>
 <li>Strange Exorcism Diamond Botkiller Sniper Rifle Mk.I: 2</li>
 <li>Strange Exorcism Disciplinary Action: 2</li>
+<li>Strange Exorcism Flare Gun: 2</li>
 <li>Strange Exorcism Frontier Justice: 2</li>
 <li>Strange Exorcism Gold Botkiller Rocket Launcher Mk.II: 2</li>
 <li>Strange Exorcism Gold Botkiller Sniper Rifle Mk.II: 2</li>
@@ -1416,6 +1442,7 @@
 <li>Strange Exorcism Stickybomb Launcher: 2</li>
 <li>Strange Exorcism Sydney Sleeper: 2</li>
 <li>Strange Exorcism Third Degree: 2</li>
+<li>Strange Exorcism Ullapool Caber: 2</li>
 <li>Strange Flash Fryer (Factory New)Halloween Fire Flame Thrower: 2</li>
 <li>Strange Flash Fryer (Minimal Wear)Exorcism Flame Thrower: 2</li>
 <li>Strange Forest Fire (Field-Tested)Halloween Fire Flame Thrower: 2</li>
@@ -1430,7 +1457,6 @@
 <li>Strange Lightning Rod (Well-Worn)Exorcism Shotgun: 2</li>
 <li>Strange Liquid Asset (Minimal Wear)Pumpkin Bombs Exorcism Stickybomb Launcher: 2</li>
 <li>Strange Psychedelic Slugger (Minimal Wear)Exorcism Revolver: 2</li>
-<li>Strange Pumpkin Bombs Carbonado Botkiller Rocket Launcher Mk.I: 2</li>
 <li>Strange Pumpkin Bombs Carbonado Botkiller Stickybomb Launcher Mk.I: 2</li>
 <li>Strange Pumpkin Bombs Diamond Botkiller Stickybomb Launcher Mk.I: 2</li>
 <li>Strange Pumpkin Bombs Exorcism Cow Mangler 5000: 2</li>
@@ -1470,7 +1496,6 @@
 <li>Strange Voices from Below Double Dog Dare Demo Pants: 2</li>
 <li>Strange Voices from Below Flashdance Footies: 2</li>
 <li>Strange Voices from Below Marksman's Mohair: 2</li>
-<li>Strange Voices from Below Mountebank's Masque: 2</li>
 <li>Strange Voices from Below Potassium Bonnet: 2</li>
 <li>Strange Voices from Below Sheriff's Stetson: 2</li>
 <li>Strange Voices from Below Snow Sleeves: 2</li>
@@ -1488,6 +1513,7 @@
 <li>Voices from Below Blighted Beak: 2</li>
 <li>Voices from Below Brotherhood of Arms: 2</li>
 <li>Voices from Below Classified Coif: 2</li>
+<li>Voices from Below Co-Pilot: 2</li>
 <li>Voices from Below Crone's Dome: 2</li>
 <li>Voices from Below Crown of the Old Kingdom: 2</li>
 <li>Voices from Below Dark Age Defender: 2</li>
@@ -1511,6 +1537,7 @@
 <li>Bovine Blazemaker (Factory New) Halloween Fire Flame Thrower: 3</li>
 <li>Chromatic Corruption Cold Snap Coat: 3</li>
 <li>Chromatic Corruption Pyromancer's Mask: 3</li>
+<li>Chromatic Corruption Rogue's Robe: 3</li>
 <li>Chromatic Corruption Tomb Readers: 3</li>
 <li>Chromatic Corruption Winter Woodsman: 3</li>
 <li>Cool Unusual Halloween Fire Flame Thrower: 3</li>
@@ -1541,6 +1568,7 @@
 <li>Night Terror (Field-Tested) Exorcism Scattergun: 3</li>
 <li>Night Terror (Minimal Wear) Exorcism Scattergun: 3</li>
 <li>Pumpkin Bombs Grenade Launcher: 3</li>
+<li>Purple Range (Minimal Wear) Exorcism Sniper Rifle: 3</li>
 <li>Putrescent Pigmentation All-Father: 3</li>
 <li>Putrescent Pigmentation Antarctic Parka: 3</li>
 <li>Putrescent Pigmentation Graybanns: 3</li>
@@ -1577,12 +1605,12 @@
 <li>Strange Exorcism Rust Botkiller Sniper Rifle Mk.I: 3</li>
 <li>Strange Exorcism Warrior's Spirit: 3</li>
 <li>Strange Flash Fryer (Minimal Wear)Halloween Fire Flame Thrower: 3</li>
-<li>Strange Lightning Rod (Field-Tested)Exorcism Shotgun: 3</li>
 <li>Strange Night Owl (Battle Scarred)Exorcism Sniper Rifle: 3</li>
 <li>Strange Night Owl (Minimal Wear)Exorcism Sniper Rifle: 3</li>
 <li>Strange Night Terror (Well-Worn)Exorcism Scattergun: 3</li>
 <li>Strange Pumpkin Bombs Beggar's Bazooka: 3</li>
 <li>Strange Pumpkin Bombs Blood Botkiller Wrench Mk.I: 3</li>
+<li>Strange Pumpkin Bombs Carbonado Botkiller Rocket Launcher Mk.I: 3</li>
 <li>Strange Pumpkin Bombs Diamond Botkiller Wrench Mk.I: 3</li>
 <li>Strange Pumpkin Bombs Exorcism Carbonado Botkiller Rocket Launcher Mk.I: 3</li>
 <li>Strange Pumpkin Bombs Exorcism Loose Cannon: 3</li>
@@ -1595,11 +1623,12 @@
 <li>Strange Spectral Spectrum Coldfront Curbstompers: 3</li>
 <li>Strange Spectral Spectrum Rotation Sensation: 3</li>
 <li>Strange Voices from Below Insulated Inventor: 3</li>
+<li>Strange Voices from Below Mountebank's Masque: 3</li>
 <li>Strange Voices from Below Rotation Sensation: 3</li>
 <li>Strange Woodland Warrior (Factory New)Exorcism Rocket Launcher: 3</li>
-<li>Strange Woodland Warrior (Factory New)Pumpkin Bombs Exorcism Rocket Launcher: 3</li>
 <li>Strange Woodland Warrior (Field-Tested)Exorcism Rocket Launcher: 3</li>
 <li>Voices from Below Alien Cranium: 3</li>
+<li>Voices from Below All-Father: 3</li>
 <li>Voices from Below Antarctic Parka: 3</li>
 <li>Voices from Below Bear Necessities: 3</li>
 <li>Voices from Below Bushman's Bristles: 3</li>
@@ -1648,19 +1677,21 @@
 <li>Strange Forest Fire (Factory New)Halloween Fire Flame Thrower: 4</li>
 <li>Strange King of the Jungle (Field-Tested)Exorcism Minigun: 4</li>
 <li>Strange Lightning Rod (Factory New)Exorcism Shotgun: 4</li>
+<li>Strange Lightning Rod (Field-Tested)Exorcism Shotgun: 4</li>
 <li>Strange Night Owl (Field-Tested)Exorcism Sniper Rifle: 4</li>
 <li>Strange Night Terror (Minimal Wear)Exorcism Scattergun: 4</li>
 <li>Strange Pumpkin Bombs Exorcism Carbonado Botkiller Wrench Mk.I: 4</li>
+<li>Strange Pumpkin Bombs Exorcism Rocket Launcher: 4</li>
 <li>Strange Putrescent Pigmentation Lurker's Leathers: 4</li>
 <li>Strange Shell Shocker (Factory New)Pumpkin Bombs Exorcism Rocket Launcher: 4</li>
 <li>Strange Voices from Below Coldsnap Cap: 4</li>
 <li>Strange Voices from Below Commissar's Coat: 4</li>
 <li>Strange Voices from Below Mistaken Movember: 4</li>
 <li>Strange Voices from Below Professional's Ushanka: 4</li>
+<li>Strange Woodland Warrior (Factory New)Pumpkin Bombs Exorcism Rocket Launcher: 4</li>
 <li>Strange Woodland Warrior (Field-Tested)Pumpkin Bombs Rocket Launcher: 4</li>
 <li>Strange Woodland Warrior (Minimal Wear)Pumpkin Bombs Rocket Launcher: 4</li>
 <li>Voices from Below A Brush with Death: 4</li>
-<li>Voices from Below All-Father: 4</li>
 <li>Voices from Below Commissar's Coat: 4</li>
 <li>Voices from Below Flapjack: 4</li>
 <li>Voices from Below Flashdance Footies: 4</li>
@@ -1671,7 +1702,6 @@
 <li>Exorcism Conscientious Objector: 5</li>
 <li>Genuine Voices from Below Brimstone: 5</li>
 <li>Pumpkin Bombs Southern Hospitality: 5</li>
-<li>Shell Shocker (Minimal Wear) Pumpkin Bombs Rocket Launcher: 5</li>
 <li>Spectral Spectrum Bruiser's Bandanna: 5</li>
 <li>Strange Aqua Marine (Field-Tested)Exorcism Rocket Launcher: 5</li>
 <li>Strange Australium Exorcism Axtinguisher: 5</li>
@@ -1680,7 +1710,6 @@
 <li>Strange Exorcism Candy Cane: 5</li>
 <li>Strange Exorcism Carbonado Botkiller Sniper Rifle Mk.I: 5</li>
 <li>Strange Exorcism Cow Mangler 5000: 5</li>
-<li>Strange Exorcism Flame Thrower: 5</li>
 <li>Strange Exorcism Minigun: 5</li>
 <li>Strange Exorcism Rust Botkiller Scattergun Mk.I: 5</li>
 <li>Strange Exorcism Winger: 5</li>
@@ -1691,7 +1720,6 @@
 <li>Strange Pumpkin Bombs Air Strike: 5</li>
 <li>Strange Pumpkin Bombs Exorcism Air Strike: 5</li>
 <li>Strange Pumpkin Bombs Exorcism Grenade Launcher: 5</li>
-<li>Strange Pumpkin Bombs Exorcism Rocket Launcher: 5</li>
 <li>Voices from Below Pyromancer's Mask: 5</li>
 <li>Chromatic Corruption Bruiser's Bandanna: 6</li>
 <li>Exorcism AWPer Hand: 6</li>
@@ -1699,10 +1727,12 @@
 <li>Pumpkin Bombs Exorcism Quickiebomb Launcher: 6</li>
 <li>Pumpkin Bombs Quickiebomb Launcher: 6</li>
 <li>Putrescent Pigmentation Bruiser's Bandanna: 6</li>
+<li>Shell Shocker (Minimal Wear) Pumpkin Bombs Rocket Launcher: 6</li>
 <li>Spectral Spectrum Rotation Sensation: 6</li>
 <li>Strange Australium Exorcism Stickybomb Launcher: 6</li>
 <li>Strange Exorcism Carbonado Botkiller Knife Mk.I: 6</li>
 <li>Strange Exorcism Festive Chargin' Targe: 6</li>
+<li>Strange Exorcism Flame Thrower: 6</li>
 <li>Strange Exorcism Silver Botkiller Rocket Launcher Mk.II: 6</li>
 <li>Strange Pumpkin Bombs Silver Botkiller Wrench Mk.II: 6</li>
 <li>Strange Pumpkin Bombs Wrench: 6</li>
@@ -1712,21 +1742,21 @@
 <li>Voices from Below Level Three Chin: 6</li>
 <li>Voices from Below Potassium Bonnet: 6</li>
 <li>Voices from Below Rotation Sensation: 6</li>
-<li>Pumpkin Bombs Loose Cannon: 7</li>
 <li>Putrescent Pigmentation Lurker's Leathers: 7</li>
 <li>Sinister Staining Bruiser's Bandanna: 7</li>
 <li>Strange Australium Exorcism Eyelander: 7</li>
 <li>Strange Australium Pumpkin Bombs Exorcism Stickybomb Launcher: 7</li>
+<li>Strange Exorcism Shotgun: 7</li>
 <li>Strange Exorcism Sniper Rifle: 7</li>
 <li>Strange Exorcism Wrangler: 7</li>
 <li>Strange Pumpkin Bombs Carbonado Botkiller Wrench Mk.I: 7</li>
 <li>Strange Pumpkin Bombs Loose Cannon: 7</li>
 <li>Voices from Below Team Captain: 7</li>
+<li>Pumpkin Bombs Loose Cannon: 8</li>
 <li>Pumpkin Bombs Wrench: 8</li>
 <li>Putrescent Pigmentation Rotation Sensation: 8</li>
 <li>Strange Exorcism Carbonado Botkiller Rocket Launcher Mk.I: 8</li>
 <li>Strange Exorcism Rocket Launcher: 8</li>
-<li>Strange Exorcism Shotgun: 8</li>
 <li>Strange Night Terror (Field-Tested)Exorcism Scattergun: 8</li>
 <li>Voices from Below Lurker's Leathers: 8</li>
 <li>Exorcism Panic Attack: 9</li>
@@ -1764,8 +1794,8 @@
 <li>Strange Australium Halloween Fire Exorcism Flame Thrower: 20</li>
 <li>Strange Australium Exorcism Minigun: 25</li>
 <li>Strange Australium Exorcism Scattergun: 26</li>
-<li>Strange Australium Exorcism Sniper Rifle: 26</li>
 <li>Strange Halloween Fire Festive Backburner: 26</li>
+<li>Strange Australium Exorcism Sniper Rifle: 27</li>
 <li>Strange Australium Pumpkin Bombs Grenade Launcher: 28</li>
 <li>Strange Australium Pumpkin Bombs Rocket Launcher: 29</li>
 <li>Strange Australium Pumpkin Bombs Exorcism Rocket Launcher: 31</li>
@@ -1774,6 +1804,6 @@
 <li>Strange Exorcism Festive Shotgun: 41</li>
 <li>Strange Australium Pumpkin Bombs Wrench: 43</li>
 </ul>
-<footer class="svelte-1mqzehu"><div class="finalfooter">
-            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Jan 16 2022</p>
-        </div></footer>
+</main><footer class="svelte-1mqzehu"><div class="finalfooter">
+            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Mon Apr 04 2022</p>
+        </div></footer></body></html>

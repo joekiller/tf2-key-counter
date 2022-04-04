@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,13 +12,34 @@
     <link rel="stylesheet" href="../../../build/bundle.css">
     <link rel="shortcut icon" href="../../../key-solid.svg" type="image/png">
     <title>double spelled unusual exquisite rack</title>
+    <script>
+        function searchLi() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('spellSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("spellList");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main class="spell-list">
 <h1>unusual exquisite rack</h1>
-<h2>Estimated Total: 33</h2>
-<ul>
+        <h2>Estimated Total: 34</h2>
+        <input type="text" id="spellSearch" onkeyup="searchLi()" placeholder="Search for names..">
+        <ul id="spellList">
 <li>Aces High Die Job Team Spirit Footprints: 1</li>
 <li>Blizzardy Storm Spectral Spectrum Voices from Below: 1</li>
 <li>Bubbling Spectral Spectrum Team Spirit Footprints: 1</li>
@@ -37,6 +59,7 @@
 <li>Orbiting Fire Chromatic Corruption Rotten Orange Footprints: 1</li>
 <li>Orbiting Fire Spectral Spectrum Team Spirit Footprints: 1</li>
 <li>Power Surge Chromatic Corruption Voices from Below: 1</li>
+<li>Purple Energy Violent Violet Footprints Voices from Below: 1</li>
 <li>Scorching Flames Putrescent Pigmentation Corpse Gray Footprints: 1</li>
 <li>Stormy 13th Hour Chromatic Corruption Bruised Purple Footprints: 1</li>
 <li>Stormy 13th Hour Chromatic Corruption Violent Violet Footprints: 1</li>
@@ -59,7 +82,7 @@
         </div>
         <div class="break"></div>
         <div class="finalfooter">
-            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Jan 16 2022</p>
+            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Apr 03 2022</p>
         </div>
     </footer>
 </body>

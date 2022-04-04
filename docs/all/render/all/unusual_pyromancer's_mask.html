@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,13 +12,34 @@
     <link rel="stylesheet" href="../../../build/bundle.css">
     <link rel="shortcut icon" href="../../../key-solid.svg" type="image/png">
     <title>all spelled unusual pyromancer's mask</title>
+    <script>
+        function searchLi() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('spellSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("spellList");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main class="spell-list">
 <h1>unusual pyromancer's mask</h1>
-<h2>Estimated Total: 198</h2>
-<ul>
+        <h2>Estimated Total: 201</h2>
+        <input type="text" id="spellSearch" onkeyup="searchLi()" placeholder="Search for names..">
+        <ul id="spellList">
 <li>Aces High Rotten Orange Footprints: 1</li>
 <li>Anti-Freeze Spectral Spectrum Headless Horseshoes: 1</li>
 <li>Anti-Freeze Voices from Below: 1</li>
@@ -77,6 +99,7 @@
 <li>Green Energy Spectral Spectrum Corpse Gray Footprints: 1</li>
 <li>Green Energy Voices from Below: 1</li>
 <li>Harvest Moon Chromatic Corruption: 1</li>
+<li>Harvest Moon Chromatic Corruption Headless Horseshoes: 1</li>
 <li>Harvest Moon Headless Horseshoes Voices from Below: 1</li>
 <li>Haunted Ghosts Chromatic Corruption: 1</li>
 <li>Haunted Ghosts Sinister Staining Headless Horseshoes: 1</li>
@@ -126,6 +149,7 @@
 <li>Roboactive Voices from Below: 1</li>
 <li>Scorching Flames Gangreen Footprints: 1</li>
 <li>Scorching Flames Putrescent Pigmentation Gangreen Footprints: 1</li>
+<li>Scorching Flames Sinister Staining Gangreen Footprints: 1</li>
 <li>Scorching Flames Spectral Spectrum Gangreen Footprints: 1</li>
 <li>Searing Plasma Chromatic Corruption Gangreen Footprints: 1</li>
 <li>Searing Plasma Chromatic Corruption Violent Violet Footprints: 1</li>
@@ -185,13 +209,13 @@
 <li>Orbiting Fire Spectral Spectrum Rotten Orange Footprints: 2</li>
 <li>Purple Energy Spectral Spectrum: 2</li>
 <li>Scorching Flames Corpse Gray Footprints: 2</li>
-<li>Scorching Flames Voices from Below: 2</li>
 <li>Searing Plasma Chromatic Corruption: 2</li>
 <li>Searing Plasma Voices from Below: 2</li>
 <li>Smoking Corpse Gray Footprints: 2</li>
 <li>Smoking Spectral Spectrum: 2</li>
 <li>Stormy Storm Voices from Below: 2</li>
 <li>Orbiting Fire Voices from Below: 3</li>
+<li>Scorching Flames Voices from Below: 3</li>
 <li>Terror-Watt Gangreen Footprints: 3</li>
 <li>Orbiting Fire Rotten Orange Footprints: 4</li>
 </ul>
@@ -205,7 +229,7 @@
         </div>
         <div class="break"></div>
         <div class="finalfooter">
-            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Jan 16 2022</p>
+            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Apr 03 2022</p>
         </div>
     </footer>
 </body>

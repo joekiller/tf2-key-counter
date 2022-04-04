@@ -11,11 +11,32 @@
     <link rel="stylesheet" href="../../../build/bundle.css">
     <link rel="shortcut icon" href="../../../key-solid.svg" type="image/png">
     <title>Summary of All Postlife  -Empty</title>
+    <script>
+        function searchLi() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('spellSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("spellList");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main class="spell-list">
-<ul>
+    <input type="text" id="spellSearch" onkeyup="searchLi()" placeholder="Search for names..">
+        <ul id="spellList">
 <li>A Head Full of Hot Air: 1</li>
 <li>A Rather Festive Tree: 1</li>
 <li>Allbrero: 1</li>
@@ -87,6 +108,7 @@
 <li>Cosa Nostra Cap: 1</li>
 <li>Cremator's Conscience: 1</li>
 <li>Crosslinker's Coil: 1</li>
+<li>Crusader's Crossbow: 1</li>
 <li>Crusader's Getup: 1</li>
 <li>Danger: 1</li>
 <li>Das Fantzipantzen: 1</li>
@@ -110,6 +132,7 @@
 <li>El Patron: 1</li>
 <li>Endothermic Exowear: 1</li>
 <li>Enforcer: 1</li>
+<li>Eye-Catcher: 1</li>
 <li>Eyelander: 1</li>
 <li>FR-0: 1</li>
 <li>Faerie Solitaire Pin: 1</li>
@@ -117,6 +140,7 @@
 <li>Fancy Dress Uniform: 1</li>
 <li>Fashionable Megalomaniac: 1</li>
 <li>Festive Axtinguisher: 1</li>
+<li>Festive Black Box: 1</li>
 <li>Festive Force-A-Nature: 1</li>
 <li>Festive Sniper Rifle: 1</li>
 <li>Force-A-Nature: 1</li>
@@ -172,6 +196,7 @@
 <li>Lucky No. 42: 1</li>
 <li>Lucky Shot: 1</li>
 <li>Machina: 1</li>
+<li>Madame Dixie: 1</li>
 <li>Magical Mercenary: 1</li>
 <li>Manmelter: 1</li>
 <li>Mann of the House: 1</li>
@@ -255,6 +280,7 @@
 <li>Wanga Prick: 1</li>
 <li>War Goggles: 1</li>
 <li>Ward: 1</li>
+<li>Whirly Warrior: 1</li>
 <li>Whiskered Gentleman: 1</li>
 <li>Whiskey Bib: 1</li>
 <li>Wilson Weave: 1</li>
@@ -298,7 +324,6 @@
 <li>Federal Casemaker: 2</li>
 <li>Filamental: 2</li>
 <li>Five-Month Shadow: 2</li>
-<li>Flare Gun: 2</li>
 <li>Frickin' Sweet Ninja Hood: 2</li>
 <li>Front Runner: 2</li>
 <li>Frontier Justice: 2</li>
@@ -368,7 +393,6 @@
 <li>Tyrant's Helm: 2</li>
 <li>Tyrantium Helmet: 2</li>
 <li>U-clank-a: 2</li>
-<li>Ullapool Caber: 2</li>
 <li>Unknown Mann: 2</li>
 <li>Valhalla Helm: 2</li>
 <li>Vascular Vestment: 2</li>
@@ -401,6 +425,7 @@
 <li>El Duderino: 3</li>
 <li>Face Full of Festive: 3</li>
 <li>Familiar Fez: 3</li>
+<li>Flare Gun: 3</li>
 <li>Fur-Lined Fighter: 3</li>
 <li>Gentleman's Ushanka: 3</li>
 <li>Greased Lightning: 3</li>
@@ -412,14 +437,12 @@
 <li>Killer's Kabuto: 3</li>
 <li>Large Luchadore: 3</li>
 <li>Liberty Launcher: 3</li>
-<li>Lunatic's Leathers: 3</li>
 <li>Napper's Respite: 3</li>
 <li>Point and Shoot: 3</li>
 <li>Pom-Pommed Provocateur: 3</li>
 <li>Pop-eyes: 3</li>
 <li>Reggaelator: 3</li>
 <li>Righteous Bison: 3</li>
-<li>Rogue's Robe: 3</li>
 <li>Rust Botkiller Sniper Rifle Mk.I: 3</li>
 <li>Scorch Shot: 3</li>
 <li>Scotsman's Skullcutter: 3</li>
@@ -433,6 +456,7 @@
 <li>Third Degree: 3</li>
 <li>Tough Guy's Toque: 3</li>
 <li>Track Terrorizer: 3</li>
+<li>Ullapool Caber: 3</li>
 <li>Vintage Tyrolean: 3</li>
 <li>Vive La France: 3</li>
 <li>Wally Pocket: 3</li>
@@ -457,11 +481,12 @@
 <li>Hat With No Name: 4</li>
 <li>Knife: 4</li>
 <li>Lord Cockswain's Novelty Mutton Chops and Pipe: 4</li>
+<li>Lunatic's Leathers: 4</li>
 <li>Macho Mann: 4</li>
 <li>Medi-Mask: 4</li>
-<li>Mountebank's Masque: 4</li>
 <li>Nostromo Napalmer: 4</li>
 <li>Powerjack: 4</li>
+<li>Rogue's Robe: 4</li>
 <li>Screamin' Eagle: 4</li>
 <li>Silver Botkiller Scattergun Mk.II: 4</li>
 <li>Slo-Poke: 4</li>
@@ -481,7 +506,6 @@
 <li>C.A.P.P.E.R: 5</li>
 <li>Candy Cane: 5</li>
 <li>Carbonado Botkiller Sniper Rifle Mk.I: 5</li>
-<li>Co-Pilot: 5</li>
 <li>Conagher's Combover: 5</li>
 <li>Cool Cat Cardigan: 5</li>
 <li>Deep Cover Operator: 5</li>
@@ -492,6 +516,7 @@
 <li>Gold Digger: 5</li>
 <li>Holstered Heaters: 5</li>
 <li>Hunter Heavy: 5</li>
+<li>Mountebank's Masque: 5</li>
 <li>Physician's Protector: 5</li>
 <li>Rust Botkiller Scattergun Mk.I: 5</li>
 <li>Scot Bonnet: 5</li>
@@ -501,6 +526,7 @@
 <li>Birdman of Australiacatraz: 6</li>
 <li>Black Box: 6</li>
 <li>Carbonado Botkiller Knife Mk.I: 6</li>
+<li>Co-Pilot: 6</li>
 <li>Conscientious Objector: 6</li>
 <li>Exquisite Rack: 6</li>
 <li>Gold Botkiller Wrench Mk.II: 6</li>
@@ -576,13 +602,13 @@
 <li>Phlogistinator: 12</li>
 <li>Pyromancer's Hood: 12</li>
 <li>Wild West Waistcoat: 12</li>
-<li>Carbonado Botkiller Rocket Launcher Mk.I: 13</li>
 <li>Festive Revolver: 13</li>
 <li>Puffy Provocateur: 13</li>
 <li>Skullcap: 13</li>
 <li>White Russian: 13</li>
 <li>Boxcar Bomber: 14</li>
 <li>Captain Cardbeard Cutthroat: 14</li>
+<li>Carbonado Botkiller Rocket Launcher Mk.I: 14</li>
 <li>Mistaken Movember: 14</li>
 <li>Thermal Tracker: 14</li>
 <li>Tomb Readers: 14</li>
@@ -599,11 +625,11 @@
 <li>Graybanns: 17</li>
 <li>Crossing Guard: 18</li>
 <li>Australium Knife: 19</li>
-<li>Cold Snap Coat: 19</li>
-<li>Loose Cannon: 19</li>
 <li>Winter Woodsman: 19</li>
+<li>Cold Snap Coat: 20</li>
 <li>Insulated Inventor: 20</li>
 <li>Iron Bomber: 20</li>
+<li>Loose Cannon: 20</li>
 <li>Potassium Bonnet: 20</li>
 <li>Festive SMG: 21</li>
 <li>Pyromancer's Mask: 21</li>
@@ -612,8 +638,8 @@
 <li>Australium Minigun: 25</li>
 <li>Flashdance Footies: 25</li>
 <li>Australium Scattergun: 26</li>
-<li>Australium Sniper Rifle: 26</li>
 <li>Grenade Launcher: 26</li>
+<li>Australium Sniper Rifle: 27</li>
 <li>Degreaser: 29</li>
 <li>Pistol: 30</li>
 <li>Minigun: 31</li>
@@ -627,15 +653,15 @@
 <li>Shotgun: 47</li>
 <li>Festive Shotgun: 52</li>
 <li>Rotation Sensation: 56</li>
-<li>Sniper Rifle: 56</li>
+<li>Sniper Rifle: 57</li>
 <li>Australium Wrench: 60</li>
 <li>Australium Flame Thrower: 63</li>
-<li>Stickybomb Launcher: 66</li>
-<li>Scattergun: 75</li>
+<li>Stickybomb Launcher: 67</li>
+<li>Scattergun: 76</li>
 <li>Australium Rocket Launcher: 79</li>
-<li>Flame Thrower: 108</li>
+<li>Flame Thrower: 109</li>
 <li>Rocket Launcher: 155</li>
 </ul>
-<footer class="svelte-1mqzehu"><div class="finalfooter">
-            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Jan 16 2022</p>
-        </div></footer>
+</main><footer class="svelte-1mqzehu"><div class="finalfooter">
+            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Mon Apr 04 2022</p>
+        </div></footer></body></html>

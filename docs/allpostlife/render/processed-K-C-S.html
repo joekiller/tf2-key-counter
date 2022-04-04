@@ -11,11 +11,32 @@
     <link rel="stylesheet" href="../../../build/bundle.css">
     <link rel="shortcut icon" href="../../../key-solid.svg" type="image/png">
     <title>Summary of All Postlife  -K-C-S</title>
+    <script>
+        function searchLi() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('spellSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("spellList");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main class="spell-list">
-<ul>
+    <input type="text" id="spellSearch" onkeyup="searchLi()" placeholder="Search for names..">
+        <ul id="spellList">
 <li>Australium Exorcism Eyelander: 1</li>
 <li>Australium Exorcism Flame Thrower: 1</li>
 <li>Australium Exorcism Minigun: 1</li>
@@ -63,6 +84,7 @@
 <li>Chromatic Corruption Dogfighter: 1</li>
 <li>Chromatic Corruption Executioner: 1</li>
 <li>Chromatic Corruption Exquisite Rack: 1</li>
+<li>Chromatic Corruption Eye-Catcher: 1</li>
 <li>Chromatic Corruption Face Full of Festive: 1</li>
 <li>Chromatic Corruption Fast Learner: 1</li>
 <li>Chromatic Corruption Flapjack: 1</li>
@@ -76,6 +98,7 @@
 <li>Chromatic Corruption Heavy Duty Rag: 1</li>
 <li>Chromatic Corruption Hero's Hachimaki: 1</li>
 <li>Chromatic Corruption Lunatic's Leathers: 1</li>
+<li>Chromatic Corruption Madame Dixie: 1</li>
 <li>Chromatic Corruption Medicine Manpurse: 1</li>
 <li>Chromatic Corruption Merc's Mohawk: 1</li>
 <li>Chromatic Corruption Outta' Sight: 1</li>
@@ -177,6 +200,7 @@
 <li>Die Job Killer's Kabuto: 1</li>
 <li>Die Job Law: 1</li>
 <li>Die Job Lord Cockswain's Novelty Mutton Chops and Pipe: 1</li>
+<li>Die Job Lunatic's Leathers: 1</li>
 <li>Die Job Made Man: 1</li>
 <li>Die Job Medi-Mask: 1</li>
 <li>Die Job Minnesota Slick: 1</li>
@@ -231,6 +255,7 @@
 <li>Exorcism Carbonado Botkiller Minigun Mk.I: 1</li>
 <li>Exorcism Classic: 1</li>
 <li>Exorcism Conscientious Objector: 1</li>
+<li>Exorcism Crusader's Crossbow: 1</li>
 <li>Exorcism Diamond Botkiller Flame Thrower Mk.I: 1</li>
 <li>Exorcism Diamond Botkiller Scattergun Mk.I: 1</li>
 <li>Exorcism Enforcer: 1</li>
@@ -307,6 +332,7 @@
 <li>Killstreak Exorcism Festive Backburner: 1</li>
 <li>Killstreak Exorcism Festive Chargin' Targe: 1</li>
 <li>Killstreak Exorcism Festive Revolver: 1</li>
+<li>Killstreak Exorcism Flare Gun: 1</li>
 <li>Killstreak Exorcism Frontier Justice: 1</li>
 <li>Killstreak Exorcism Frying Pan: 1</li>
 <li>Killstreak Exorcism Gold Botkiller Minigun Mk.I: 1</li>
@@ -409,6 +435,7 @@
 <li>Professional Killstreak Exorcism Three-Rune Blade: 1</li>
 <li>Professional Killstreak Exorcism Tribalman's Shiv: 1</li>
 <li>Professional Killstreak Exorcism Ubersaw: 1</li>
+<li>Professional Killstreak Exorcism Ullapool Caber: 1</li>
 <li>Professional Killstreak Exorcism Wanga Prick: 1</li>
 <li>Professional Killstreak Exorcism Your Eternal Reward: 1</li>
 <li>Professional Killstreak Gangreen Footprints Voices from Below Hong Kong Cone: 1</li>
@@ -735,6 +762,7 @@
 <li>Specialized Killstreak Pumpkin Bombs Air Strike: 1</li>
 <li>Specialized Killstreak Pumpkin Bombs Black Box: 1</li>
 <li>Specialized Killstreak Pumpkin Bombs Blood Botkiller Wrench Mk.I: 1</li>
+<li>Specialized Killstreak Pumpkin Bombs Carbonado Botkiller Rocket Launcher Mk.I: 1</li>
 <li>Specialized Killstreak Pumpkin Bombs Carbonado Botkiller Stickybomb Launcher Mk.I: 1</li>
 <li>Specialized Killstreak Pumpkin Bombs Diamond Botkiller Rocket Launcher Mk.I: 1</li>
 <li>Specialized Killstreak Pumpkin Bombs Diamond Botkiller Wrench Mk.I: 1</li>
@@ -745,6 +773,7 @@
 <li>Specialized Killstreak Pumpkin Bombs Exorcism Gold Botkiller Stickybomb Launcher Mk.II: 1</li>
 <li>Specialized Killstreak Pumpkin Bombs Exorcism Gold Botkiller Wrench Mk.II: 1</li>
 <li>Specialized Killstreak Pumpkin Bombs Exorcism Loose Cannon: 1</li>
+<li>Specialized Killstreak Pumpkin Bombs Festive Black Box: 1</li>
 <li>Specialized Killstreak Pumpkin Bombs Loose Cannon: 1</li>
 <li>Specialized Killstreak Pumpkin Bombs Original: 1</li>
 <li>Specialized Killstreak Pumpkin Bombs Rust Botkiller Wrench Mk.I: 1</li>
@@ -840,6 +869,7 @@
 <li>Spectral Spectrum Voices from Below Texas Ten Gallon: 1</li>
 <li>Spectral Spectrum Wartime Warmth: 1</li>
 <li>Spectral Spectrum Wet Works: 1</li>
+<li>Spectral Spectrum Whirly Warrior: 1</li>
 <li>Spectral Spectrum White Russian: 1</li>
 <li>Team Spirit Footprints Boxcar Bomber: 1</li>
 <li>Team Spirit Footprints Bruiser's Bandanna: 1</li>
@@ -905,7 +935,6 @@
 <li>Voices from Below Chronoscarf: 1</li>
 <li>Voices from Below Clan Pride: 1</li>
 <li>Voices from Below Clubsy The Seal: 1</li>
-<li>Voices from Below Co-Pilot: 1</li>
 <li>Voices from Below Cockfighter: 1</li>
 <li>Voices from Below Cold Killer: 1</li>
 <li>Voices from Below Cold Snap Coat: 1</li>
@@ -1037,7 +1066,6 @@
 <li>Chromatic Corruption Polar Pullover: 2</li>
 <li>Chromatic Corruption Pom-Pommed Provocateur: 2</li>
 <li>Chromatic Corruption Pyromancer's Raiments: 2</li>
-<li>Chromatic Corruption Rogue's Robe: 2</li>
 <li>Chromatic Corruption Sheriff's Stetson: 2</li>
 <li>Chromatic Corruption Snow Sleeves: 2</li>
 <li>Chromatic Corruption Support Spurs: 2</li>
@@ -1223,12 +1251,12 @@
 <li>Spectral Spectrum Troublemaker's Tossle Cap: 2</li>
 <li>Spectral Spectrum War Pig: 2</li>
 <li>Team Spirit Footprints Potassium Bonnet: 2</li>
-<li>Violent Violet Footprints Cold Snap Coat: 2</li>
 <li>Voices from Below Backwards Ballcap: 2</li>
 <li>Voices from Below Blighted Beak: 2</li>
 <li>Voices from Below Brotherhood of Arms: 2</li>
 <li>Voices from Below Bunsen Brave: 2</li>
 <li>Voices from Below Classified Coif: 2</li>
+<li>Voices from Below Co-Pilot: 2</li>
 <li>Voices from Below Coldfront Curbstompers: 2</li>
 <li>Voices from Below Crone's Dome: 2</li>
 <li>Voices from Below Crown of the Old Kingdom: 2</li>
@@ -1243,7 +1271,6 @@
 <li>Voices from Below Lunatic's Leathers: 2</li>
 <li>Voices from Below MK 50: 2</li>
 <li>Voices from Below Macho Mann: 2</li>
-<li>Voices from Below Mountebank's Masque: 2</li>
 <li>Voices from Below Noh Mercy: 2</li>
 <li>Voices from Below Nunhood: 2</li>
 <li>Voices from Below Outdoorsman: 2</li>
@@ -1269,6 +1296,7 @@
 <li>Chromatic Corruption Marksman's Mohair: 3</li>
 <li>Chromatic Corruption Puffy Provocateur: 3</li>
 <li>Chromatic Corruption Pyromancer's Hood: 3</li>
+<li>Chromatic Corruption Rogue's Robe: 3</li>
 <li>Chromatic Corruption Rotation Sensation: 3</li>
 <li>Chromatic Corruption Skullcap: 3</li>
 <li>Chromatic Corruption Winter Woodsman: 3</li>
@@ -1349,6 +1377,7 @@
 <li>Spectral Spectrum Coldfront Curbstompers: 3</li>
 <li>Spectral Spectrum Coldsnap Cap: 3</li>
 <li>Spectral Spectrum Lurker's Leathers: 3</li>
+<li>Violent Violet Footprints Cold Snap Coat: 3</li>
 <li>Voices from Below Antarctic Parka: 3</li>
 <li>Voices from Below Bear Necessities: 3</li>
 <li>Voices from Below Bonk Boy: 3</li>
@@ -1359,6 +1388,7 @@
 <li>Voices from Below Grimm Hatte: 3</li>
 <li>Voices from Below Hong Kong Cone: 3</li>
 <li>Voices from Below Marksman's Mohair: 3</li>
+<li>Voices from Below Mountebank's Masque: 3</li>
 <li>Voices from Below Polar Pullover: 3</li>
 <li>Voices from Below Scotch Saver: 3</li>
 <li>Voices from Below Slo-Poke: 3</li>
@@ -1396,10 +1426,12 @@
 <li>Sinister Staining Crone's Dome: 4</li>
 <li>Sinister Staining North Polar Fleece: 4</li>
 <li>Sinister Staining Winter Woodsman: 4</li>
+<li>Specialized Killstreak Australium Exorcism Ambassador: 4</li>
 <li>Specialized Killstreak Australium Exorcism Black Box: 4</li>
 <li>Specialized Killstreak Australium Exorcism Minigun: 4</li>
 <li>Specialized Killstreak Australium Exorcism Rocket Launcher: 4</li>
 <li>Specialized Killstreak Australium Pumpkin Bombs Exorcism Black Box: 4</li>
+<li>Specialized Killstreak Exorcism AWPer Hand: 4</li>
 <li>Specialized Killstreak Exorcism Flame Thrower: 4</li>
 <li>Specialized Killstreak Halloween Fire Exorcism Flame Thrower: 4</li>
 <li>Specialized Killstreak Halloween Fire Festive Backburner: 4</li>
@@ -1438,14 +1470,11 @@
 <li>Professional Killstreak Exorcism SMG: 5</li>
 <li>Professional Killstreak Exorcism Spy-cicle: 5</li>
 <li>Professional Killstreak Halloween Fire Exorcism Festive Backburner: 5</li>
-<li>Professional Killstreak Pumpkin Bombs Loose Cannon: 5</li>
 <li>Pumpkin Bombs Loose Cannon: 5</li>
 <li>Pumpkin Bombs Wrench: 5</li>
 <li>Sinister Staining Flashdance Footies: 5</li>
 <li>Sinister Staining Snow Sleeves: 5</li>
-<li>Specialized Killstreak Australium Exorcism Ambassador: 5</li>
 <li>Specialized Killstreak Australium Pumpkin Bombs Rocket Launcher: 5</li>
-<li>Specialized Killstreak Exorcism AWPer Hand: 5</li>
 <li>Specialized Killstreak Exorcism Crossing Guard: 5</li>
 <li>Spectral Spectrum Bruiser's Bandanna: 5</li>
 <li>Spectral Spectrum Cold Snap Coat: 5</li>
@@ -1464,6 +1493,7 @@
 <li>Professional Killstreak Exorcism Festive SMG: 6</li>
 <li>Professional Killstreak Exorcism Panic Attack: 6</li>
 <li>Professional Killstreak Halloween Fire Degreaser: 6</li>
+<li>Professional Killstreak Pumpkin Bombs Loose Cannon: 6</li>
 <li>Pumpkin Bombs Rocket Launcher: 6</li>
 <li>Putrescent Pigmentation Bruiser's Bandanna: 6</li>
 <li>Specialized Killstreak Australium Halloween Fire Exorcism Flame Thrower: 6</li>
@@ -1474,6 +1504,7 @@
 <li>Voices from Below Flashdance Footies: 6</li>
 <li>Voices from Below Level Three Chin: 6</li>
 <li>Voices from Below Pyromancer's Mask: 6</li>
+<li>Exorcism Shotgun: 7</li>
 <li>Professional Killstreak Australium Exorcism Black Box: 7</li>
 <li>Professional Killstreak Australium Exorcism SMG: 7</li>
 <li>Professional Killstreak Exorcism Flame Thrower: 7</li>
@@ -1487,7 +1518,6 @@
 <li>Voices from Below Flak Jack: 7</li>
 <li>Voices from Below Team Captain: 7</li>
 <li>Exorcism Festive Shotgun: 8</li>
-<li>Exorcism Shotgun: 8</li>
 <li>Killstreak Exorcism Sniper Rifle: 8</li>
 <li>Professional Killstreak Australium Exorcism Blutsauger: 8</li>
 <li>Professional Killstreak Australium Exorcism Knife: 8</li>
@@ -1504,7 +1534,6 @@
 <li>Professional Killstreak Exorcism Shahanshah: 9</li>
 <li>Specialized Killstreak Exorcism Festive Shotgun: 9</li>
 <li>Spectral Spectrum Rotation Sensation: 9</li>
-<li>Exorcism Flame Thrower: 10</li>
 <li>Killstreak Exorcism Festive Shotgun: 10</li>
 <li>Killstreak Pumpkin Bombs Rocket Launcher: 10</li>
 <li>Professional Killstreak Australium Exorcism Force-A-Nature: 10</li>
@@ -1512,13 +1541,13 @@
 <li>Putrescent Pigmentation Rotation Sensation: 10</li>
 <li>Voices from Below Bruiser's Bandanna: 10</li>
 <li>Exorcism Festive SMG: 11</li>
+<li>Exorcism Flame Thrower: 11</li>
 <li>Exorcism Sniper Rifle: 11</li>
 <li>Professional Killstreak Australium Exorcism Frontier Justice: 11</li>
 <li>Professional Killstreak Pumpkin Bombs Exorcism Stickybomb Launcher: 11</li>
 <li>Putrescent Pigmentation Lurker's Leathers: 11</li>
 <li>Voices from Below Rotation Sensation: 11</li>
 <li>Exorcism Crossing Guard: 12</li>
-<li>Professional Killstreak Australium Exorcism Ambassador: 12</li>
 <li>Professional Killstreak Australium Halloween Fire Exorcism Flame Thrower: 12</li>
 <li>Professional Killstreak Australium Pumpkin Bombs Black Box: 12</li>
 <li>Professional Killstreak Australium Pumpkin Bombs Exorcism Black Box: 12</li>
@@ -1527,10 +1556,11 @@
 <li>Exorcism Minigun: 13</li>
 <li>Killstreak Exorcism Rocket Launcher: 13</li>
 <li>Killstreak Exorcism Scattergun: 13</li>
+<li>Professional Killstreak Australium Exorcism Ambassador: 13</li>
 <li>Professional Killstreak Australium Exorcism Rocket Launcher: 13</li>
-<li>Pumpkin Bombs Stickybomb Launcher: 13</li>
 <li>Specialized Killstreak Exorcism Shotgun: 13</li>
 <li>Professional Killstreak Australium Pumpkin Bombs Exorcism Wrench: 14</li>
+<li>Pumpkin Bombs Stickybomb Launcher: 14</li>
 <li>Specialized Killstreak Pumpkin Bombs Stickybomb Launcher: 14</li>
 <li>Voices from Below Lurker's Leathers: 14</li>
 <li>Exorcism Rocket Launcher: 15</li>
@@ -1542,24 +1572,24 @@
 <li>Professional Killstreak Australium Exorcism Minigun: 18</li>
 <li>Professional Killstreak Halloween Fire Festive Backburner: 18</li>
 <li>Specialized Killstreak Exorcism Rocket Launcher: 18</li>
-<li>Specialized Killstreak Exorcism Sniper Rifle: 20</li>
+<li>Specialized Killstreak Exorcism Sniper Rifle: 21</li>
 <li>Specialized Killstreak Halloween Fire Flame Thrower: 21</li>
-<li>Professional Killstreak Australium Exorcism Sniper Rifle: 22</li>
-<li>Professional Killstreak Exorcism Shotgun: 22</li>
 <li>Professional Killstreak Pumpkin Bombs Exorcism Rocket Launcher: 22</li>
 <li>Professional Killstreak Australium Exorcism Scattergun: 23</li>
+<li>Professional Killstreak Australium Exorcism Sniper Rifle: 23</li>
 <li>Professional Killstreak Australium Halloween Fire Flame Thrower: 23</li>
+<li>Professional Killstreak Exorcism Shotgun: 23</li>
 <li>Specialized Killstreak Pumpkin Bombs Rocket Launcher: 23</li>
 <li>Professional Killstreak Australium Pumpkin Bombs Rocket Launcher: 24</li>
 <li>Professional Killstreak Pumpkin Bombs Rocket Launcher: 24</li>
-<li>Professional Killstreak Exorcism AWPer Hand: 25</li>
 <li>Professional Killstreak Exorcism Festive Shotgun: 25</li>
-<li>Specialized Killstreak Exorcism Scattergun: 26</li>
+<li>Professional Killstreak Exorcism AWPer Hand: 26</li>
 <li>Professional Killstreak Australium Pumpkin Bombs Exorcism Rocket Launcher: 27</li>
 <li>Professional Killstreak Exorcism Scattergun: 27</li>
 <li>Professional Killstreak Halloween Fire Flame Thrower: 27</li>
+<li>Specialized Killstreak Exorcism Scattergun: 27</li>
 <li>Professional Killstreak Australium Pumpkin Bombs Wrench: 33</li>
 </ul>
-<footer class="svelte-1mqzehu"><div class="finalfooter">
-            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Jan 16 2022</p>
-        </div></footer>
+</main><footer class="svelte-1mqzehu"><div class="finalfooter">
+            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Mon Apr 04 2022</p>
+        </div></footer></body></html>

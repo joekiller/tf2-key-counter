@@ -11,11 +11,32 @@
     <link rel="stylesheet" href="../../../build/bundle.css">
     <link rel="shortcut icon" href="../../../key-solid.svg" type="image/png">
     <title>Summary of All Spells  -Empty</title>
+    <script>
+        function searchLi() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('spellSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("spellList");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main class="spell-list">
-<ul>
+    <input type="text" id="spellSearch" onkeyup="searchLi()" placeholder="Search for names..">
+        <ul id="spellList">
 <li>A Head Full of Hot Air: 1</li>
 <li>Arthropod's Aspect: 1</li>
 <li>Black Knight's Bascinet: 1</li>
@@ -72,10 +93,8 @@
 <li>Croft's Crest: 4</li>
 <li>Fortunate Son: 4</li>
 <li>Glitched Circuit Board: 4</li>
-<li>Googol Glass Eyes: 4</li>
 <li>Heroic Companion Badge: 4</li>
 <li>Merc Medal: 4</li>
-<li>Mountebank's Masque: 4</li>
 <li>Nabler: 4</li>
 <li>Resurrection Associate Pin: 4</li>
 <li>Screamin' Eagle: 4</li>
@@ -86,11 +105,12 @@
 <li>Aladdin's Private Reserve: 5</li>
 <li>Bolgan Family Crest: 5</li>
 <li>C.A.P.P.E.R: 5</li>
-<li>Co-Pilot: 5</li>
 <li>Conagher's Combover: 5</li>
+<li>Googol Glass Eyes: 5</li>
 <li>Holstered Heaters: 5</li>
 <li>Hunter Heavy: 5</li>
 <li>Megapixel Beard: 5</li>
+<li>Mountebank's Masque: 5</li>
 <li>Physician's Protector: 5</li>
 <li>Portable Smissmas Spirit Dispenser: 5</li>
 <li>Sack Fulla Smissmas: 5</li>
@@ -98,6 +118,7 @@
 <li>Triple A Badge: 5</li>
 <li>Vigilant Pin: 5</li>
 <li>Wingstick: 5</li>
+<li>Co-Pilot: 6</li>
 <li>Death Support Pack: 6</li>
 <li>Dual-Core Devil Doll: 6</li>
 <li>Frymaster: 6</li>
@@ -130,7 +151,6 @@
 <li>Baronial Badge: 8</li>
 <li>Colonial Clogs: 8</li>
 <li>Commissar's Coat: 8</li>
-<li>First American: 8</li>
 <li>Flunkyware: 8</li>
 <li>Halogen Head Lamp: 8</li>
 <li>Immobile Suit: 8</li>
@@ -142,6 +162,7 @@
 <li>Pyromancer's Raiments: 8</li>
 <li>Bushman's Bristles: 9</li>
 <li>Courtier's Collar: 9</li>
+<li>First American: 9</li>
 <li>Grenadier Helm: 9</li>
 <li>Panic Attack: 9</li>
 <li>Russian Rocketeer: 9</li>
@@ -162,7 +183,6 @@
 <li>Argyle Ace: 12</li>
 <li>Coldfront Curbstompers: 12</li>
 <li>Little Bear: 12</li>
-<li>Mucous Membrain: 12</li>
 <li>Pyromancer's Hood: 12</li>
 <li>Soldier's Sparkplug: 12</li>
 <li>Wild West Waistcoat: 12</li>
@@ -173,8 +193,8 @@
 <li>Festive Revolver: 13</li>
 <li>Forgotten King's Pauldrons: 13</li>
 <li>Hollowhead: 13</li>
-<li>Kanga Kickers: 13</li>
 <li>Mister Bubbles: 13</li>
+<li>Mucous Membrain: 13</li>
 <li>Paisley Pro: 13</li>
 <li>Puffy Provocateur: 13</li>
 <li>Skullcap: 13</li>
@@ -186,9 +206,9 @@
 <li>Gabe Glasses: 14</li>
 <li>Herzensbrecher: 14</li>
 <li>Hunger Force: 14</li>
+<li>Kanga Kickers: 14</li>
 <li>Lieutenant Bites the Dust: 14</li>
 <li>Mistaken Movember: 14</li>
-<li>Robot Running Man: 14</li>
 <li>Thermal Tracker: 14</li>
 <li>Tomb Readers: 14</li>
 <li>Towering Pillar Of Summer Shades: 14</li>
@@ -196,14 +216,15 @@
 <li>Kriegsmaschine-9000: 15</li>
 <li>Maniac's Manacles: 15</li>
 <li>Mannhattan Project: 15</li>
+<li>Robot Running Man: 15</li>
 <li>Steam Pipe: 15</li>
-<li>Strontium Stove Pipe: 15</li>
-<li>Big Daddy: 16</li>
 <li>Bolted Bushman: 16</li>
 <li>Coldsnap Cap: 16</li>
 <li>Quickiebomb Launcher: 16</li>
 <li>Seeing Double: 16</li>
+<li>Strontium Stove Pipe: 16</li>
 <li>Trepanabotomizer: 16</li>
+<li>Big Daddy: 17</li>
 <li>Doc's Holiday: 17</li>
 <li>Double Dog Dare Demo Pants: 17</li>
 <li>Gaelic Garb: 17</li>
@@ -211,11 +232,11 @@
 <li>Steel Songbird: 17</li>
 <li>Crossing Guard: 18</li>
 <li>Six Pack Abs: 18</li>
-<li>Cold Snap Coat: 19</li>
 <li>Ghoul Gibbin' Gear: 19</li>
 <li>Golden Frying Pan: 19</li>
 <li>Tiny Timber: 19</li>
 <li>Winter Woodsman: 19</li>
+<li>Cold Snap Coat: 20</li>
 <li>Doe-Boy: 20</li>
 <li>Gone Commando: 20</li>
 <li>Heavy Artillery Officer's Cap: 20</li>
@@ -225,17 +246,16 @@
 <li>Smissmas Caribou: 20</li>
 <li>War Head: 20</li>
 <li>Festive SMG: 21</li>
-<li>Gentle Manne's Service Medal: 21</li>
 <li>Planeswalker Helm: 21</li>
 <li>Prairie Heel Biters: 21</li>
 <li>Snow Sleeves: 21</li>
 <li>Atomic Accolade: 22</li>
 <li>Crazy Legs: 22</li>
+<li>Gentle Manne's Service Medal: 22</li>
 <li>Gilded Guard: 22</li>
 <li>Pocket Medic: 22</li>
 <li>Accursed Apparition: 23</li>
 <li>Baphomet Trotters: 23</li>
-<li>Dread Knot: 23</li>
 <li>Hanger-On Hood: 23</li>
 <li>Holiday Headcase: 23</li>
 <li>Photo Badge: 23</li>
@@ -246,235 +266,234 @@
 <li>Beacon from Beyond: 24</li>
 <li>Man in Slacks: 24</li>
 <li>Plumber's Pipe: 24</li>
-<li>Scrap Sack: 24</li>
-<li>Surgeon's Stethoscope: 24</li>
-<li>Transylvania Top: 24</li>
 <li>Brim-Full Of Bullets: 25</li>
+<li>Dread Knot: 25</li>
 <li>Flashdance Footies: 25</li>
-<li>Surgeon's Side Satchel: 25</li>
+<li>Scrap Sack: 25</li>
+<li>Surgeon's Stethoscope: 25</li>
+<li>Transylvania Top: 25</li>
 <li>Warmth Preserver: 25</li>
 <li>Conquistador: 26</li>
 <li>Criminal Cloak: 26</li>
 <li>Raven's Visage: 26</li>
-<li>Rogue's Brogues: 26</li>
 <li>Sole Saviors: 26</li>
 <li>Extra Layer: 27</li>
 <li>Monstrous Mandible: 27</li>
 <li>Pomade Prince: 27</li>
+<li>Rogue's Brogues: 27</li>
+<li>Surgeon's Side Satchel: 27</li>
 <li>Facepeeler: 28</li>
 <li>Grandmaster: 28</li>
 <li>Last Bite: 28</li>
-<li>Pin Pals: 28</li>
 <li>Tartantaloons: 28</li>
 <li>Teddy Robobelt: 28</li>
 <li>Alternative Medicine Mann: 29</li>
 <li>Bolshevik Biker: 29</li>
-<li>Lieutenant Bites: 29</li>
 <li>PY-40 Incinibot: 29</li>
+<li>Pin Pals: 29</li>
 <li>Security Shades: 29</li>
 <li>After Dark: 30</li>
-<li>Bolted Birdcage: 30</li>
 <li>Itsy Bitsy Spyer: 30</li>
+<li>Lieutenant Bites: 30</li>
 <li>Parasight: 30</li>
 <li>Pyro's Boron Beanie: 30</li>
-<li>Stahlhelm: 30</li>
-<li>Tyurtlenek: 30</li>
 <li>Bacteria Blocker: 31</li>
+<li>Bolted Birdcage: 31</li>
 <li>Cadaver's Cranium: 31</li>
 <li>Platinum Pickelhaube: 31</li>
 <li>Shooter's Tin Topi: 31</li>
+<li>Stahlhelm: 31</li>
+<li>Tyurtlenek: 31</li>
 <li>Breather Bag: 32</li>
-<li>Electric Escorter: 32</li>
 <li>SpaceChem Pin: 32</li>
-<li>Steel Sixpack: 32</li>
+<li>Electric Escorter: 33</li>
 <li>Pure Tin Capotain: 33</li>
 <li>Sandvich Safe: 33</li>
+<li>Steel Sixpack: 33</li>
 <li>Bone-Cut Belt: 34</li>
 <li>Data Mining Light: 34</li>
 <li>Founding Father: 34</li>
 <li>Handhunter: 34</li>
-<li>Hardium Helm: 34</li>
-<li>Marsupial Muzzle: 34</li>
-<li>Prancer's Pride: 34</li>
 <li>Red Army Robin: 34</li>
 <li>Steel-Toed Stompers: 34</li>
 <li>Broadband Bonnet: 35</li>
 <li>Cadaver's Capper: 35</li>
+<li>Hardium Helm: 35</li>
+<li>Marsupial Muzzle: 35</li>
 <li>Mustachioed Mann: 35</li>
 <li>Noble Nickel Amassment of Hats: 35</li>
-<li>Weather Master: 35</li>
+<li>Prancer's Pride: 35</li>
 <li>Base Metal Billycock: 36</li>
-<li>Garlic Flank Stake: 36</li>
 <li>Hidden Dragon: 36</li>
-<li>Mann of the House: 36</li>
+<li>Weather Master: 36</li>
 <li>Big Steel Jaw of Summer Fun: 37</li>
 <li>Emerald Jarate: 37</li>
+<li>Garlic Flank Stake: 37</li>
+<li>Mann of the House: 37</li>
 <li>Reindoonicorn: 37</li>
 <li>Candleer: 38</li>
 <li>Gridiron Guardian: 38</li>
-<li>Pickled Paws: 38</li>
-<li>Ritzy Rick's Hair Fixative: 38</li>
 <li>Dry Gulch Gulp: 39</li>
-<li>Employee of the Mmmph: 39</li>
-<li>External Organ: 39</li>
 <li>Foul Cowl: 39</li>
+<li>Pickled Paws: 39</li>
+<li>Ritzy Rick's Hair Fixative: 39</li>
 <li>Scrumpy Strongbox: 39</li>
 <li>Bootleg Base Metal Billycock: 40</li>
+<li>Employee of the Mmmph: 40</li>
+<li>External Organ: 40</li>
 <li>Halloweiner: 40</li>
 <li>Stately Steel Toe: 40</li>
 <li>War on Smissmas Battle Hood: 40</li>
 <li>Cyborg Stunt Helmet: 41</li>
 <li>Doctor's Sack: 41</li>
-<li>Faun Feet: 41</li>
 <li>Lurker's Leathers: 41</li>
 <li>Modest Metal Pile of Scrap: 41</li>
 <li>Trencher's Topper: 41</li>
-<li>Tungsten Toque: 41</li>
 <li>Dead Cone: 42</li>
 <li>Eyeborg: 42</li>
-<li>Futankhamun: 42</li>
 <li>Lonesome Loafers: 42</li>
+<li>Tungsten Toque: 42</li>
 <li>Baseball Bill's Sports Shine: 43</li>
 <li>Biomech Backpack: 43</li>
 <li>Cool Breeze: 43</li>
 <li>Das Gutenkutteharen: 43</li>
-<li>Mutton Mann: 43</li>
+<li>Faun Feet: 43</li>
 <li>Nightmare Hunter: 43</li>
 <li>Texas Slim's Dome Shine: 43</li>
 <li>Trencher's Tunic: 43</li>
 <li>Vampire Makeover: 43</li>
 <li>Bolted Bombardier: 44</li>
 <li>Der Wintermantel: 44</li>
-<li>Shadowman's Shade: 44</li>
+<li>Futankhamun: 44</li>
+<li>Mutton Mann: 44</li>
 <li>FR-0: 45</li>
 <li>Hyperbaric Bowler: 45</li>
-<li>Metal Slug: 45</li>
+<li>Shadowman's Shade: 45</li>
 <li>Soldered Sensei: 45</li>
 <li>Bozo's Brogues: 46</li>
 <li>Compatriot: 46</li>
-<li>Copper's Hard Top: 46</li>
 <li>Festive Backburner: 46</li>
 <li>Griffin's Gog: 46</li>
 <li>Hellhunter's Headpiece: 46</li>
+<li>Metal Slug: 46</li>
 <li>Bull Locks: 47</li>
-<li>Crispy Golden Locks: 47</li>
-<li>Lucky Shot: 47</li>
-<li>Minsk Beef: 47</li>
 <li>Moccasin Machinery: 47</li>
 <li>Baron von Havenaplane: 48</li>
 <li>Carl: 48</li>
+<li>Copper's Hard Top: 48</li>
+<li>Crispy Golden Locks: 48</li>
 <li>Fortune Hunter: 48</li>
 <li>Hive Minder: 48</li>
 <li>Jumper's Jeepcap: 48</li>
-<li>Mann of Reason: 48</li>
+<li>Lucky Shot: 48</li>
 <li>Scaly Scrapers: 48</li>
-<li>Ye Oiled Baker Boy: 48</li>
 <li>Bot Dogger: 49</li>
 <li>Das Naggenvatcher: 49</li>
 <li>Grub Grenades: 49</li>
-<li>Rugged Respirator: 49</li>
+<li>Mann of Reason: 49</li>
+<li>Minsk Beef: 49</li>
+<li>Ye Oiled Baker Boy: 49</li>
 <li>Bolgan: 50</li>
-<li>Carrion Companion: 50</li>
-<li>Eliminator's Safeguard: 50</li>
 <li>Respectless Robo-Glove: 50</li>
-<li>Fowl Fists: 51</li>
-<li>Steel Pipes: 51</li>
-<li>Sultan's Ceremonial: 51</li>
+<li>Rugged Respirator: 50</li>
+<li>Carrion Companion: 51</li>
 <li>Festive Shotgun: 52</li>
-<li>Pounding Father: 52</li>
+<li>Fowl Fists: 52</li>
+<li>Steel Pipes: 52</li>
 <li>Chronoscarf: 53</li>
 <li>Clan Pride: 53</li>
 <li>Legend of Bugfoot: 53</li>
 <li>Manniversary Paper Hat: 53</li>
+<li>Pounding Father: 53</li>
 <li>Spectre's Spectacles: 53</li>
+<li>Sultan's Ceremonial: 53</li>
 <li>Yuri's Revenge: 53</li>
-<li>Corpsemopolitan: 54</li>
-<li>Hallowed Headcase: 54</li>
 <li>Heavy-Weight Champ: 54</li>
 <li>Horseless Headless Horsemann's Head: 54</li>
-<li>Tail From the Crypt: 54</li>
 <li>Void Monk Hair: 54</li>
+<li>Corpsemopolitan: 55</li>
 <li>Geisha Boy: 55</li>
+<li>Hallowed Headcase: 55</li>
 <li>Stylish DeGroot: 55</li>
-<li>Teddy Roosebelt: 55</li>
 <li>Timeless Topper: 55</li>
 <li>Trash Man: 55</li>
 <li>Full Metal Drill Hat: 56</li>
 <li>Hat of Undeniable Wealth And Respect: 56</li>
 <li>Rotation Sensation: 56</li>
 <li>Soldier's Stogie: 56</li>
+<li>Tail From the Crypt: 56</li>
+<li>Teddy Roosebelt: 56</li>
 <li>Cranial Conspiracy: 57</li>
 <li>Dictator: 57</li>
 <li>Dough Puncher: 57</li>
-<li>Joe-on-the-Go: 57</li>
+<li>Eliminator's Safeguard: 57</li>
 <li>Steel Shako: 57</li>
-<li>Toy Soldier: 57</li>
 <li>Ein: 58</li>
-<li>Titanium Tyrolean: 58</li>
+<li>Joe-on-the-Go: 58</li>
 <li>Towering Titanium Pillar of Hats: 58</li>
 <li>Ze Übermensch: 58</li>
 <li>Angel of Death: 59</li>
 <li>Bushi-Dou: 59</li>
-<li>Demoman Mask: 59</li>
 <li>Otolaryngologist's Mirror: 59</li>
-<li>Tsarboosh: 59</li>
-<li>Berliner's Bucket Helm: 60</li>
+<li>Titanium Tyrolean: 59</li>
+<li>Toy Soldier: 59</li>
+<li>Demoman Mask: 60</li>
 <li>Pencil Pusher: 60</li>
-<li>Scout Shako: 60</li>
 <li>Templar's Spirit: 60</li>
+<li>Tsarboosh: 60</li>
+<li>Berliner's Bucket Helm: 61</li>
 <li>Builder's Blueprints: 61</li>
 <li>Bullet Buzz: 61</li>
-<li>Egghead's Overalls: 61</li>
 <li>Napoleon Complex: 61</li>
-<li>Soviet Stitch-Up: 61</li>
-<li>Teutonic Toque: 61</li>
-<li>Triggerman's Tacticals: 61</li>
-<li>Ze Goggles: 61</li>
+<li>Scout Shako: 61</li>
+<li>Egghead's Overalls: 62</li>
 <li>Horned Honcho: 62</li>
-<li>Pop-Eyes: 62</li>
-<li>Purity Fist: 62</li>
-<li>Shaman's Skull: 62</li>
 <li>Shoestring Budget: 62</li>
+<li>Soviet Stitch-Up: 62</li>
 <li>Stormin' Norman: 62</li>
+<li>Teutonic Toque: 62</li>
+<li>Triggerman's Tacticals: 62</li>
 <li>Up Pyroscopes: 62</li>
-<li>Burning Bandana: 63</li>
+<li>Ze Goggles: 62</li>
 <li>Cold War Luchador: 63</li>
 <li>Cross-Comm Crash Helmet: 63</li>
-<li>Katyusha: 63</li>
-<li>Sign of the Wolf's School: 63</li>
-<li>Allbrero: 64</li>
+<li>Purity Fist: 63</li>
+<li>Burning Bandana: 64</li>
 <li>Combat Medic's Crusher Cap: 64</li>
 <li>Cryptic Keepsake: 64</li>
+<li>Katyusha: 64</li>
+<li>Shaman's Skull: 64</li>
 <li>Terrier Trousers: 64</li>
 <li>Buckaroo's Hat: 65</li>
-<li>Gaelic Golf Bag: 65</li>
-<li>Infernal Impaler: 65</li>
 <li>Killer's Kit: 65</li>
-<li>Sangu Sleeves: 65</li>
+<li>Sign of the Wolf's School: 65</li>
+<li>Allbrero: 66</li>
 <li>Bolted Bicorne: 66</li>
-<li>Combustible Kabuto: 66</li>
-<li>Sackcloth Spook: 66</li>
-<li>Shaolin Sash: 66</li>
+<li>Infernal Impaler: 66</li>
 <li>Sniper Mask: 66</li>
-<li>Arsonist Apparatus: 67</li>
+<li>Combustible Kabuto: 67</li>
+<li>Gaelic Golf Bag: 67</li>
 <li>Larrikin Robin: 67</li>
 <li>Medicine Manpurse: 67</li>
 <li>Practitioner's Processing Mask: 67</li>
+<li>Sangu Sleeves: 67</li>
+<li>Shaolin Sash: 67</li>
+<li>Arsonist Apparatus: 68</li>
 <li>Brock's Locks: 68</li>
 <li>Lucky No. 42: 68</li>
+<li>Sackcloth Spook: 68</li>
 <li>Smock Surgeon: 68</li>
-<li>Das Feelinbeterbager: 69</li>
-<li>Gym Rat: 69</li>
-<li>Nugget Noggin: 69</li>
-<li>One-Way Ticket: 69</li>
+<li>Das Feelinbeterbager: 70</li>
 <li>Frontier Flyboy: 70</li>
+<li>Gym Rat: 70</li>
+<li>Nugget Noggin: 70</li>
+<li>One-Way Ticket: 70</li>
 <li>Ward: 70</li>
-<li>Zipperface: 70</li>
-<li>Scotch Bonnet: 71</li>
-<li>Companion Cube Pin: 72</li>
+<li>Zipperface: 71</li>
 <li>Firewall Helmet: 72</li>
 <li>Minnesota Slick: 72</li>
 <li>Prize Plushy: 72</li>
+<li>Scotch Bonnet: 72</li>
 <li>Australium Eyelander: 73</li>
 <li>Bonk Leadwear: 73</li>
 <li>Bountiful Bow: 73</li>
@@ -482,833 +501,835 @@
 <li>Koala Compact: 73</li>
 <li>Medic Mask: 73</li>
 <li>Medical Mystery: 73</li>
-<li>Silver Bullets: 73</li>
-<li>Spy Mask: 73</li>
 <li>Vicious Visage: 73</li>
 <li>Candyman's Cap: 74</li>
-<li>Diamond Botkiller Knife Mk.I: 75</li>
+<li>Companion Cube Pin: 74</li>
+<li>Silver Bullets: 74</li>
+<li>Spy Mask: 74</li>
 <li>Dr. Gogglestache: 75</li>
-<li>Last Straw: 75</li>
 <li>Unidentified Following Object: 75</li>
-<li>Little Buddy: 76</li>
+<li>Last Straw: 76</li>
 <li>Pocket Horsemann: 76</li>
-<li>Stockbroker's Scarf: 76</li>
 <li>Birdcage: 77</li>
+<li>Little Buddy: 77</li>
 <li>Spectralnaut: 77</li>
-<li>Xeno Suit: 77</li>
-<li>Armored Authority: 78</li>
-<li>Der Maschinensoldaten-Helm: 78</li>
+<li>Stockbroker's Scarf: 77</li>
+<li>Diamond Botkiller Knife Mk.I: 78</li>
 <li>Forgotten King's Restless Head: 78</li>
 <li>Monster's Stompers: 78</li>
 <li>Rebel Rouser: 78</li>
-<li>Blood Botkiller Knife Mk.I: 79</li>
-<li>Chief Constable: 79</li>
-<li>Tin-1000: 79</li>
-<li>Ball-Kicking Boots: 80</li>
+<li>Xeno Suit: 78</li>
+<li>Tin-1000: 80</li>
+<li>Armored Authority: 81</li>
+<li>Ball-Kicking Boots: 81</li>
+<li>Blood Botkiller Knife Mk.I: 81</li>
+<li>Chief Constable: 81</li>
+<li>Der Maschinensoldaten-Helm: 81</li>
 <li>Marsupial Man: 81</li>
-<li>Mr. Mundee's Wild Ride: 81</li>
 <li>Tiny Texan: 81</li>
 <li>Battle Bird: 82</li>
 <li>Engineer Mask: 82</li>
 <li>Falconer: 82</li>
 <li>Gaiter Guards: 82</li>
-<li>Grisly Gumbo: 82</li>
 <li>Helmet Without a Home: 82</li>
-<li>Janissary Ketche: 82</li>
+<li>Mr. Mundee's Wild Ride: 82</li>
 <li>Scout Mask: 82</li>
 <li>Soldier Mask: 82</li>
 <li>Treasure Hat: 82</li>
 <li>Area 451: 84</li>
 <li>Bubble Pipe: 84</li>
-<li>Cloud Crasher: 84</li>
-<li>Grenadier's Softcap: 84</li>
+<li>Grisly Gumbo: 84</li>
+<li>Janissary Ketche: 84</li>
 <li>Vita-Saw: 84</li>
-<li>Flared Frontiersman: 85</li>
-<li>B-ankh!: 87</li>
+<li>Grenadier's Softcap: 85</li>
+<li>Flared Frontiersman: 86</li>
+<li>Cloud Crasher: 87</li>
 <li>Dealer's Visor: 87</li>
-<li>Gold Botkiller Knife Mk.II: 87</li>
 <li>Pom-Pommed Provocateur: 87</li>
 <li>Pyro Mask: 87</li>
-<li>Sydney Straw Boat: 87</li>
 <li>Brain Bucket: 88</li>
-<li>Gold Botkiller Knife Mk.I: 88</li>
-<li>Hardy Laurel: 88</li>
-<li>Western Wear: 88</li>
-<li>Apparatchik's Apparel: 89</li>
+<li>Sydney Straw Boat: 88</li>
+<li>B-ankh!: 89</li>
+<li>Gold Botkiller Knife Mk.I: 89</li>
 <li>Pilotka: 89</li>
 <li>Sammy Cap: 89</li>
 <li>Cheet Sheet: 90</li>
+<li>Gold Botkiller Knife Mk.II: 90</li>
 <li>Guano: 90</li>
 <li>Iron Fist: 90</li>
-<li>Magnificent Mongolian: 90</li>
-<li>Bloke's Bucket Hat: 91</li>
+<li>Western Wear: 90</li>
 <li>Bozo's Bouffant: 91</li>
-<li>Die Regime-Panzerung: 91</li>
-<li>Glasgow Great Helm: 91</li>
-<li>Heavy's Hockey Hair: 91</li>
-<li>Professional's Panama: 91</li>
-<li>Squid's Lid: 91</li>
-<li>Lacking Moral Fiber Mask: 92</li>
+<li>Hardy Laurel: 91</li>
+<li>Glasgow Great Helm: 92</li>
+<li>Heavy's Hockey Hair: 92</li>
+<li>Professional's Panama: 92</li>
+<li>Squid's Lid: 92</li>
 <li>Tyrantium Helmet: 92</li>
+<li>Apparatchik's Apparel: 93</li>
+<li>Bloke's Bucket Hat: 93</li>
 <li>Brim-Full of Bullets: 93</li>
-<li>Cauterizer's Caudal Appendage: 93</li>
+<li>Die Regime-Panzerung: 93</li>
 <li>Gold Botkiller Flame Thrower Mk.I: 93</li>
+<li>Magnificent Mongolian: 93</li>
 <li>Blind Justice: 94</li>
+<li>Cauterizer's Caudal Appendage: 94</li>
+<li>Lacking Moral Fiber Mask: 94</li>
 <li>Vampyro: 94</li>
-<li>Abhorrent Appendages: 95</li>
-<li>Macabre Mask: 95</li>
-<li>Ol' Snaggletooth: 95</li>
 <li>Stainless Pot: 95</li>
 <li>Teutonkahmun: 95</li>
-<li>Flair!: 96</li>
-<li>Gold Botkiller Minigun Mk.II: 96</li>
-<li>Mr. Juice: 96</li>
+<li>Abhorrent Appendages: 96</li>
+<li>Macabre Mask: 96</li>
+<li>Ol' Snaggletooth: 96</li>
 <li>Runner's Warm-Up: 96</li>
-<li>U-clank-a: 96</li>
-<li>Wet Works: 96</li>
 <li>Bone Dome: 97</li>
+<li>Flair!: 97</li>
 <li>Gold Botkiller Flame Thrower Mk.II: 97</li>
+<li>Gold Botkiller Minigun Mk.II: 97</li>
+<li>Mr. Juice: 97</li>
 <li>Pugilist's Protector: 97</li>
-<li>Scoper's Smoke: 97</li>
-<li>Texas Tin-Gallon: 97</li>
-<li>Garden Bristles: 98</li>
+<li>U-clank-a: 97</li>
 <li>Googly Gazer: 98</li>
-<li>Handyman's Handle: 98</li>
 <li>Huntsman's Essentials: 98</li>
-<li>Pampered Pyro: 98</li>
 <li>Polly Putrid: 98</li>
 <li>Postal Pummeler: 98</li>
 <li>Scrap Pack: 98</li>
-<li>Virus Doctor: 98</li>
+<li>Texas Tin-Gallon: 98</li>
+<li>Wet Works: 98</li>
+<li>Garden Bristles: 99</li>
+<li>Scoper's Smoke: 99</li>
+<li>Virus Doctor: 99</li>
 <li>Barely-Melted Capacitor: 100</li>
+<li>Handyman's Handle: 100</li>
 <li>Idea Tube: 100</li>
-<li>Letch's LED: 100</li>
-<li>Medic's Mountain Cap: 100</li>
-<li>Peacenik's Ponytail: 100</li>
-<li>Bushman's Boonie: 101</li>
+<li>Pampered Pyro: 100</li>
 <li>Coupe D'isaster: 101</li>
-<li>Escapist: 101</li>
 <li>Grimm Hatte: 101</li>
 <li>Hot Dogger: 101</li>
-<li>Counterfeit Billycock: 102</li>
+<li>Letch's LED: 101</li>
+<li>Medic's Mountain Cap: 101</li>
+<li>Peacenik's Ponytail: 101</li>
 <li>Cuban Bristle Crisis: 102</li>
-<li>Highland High Heels: 102</li>
-<li>Marshall's Mutton Chops: 102</li>
+<li>Escapist: 102</li>
 <li>Salty Dog: 102</li>
-<li>Valley Forge: 102</li>
-<li>Stereoscopic Shades: 103</li>
-<li>Blood Botkiller Minigun Mk.I: 104</li>
-<li>Dark Falkirk Helm: 104</li>
-<li>Flip-Flops: 104</li>
+<li>Bushman's Boonie: 103</li>
+<li>Counterfeit Billycock: 103</li>
+<li>Highland High Heels: 103</li>
+<li>Marshall's Mutton Chops: 103</li>
+<li>Valley Forge: 103</li>
 <li>Furious Fukaamigasa: 104</li>
-<li>Hound's Hood: 104</li>
-<li>Frontier Djustice: 105</li>
-<li>Ninja Cowl: 105</li>
+<li>Stereoscopic Shades: 104</li>
+<li>Dark Falkirk Helm: 105</li>
+<li>Flip-Flops: 105</li>
+<li>Hound's Hood: 105</li>
+<li>Blood Botkiller Minigun Mk.I: 106</li>
 <li>Human Cannonball: 106</li>
+<li>Frontier Djustice: 107</li>
 <li>Gas Guzzler: 107</li>
-<li>Stealth Steeler: 107</li>
-<li>Carious Chameleon: 108</li>
-<li>Gold Botkiller Sniper Rifle Mk.II: 108</li>
+<li>Ninja Cowl: 107</li>
 <li>Quoth: 108</li>
 <li>Slick Cut: 108</li>
-<li>Sober Stuntman: 108</li>
-<li>Trickster's Turnout Gear: 108</li>
-<li>Scarecrow: 109</li>
-<li>Archer's Groundings: 110</li>
+<li>Stealth Steeler: 109</li>
 <li>Aviator Assassin: 110</li>
-<li>Hetman's Headpiece: 110</li>
+<li>Carious Chameleon: 110</li>
+<li>Gold Botkiller Sniper Rifle Mk.II: 110</li>
+<li>Scarecrow: 110</li>
 <li>Second Opinion: 110</li>
 <li>Smoking Skid Lid: 110</li>
-<li>Battle Bob: 112</li>
-<li>Beast From Below: 112</li>
-<li>Einstein: 112</li>
+<li>Sober Stuntman: 110</li>
+<li>Trickster's Turnout Gear: 110</li>
+<li>Hetman's Headpiece: 111</li>
 <li>German Gonzila: 112</li>
-<li>Ghost of Spies Checked Past: 112</li>
 <li>Gold Botkiller Minigun Mk.I: 112</li>
-<li>Leftover Trap: 112</li>
 <li>Pocket Pyro: 112</li>
+<li>Beast From Below: 113</li>
 <li>Diamond Botkiller Minigun Mk.I: 113</li>
+<li>Einstein: 113</li>
+<li>Ghost of Spies Checked Past: 113</li>
 <li>Half-Pipe Hurdler: 113</li>
-<li>L'Inspecteur: 113</li>
-<li>Le Party Phantom: 113</li>
-<li>Triad Trinket: 113</li>
-<li>Bombing Run: 114</li>
+<li>Leftover Trap: 113</li>
+<li>Battle Bob: 114</li>
 <li>Bootie Time: 114</li>
-<li>Frenchman's Formals: 114</li>
-<li>Gothic Guise: 114</li>
-<li>Shooter's Sola Topi: 114</li>
-<li>Professor's Peculiarity: 115</li>
-<li>Shahanshah: 115</li>
-<li>Big Elfin Deal: 116</li>
+<li>L'Inspecteur: 114</li>
+<li>Le Party Phantom: 114</li>
+<li>Frenchman's Formals: 115</li>
+<li>Gothic Guise: 115</li>
+<li>Shooter's Sola Topi: 115</li>
+<li>Triad Trinket: 115</li>
 <li>Blood Botkiller Sniper Rifle Mk.I: 116</li>
+<li>Bombing Run: 116</li>
 <li>Headtaker's Hood: 116</li>
-<li>Powdered Practitioner: 116</li>
-<li>Scottish Handshake: 116</li>
-<li>Blood Botkiller Stickybomb Launcher Mk.I: 117</li>
+<li>Shahanshah: 116</li>
 <li>Bounty Hat: 117</li>
-<li>Company Man: 117</li>
 <li>Gold Botkiller Sniper Rifle Mk.I: 117</li>
-<li>Hooded Haunter: 117</li>
-<li>Soul of 'Spensers Past: 117</li>
-<li>Spellbinder's Bonnet: 117</li>
+<li>Powdered Practitioner: 117</li>
+<li>Scottish Handshake: 117</li>
+<li>Archer's Groundings: 118</li>
+<li>Big Elfin Deal: 118</li>
+<li>Blood Botkiller Stickybomb Launcher Mk.I: 118</li>
+<li>Company Man: 118</li>
 <li>Das Blutliebhaber: 118</li>
-<li>Freedom Feathers: 118</li>
+<li>Hooded Haunter: 118</li>
 <li>Lord Cockswain's Pith Helmet: 118</li>
-<li>Lumbricus Lid: 118</li>
+<li>Professor's Peculiarity: 118</li>
 <li>Rimmed Raincatcher: 118</li>
-<li>Well-Rounded Rifleman: 118</li>
-<li>Big Chief: 120</li>
+<li>Soul of 'Spensers Past: 118</li>
+<li>Spellbinder's Bonnet: 119</li>
+<li>Well-Rounded Rifleman: 119</li>
+<li>Freedom Feathers: 120</li>
+<li>Lumbricus Lid: 120</li>
 <li>Festive Bat: 121</li>
-<li>Gold Botkiller Scattergun Mk.II: 121</li>
 <li>Nose Candy: 121</li>
-<li>Slo-Poke: 121</li>
 <li>Toss-Proof Towel: 121</li>
-<li>Horrific Headsplitter: 122</li>
+<li>Big Chief: 122</li>
+<li>Slo-Poke: 122</li>
+<li>Gold Botkiller Scattergun Mk.II: 123</li>
 <li>Mask of the Shaman: 124</li>
-<li>Harmburg: 125</li>
 <li>Heavy Lifter: 125</li>
-<li>Outdoorsman: 125</li>
+<li>Horrific Headsplitter: 125</li>
 <li>Dr. Whoa: 127</li>
-<li>Gold Botkiller Stickybomb Launcher Mk.II: 127</li>
+<li>Outdoorsman: 127</li>
 <li>War Goggles: 127</li>
 <li>Coffin Kit: 128</li>
-<li>Ol' Geezer: 128</li>
-<li>Mining Light: 129</li>
-<li>Hotrod: 130</li>
+<li>Harmburg: 128</li>
+<li>Ol' Geezer: 129</li>
+<li>Gold Botkiller Stickybomb Launcher Mk.II: 130</li>
 <li>Industrial Festivizer: 130</li>
-<li>Juggernaut Jacket: 130</li>
-<li>Tartan Shade: 130</li>
-<li>Grease Monkey: 131</li>
-<li>Milkman: 131</li>
-<li>Pyrotechnic Tote: 131</li>
+<li>Hotrod: 131</li>
+<li>Juggernaut Jacket: 131</li>
+<li>Tartan Shade: 131</li>
 <li>Tartan Tyrolean: 131</li>
-<li>Hard Counter: 132</li>
+<li>Grease Monkey: 132</li>
 <li>Jingle Belt: 132</li>
-<li>Tavish DeGroot Experience: 132</li>
-<li>Exorcizor: 133</li>
-<li>Gentleman's Gatsby: 133</li>
-<li>Pirate Bandana: 133</li>
+<li>Milkman: 132</li>
+<li>Mining Light: 132</li>
+<li>Pyrotechnic Tote: 132</li>
+<li>Hard Counter: 133</li>
 <li>Waxy Wayfinder: 133</li>
-<li>Diamond Botkiller Sniper Rifle Mk.I: 134</li>
-<li>Tam O' Shanter: 134</li>
+<li>Exorcizor: 134</li>
+<li>Pirate Bandana: 134</li>
+<li>Tavish DeGroot Experience: 134</li>
 <li>Third Degree: 134</li>
 <li>Au Courant Assassin: 135</li>
 <li>Heer's Helmet: 135</li>
-<li>L'homme Burglerre: 135</li>
-<li>Samur-Eye: 135</li>
-<li>Li'l Snaggletooth: 136</li>
-<li>Noble Amassment of Hats: 136</li>
-<li>Archimedes the Undying: 137</li>
+<li>Tam O' Shanter: 135</li>
+<li>Diamond Botkiller Sniper Rifle Mk.I: 136</li>
+<li>Gentleman's Gatsby: 136</li>
+<li>L'homme Burglerre: 136</li>
 <li>Barnstormer: 137</li>
 <li>Chronomancer: 137</li>
-<li>Dark Helm: 138</li>
-<li>King of Scotland Cape: 138</li>
-<li>Madame Dixie: 138</li>
-<li>Quadwrangler: 138</li>
-<li>Sight for Sore Eyes: 138</li>
-<li>Intangible Ascot: 139</li>
-<li>Medimedes: 139</li>
-<li>Beastly Bonnet: 143</li>
-<li>Gold Botkiller Stickybomb Launcher Mk.I: 143</li>
+<li>Noble Amassment of Hats: 138</li>
+<li>Samur-Eye: 138</li>
+<li>Archimedes the Undying: 139</li>
+<li>King of Scotland Cape: 139</li>
+<li>Li'l Snaggletooth: 139</li>
+<li>Quadwrangler: 139</li>
+<li>Madame Dixie: 140</li>
+<li>Medimedes: 140</li>
+<li>Sight for Sore Eyes: 140</li>
+<li>Dark Helm: 141</li>
+<li>Intangible Ascot: 141</li>
 <li>Warrior's Spirit: 143</li>
-<li>Attendant: 144</li>
 <li>Private Eye: 144</li>
-<li>Carouser's Capotain: 145</li>
+<li>Beastly Bonnet: 145</li>
 <li>Diamond Botkiller Stickybomb Launcher Mk.I: 145</li>
-<li>Li'l Dutchman: 145</li>
+<li>Gold Botkiller Stickybomb Launcher Mk.I: 145</li>
 <li>Vampiric Vesture: 145</li>
-<li>Blood Botkiller Scattergun Mk.I: 146</li>
-<li>Diamond Botkiller Scattergun Mk.I: 146</li>
+<li>Attendant: 146</li>
+<li>Li'l Dutchman: 146</li>
 <li>Backpack Broiler: 147</li>
-<li>Bear Necessities: 147</li>
-<li>Scottish Snarl: 147</li>
-<li>Fallen Angel: 148</li>
-<li>Sun-on-a-Stick: 148</li>
-<li>Brainiac Hairpiece: 149</li>
-<li>Creature's Grin: 149</li>
-<li>Candy Cane: 150</li>
-<li>Cap'n Calamari: 150</li>
-<li>Sky Captain: 150</li>
+<li>Blood Botkiller Scattergun Mk.I: 147</li>
+<li>Diamond Botkiller Scattergun Mk.I: 147</li>
+<li>Bear Necessities: 148</li>
+<li>Carouser's Capotain: 148</li>
+<li>Fallen Angel: 149</li>
+<li>Scottish Snarl: 149</li>
+<li>Sun-on-a-Stick: 149</li>
 <li>Whiskered Gentleman: 150</li>
-<li>Borscht Belt: 151</li>
+<li>Brainiac Hairpiece: 151</li>
+<li>Candy Cane: 151</li>
+<li>Creature's Grin: 151</li>
 <li>Unknown Monkeynaut: 151</li>
-<li>Whirly Warrior: 151</li>
+<li>Borscht Belt: 152</li>
+<li>Cap'n Calamari: 152</li>
+<li>Sky Captain: 152</li>
+<li>Whirly Warrior: 152</li>
 <li>Antarctic Researcher: 153</li>
-<li>Summer Hat: 153</li>
-<li>Nine-Pipe Problem: 154</li>
-<li>Danger: 155</li>
+<li>Summer Hat: 154</li>
 <li>Cotton Head: 156</li>
 <li>Pip-Boy: 156</li>
-<li>Snaggletoothed Stetson: 156</li>
-<li>Tartan Spartan: 156</li>
 <li>Bonk Boy: 157</li>
-<li>Kiss King: 157</li>
-<li>Blood Botkiller Wrench Mk.I: 158</li>
-<li>Gentleman's Ushanka: 158</li>
+<li>Danger: 157</li>
+<li>Nine-Pipe Problem: 157</li>
+<li>Kiss King: 158</li>
 <li>Sir Shootsalot: 158</li>
-<li>Tippler's Tricorne: 158</li>
+<li>Tartan Spartan: 158</li>
 <li>Colonel's Coat: 159</li>
-<li>Air Raider: 160</li>
-<li>Eviction Notice: 160</li>
-<li>Spine-Chilling Skull 2011: 160</li>
+<li>Snaggletoothed Stetson: 159</li>
+<li>Gentleman's Ushanka: 160</li>
+<li>Air Raider: 161</li>
 <li>Australium SMG: 161</li>
-<li>Mecha-Medes: 161</li>
-<li>Razor Cut: 161</li>
-<li>Stovepipe Sniper Shako: 161</li>
-<li>Crocleather Slouch: 162</li>
-<li>Gold Botkiller Scattergun Mk.I: 163</li>
-<li>Dragonborn Helmet: 164</li>
-<li>Familiar Fez: 164</li>
-<li>Soldier's Slope Scopers: 165</li>
+<li>Blood Botkiller Wrench Mk.I: 161</li>
+<li>Tippler's Tricorne: 161</li>
+<li>Mecha-Medes: 162</li>
+<li>Razor Cut: 162</li>
+<li>Spine-Chilling Skull 2011: 162</li>
+<li>Eviction Notice: 163</li>
+<li>Stovepipe Sniper Shako: 163</li>
+<li>Crocleather Slouch: 164</li>
+<li>Dragonborn Helmet: 165</li>
 <li>Chucklenuts: 166</li>
-<li>Tuxxy: 166</li>
-<li>Diamond Botkiller Wrench Mk.I: 167</li>
-<li>Liquor Locker: 167</li>
-<li>Nessie's Nine Iron: 167</li>
+<li>Familiar Fez: 166</li>
+<li>Soldier's Slope Scopers: 166</li>
+<li>Tuxxy: 167</li>
 <li>Archimedes: 168</li>
-<li>Australium Axtinguisher: 168</li>
-<li>Burny's Boney Bonnet: 168</li>
-<li>Aqua Flops: 169</li>
+<li>Diamond Botkiller Wrench Mk.I: 168</li>
+<li>Gold Botkiller Scattergun Mk.I: 168</li>
+<li>Nessie's Nine Iron: 168</li>
+<li>Australium Axtinguisher: 169</li>
 <li>Hair of the Dog: 169</li>
+<li>Liquor Locker: 169</li>
+<li>Aqua Flops: 170</li>
 <li>Hermes: 170</li>
 <li>Sprinting Cephalopod: 170</li>
-<li>Frenchman's Beret: 172</li>
-<li>Horsemann's Hand-Me-Down: 172</li>
-<li>Neckwear Headwear: 172</li>
+<li>Burny's Boney Bonnet: 171</li>
+<li>Pop-eyes: 172</li>
 <li>Belgian Detective: 173</li>
-<li>Dread Hiding Hood: 173</li>
-<li>Boston Boom-Bringer: 174</li>
-<li>Birdie Bonnet: 176</li>
-<li>Virtual Reality Headset: 176</li>
+<li>Horsemann's Hand-Me-Down: 173</li>
+<li>Neckwear Headwear: 173</li>
+<li>Frenchman's Beret: 174</li>
+<li>Dread Hiding Hood: 175</li>
+<li>Boston Boom-Bringer: 176</li>
+<li>Virtual Reality Headset: 177</li>
 <li>Blood Botkiller Flame Thrower Mk.I: 178</li>
-<li>Glob: 178</li>
-<li>Gold Botkiller Wrench Mk.I: 178</li>
 <li>Polar Pullover: 178</li>
-<li>Can Opener: 179</li>
-<li>Diamond Botkiller Flame Thrower Mk.I: 179</li>
 <li>Face Plante: 179</li>
+<li>Glob: 179</li>
+<li>Gold Botkiller Wrench Mk.I: 179</li>
 <li>Australium Tomislav: 180</li>
-<li>Fashionable Megalomaniac: 180</li>
-<li>Maul: 180</li>
-<li>Backbiter's Billycock: 182</li>
-<li>Pocket Purrer: 182</li>
-<li>Red Socks: 182</li>
-<li>Ticket Boy: 183</li>
-<li>Australium Frontier Justice: 184</li>
-<li>Dead Little Buddy: 184</li>
-<li>Wrap Battler: 184</li>
-<li>Horace: 185</li>
-<li>Manneater: 185</li>
+<li>Birdie Bonnet: 180</li>
+<li>Can Opener: 180</li>
+<li>Fashionable Megalomaniac: 181</li>
+<li>Maul: 181</li>
+<li>Diamond Botkiller Flame Thrower Mk.I: 182</li>
+<li>Backbiter's Billycock: 184</li>
+<li>Red Socks: 184</li>
+<li>Ticket Boy: 184</li>
+<li>Australium Frontier Justice: 185</li>
+<li>Dead Little Buddy: 185</li>
+<li>Pocket Purrer: 185</li>
 <li>Sengoku Scorcher: 185</li>
+<li>Wrap Battler: 185</li>
 <li>Australium Blutsauger: 186</li>
-<li>Pardner's Pompadour: 186</li>
-<li>Tuque or Treat: 186</li>
-<li>Siberian Sophisticate: 187</li>
+<li>Horace: 186</li>
+<li>Manneater: 186</li>
+<li>Pardner's Pompadour: 187</li>
+<li>Tuque or Treat: 187</li>
 <li>Antlers: 188</li>
 <li>Business Casual: 188</li>
-<li>Whoopee Cap: 188</li>
-<li>Centurion: 189</li>
-<li>Head Hunter: 189</li>
-<li>Supernatural Stalker: 189</li>
-<li>Australium Force-A-Nature: 190</li>
+<li>Siberian Sophisticate: 188</li>
+<li>Centurion: 190</li>
 <li>Combat Slacks: 190</li>
-<li>Merc's Pride Scarf: 190</li>
-<li>Chicken Kiev: 191</li>
-<li>Das Fantzipantzen: 191</li>
+<li>Head Hunter: 190</li>
+<li>Australium Force-A-Nature: 191</li>
 <li>Lone Star: 191</li>
-<li>Large Luchadore: 193</li>
-<li>Das Maddendoktor: 194</li>
-<li>Warsworn Helmet: 194</li>
+<li>Supernatural Stalker: 191</li>
+<li>Das Fantzipantzen: 192</li>
+<li>Whoopee Cap: 192</li>
+<li>Chicken Kiev: 193</li>
+<li>Merc's Pride Scarf: 194</li>
 <li>Larval Lid: 195</li>
-<li>Nanobalaclava: 195</li>
-<li>Pyro's Beanie: 196</li>
-<li>Grizzled Growth: 197</li>
-<li>Heavy Duty Rag: 197</li>
-<li>Wrangler: 197</li>
+<li>Warsworn Helmet: 195</li>
+<li>Das Maddendoktor: 196</li>
+<li>Large Luchadore: 196</li>
+<li>Nanobalaclava: 196</li>
+<li>Pop-Eyes: 196</li>
+<li>Pyro's Beanie: 197</li>
 <li>Australium Ambassador: 198</li>
-<li>Whiskey Bib: 198</li>
-<li>Liquidator's Lid: 200</li>
+<li>Heavy Duty Rag: 199</li>
+<li>Whiskey Bib: 199</li>
 <li>Mair Mask: 200</li>
-<li>Pyrovision Goggles: 200</li>
-<li>Claidheamh Mòr: 203</li>
+<li>Grizzled Growth: 201</li>
+<li>Wrangler: 201</li>
+<li>Liquidator's Lid: 202</li>
+<li>Pyrovision Goggles: 203</li>
 <li>Bolt Boy: 204</li>
-<li>Crosslinker's Coil: 204</li>
-<li>Football Helmet: 204</li>
-<li>Soviet Gentleman: 205</li>
-<li>Blood Botkiller Rocket Launcher Mk.I: 206</li>
-<li>Trash Toter: 206</li>
-<li>Federal Casemaker: 208</li>
-<li>Hero's Hachimaki: 208</li>
-<li>Honcho's Headgear: 208</li>
-<li>MK 50: 208</li>
-<li>Cremator's Conscience: 209</li>
-<li>Gold Botkiller Rocket Launcher Mk.II: 209</li>
-<li>Gold Botkiller Wrench Mk.II: 210</li>
-<li>Pocket Heavy: 210</li>
-<li>Digit Divulger: 211</li>
+<li>Claidheamh Mòr: 205</li>
+<li>Blood Botkiller Rocket Launcher Mk.I: 207</li>
+<li>Crosslinker's Coil: 207</li>
+<li>Soviet Gentleman: 207</li>
+<li>MK 50: 209</li>
+<li>Trash Toter: 209</li>
+<li>Cremator's Conscience: 210</li>
+<li>Federal Casemaker: 210</li>
+<li>Football Helmet: 210</li>
+<li>Hero's Hachimaki: 211</li>
+<li>Honcho's Headgear: 211</li>
 <li>Medi-Mask: 211</li>
+<li>Pocket Heavy: 211</li>
 <li>Das Ubersternmann: 212</li>
+<li>Digit Divulger: 212</li>
+<li>Gold Botkiller Rocket Launcher Mk.II: 212</li>
 <li>Bonesaw: 213</li>
 <li>Caribbean Conqueror: 213</li>
-<li>Magistrate's Mullet: 213</li>
-<li>One-Man Army: 214</li>
-<li>Horrific Head of Hare: 216</li>
-<li>Scotch Saver: 216</li>
+<li>Gold Botkiller Wrench Mk.II: 213</li>
+<li>Magistrate's Mullet: 215</li>
+<li>One-Man Army: 216</li>
 <li>Under Cover: 216</li>
 <li>Vox Diabolus: 216</li>
-<li>Capo's Capper: 217</li>
+<li>Scotch Saver: 217</li>
 <li>Lollichop Licker: 218</li>
-<li>Caffeine Cooler: 219</li>
+<li>Horrific Head of Hare: 219</li>
+<li>Capo's Capper: 220</li>
 <li>Rusty Reaper: 220</li>
-<li>Golden Garment: 221</li>
+<li>Caffeine Cooler: 221</li>
+<li>Golden Garment: 222</li>
 <li>Person in the Iron Mask: 222</li>
-<li>Diamond Botkiller Rocket Launcher Mk.I: 226</li>
-<li>Gold Botkiller Rocket Launcher Mk.I: 226</li>
-<li>Black Watch: 227</li>
-<li>Hundkopf: 227</li>
-<li>Short Circuit: 227</li>
-<li>Soot Suit: 228</li>
+<li>Black Watch: 228</li>
+<li>Short Circuit: 228</li>
+<li>Gold Botkiller Rocket Launcher Mk.I: 229</li>
+<li>Hundkopf: 229</li>
+<li>Soot Suit: 229</li>
 <li>Swagman's Swatter: 229</li>
-<li>Planeswalker Goggles: 230</li>
-<li>Ground Control: 233</li>
-<li>Winger: 233</li>
-<li>Greased Lightning: 234</li>
-<li>Stout Shako: 234</li>
+<li>Diamond Botkiller Rocket Launcher Mk.I: 230</li>
+<li>Planeswalker Goggles: 232</li>
+<li>Greased Lightning: 235</li>
+<li>Winger: 235</li>
+<li>Stout Shako: 236</li>
+<li>Ground Control: 237</li>
 <li>Sole Mate: 239</li>
 <li>DethKapp: 240</li>
 <li>A Rather Festive Tree: 241</li>
-<li>Big Country: 241</li>
 <li>Das Hazmattenhatten: 241</li>
-<li>Rogue's Robe: 242</li>
 <li>Made Man: 243</li>
-<li>Australium Knife: 246</li>
-<li>Blizzard Breather: 246</li>
-<li>Silver Botkiller Knife Mk.I: 247</li>
-<li>Mann-Bird of Aberdeen: 249</li>
-<li>Blazing Bull: 251</li>
+<li>Rogue's Robe: 244</li>
+<li>Australium Knife: 247</li>
+<li>Big Country: 247</li>
+<li>Blizzard Breather: 247</li>
+<li>Mann-Bird of Aberdeen: 251</li>
 <li>Texas Half-Pants: 251</li>
-<li>Towering Pillar of Hats: 251</li>
-<li>Hurt Locher: 252</li>
-<li>Rust Botkiller Knife Mk.I: 255</li>
-<li>Deadliest Duckling: 256</li>
+<li>Blazing Bull: 253</li>
+<li>Hurt Locher: 253</li>
+<li>Towering Pillar of Hats: 253</li>
 <li>Kringle Collection: 258</li>
+<li>Rust Botkiller Knife Mk.I: 258</li>
+<li>Silver Botkiller Knife Mk.I: 258</li>
 <li>Spook Specs: 258</li>
-<li>Engineer's Cap: 259</li>
-<li>Hat With No Name: 262</li>
+<li>Deadliest Duckling: 259</li>
+<li>Engineer's Cap: 262</li>
 <li>Saxton Hale Mask: 262</li>
-<li>Five-Month Shadow: 264</li>
-<li>Special Eyes: 264</li>
-<li>Family Business: 266</li>
-<li>Fire Axe: 266</li>
-<li>Apoco-Fists: 267</li>
-<li>Big Kill: 267</li>
+<li>Hat With No Name: 264</li>
+<li>Special Eyes: 266</li>
+<li>Family Business: 267</li>
+<li>Fire Axe: 267</li>
+<li>Five-Month Shadow: 267</li>
 <li>Freedom Staff: 267</li>
-<li>Dark Age Defender: 270</li>
-<li>Gloves of Running Urgently: 270</li>
-<li>HazMat Headcase: 270</li>
-<li>Ruffled Ruprecht: 270</li>
+<li>Apoco-Fists: 268</li>
+<li>Big Kill: 268</li>
 <li>Dadliest Catch: 271</li>
-<li>Hottie's Hoodie: 271</li>
-<li>Manmelter: 271</li>
-<li>Wrap Assassin: 272</li>
-<li>Hillbilly Speed-Bump: 273</li>
-<li>Galvanized Gibus: 275</li>
-<li>Sharpened Volcano Fragment: 275</li>
-<li>Eye-Catcher: 276</li>
+<li>Ruffled Ruprecht: 271</li>
+<li>Dark Age Defender: 272</li>
+<li>Gloves of Running Urgently: 272</li>
+<li>HazMat Headcase: 273</li>
+<li>Manmelter: 273</li>
+<li>Wrap Assassin: 274</li>
+<li>Hillbilly Speed-Bump: 275</li>
+<li>Sharpened Volcano Fragment: 276</li>
 <li>Atomizer: 277</li>
-<li>Fruit Shoot: 278</li>
-<li>Spine-Chilling Skull: 278</li>
-<li>Flipped Trilby: 279</li>
-<li>Connoisseur's Cap: 280</li>
-<li>Australium Minigun: 282</li>
-<li>Crafty Hair: 282</li>
-<li>Lollichop: 282</li>
-<li>Glengarry Bonnet: 283</li>
-<li>Sergeant's Drill Hat: 284</li>
-<li>Ye Olde Baker Boy: 284</li>
-<li>Noh Mercy: 285</li>
+<li>Galvanized Gibus: 277</li>
+<li>Hottie's Hoodie: 277</li>
+<li>Eye-Catcher: 278</li>
+<li>Fruit Shoot: 279</li>
+<li>Flipped Trilby: 281</li>
+<li>Spine-Chilling Skull: 281</li>
+<li>Australium Minigun: 283</li>
+<li>Connoisseur's Cap: 283</li>
+<li>Crafty Hair: 284</li>
+<li>Lollichop: 285</li>
 <li>Buzz Killer: 286</li>
-<li>Holy Hunter: 287</li>
-<li>Australium Sniper Rifle: 288</li>
-<li>Tide Turner: 289</li>
-<li>Tipped Lid: 290</li>
-<li>Alien Cranium: 295</li>
-<li>Beep Boy: 295</li>
-<li>Fan O'War: 296</li>
-<li>Fed-Fightin' Fedora: 296</li>
-<li>Surgeon's Stahlhelm: 297</li>
-<li>Bunsen Brave: 298</li>
-<li>Prussian Pickelhaube: 298</li>
-<li>Master Mind: 301</li>
-<li>Rail Spikes: 301</li>
-<li>Shovel: 301</li>
-<li>Face Full of Festive: 303</li>
-<li>El Muchacho: 304</li>
-<li>Pop-eyes: 304</li>
-<li>Master's Yellow Belt: 306</li>
-<li>Robot Chicken Hat: 310</li>
-<li>Sneaky Spats of Sneaking: 314</li>
+<li>Glengarry Bonnet: 286</li>
+<li>Noh Mercy: 287</li>
+<li>Holy Hunter: 289</li>
+<li>Australium Sniper Rifle: 290</li>
+<li>Ye Olde Baker Boy: 290</li>
+<li>Sergeant's Drill Hat: 291</li>
+<li>Tide Turner: 292</li>
+<li>Tipped Lid: 293</li>
+<li>Beep Boy: 297</li>
+<li>Alien Cranium: 298</li>
+<li>Prussian Pickelhaube: 299</li>
+<li>Fan O'War: 300</li>
+<li>Bunsen Brave: 301</li>
+<li>Fed-Fightin' Fedora: 301</li>
+<li>Surgeon's Stahlhelm: 301</li>
+<li>Rail Spikes: 303</li>
+<li>Master Mind: 304</li>
+<li>Shovel: 304</li>
+<li>El Muchacho: 307</li>
+<li>Face Full of Festive: 307</li>
+<li>Master's Yellow Belt: 311</li>
+<li>Robot Chicken Hat: 312</li>
+<li>Sneaky Spats of Sneaking: 316</li>
 <li>Australium Stickybomb Launcher: 319</li>
-<li>Toowoomba Tunic: 319</li>
-<li>Deus Specs: 320</li>
-<li>Dead of Night: 321</li>
-<li>Endothermic Exowear: 322</li>
-<li>Lugermorph: 323</li>
-<li>Nunhood: 325</li>
-<li>Détective Noir: 326</li>
-<li>Prince Tavish's Crown: 327</li>
-<li>Trophy Belt: 327</li>
-<li>Fists of Steel: 328</li>
+<li>Deus Specs: 322</li>
+<li>Dead of Night: 323</li>
+<li>Lugermorph: 324</li>
+<li>Endothermic Exowear: 325</li>
+<li>Toowoomba Tunic: 325</li>
+<li>Prince Tavish's Crown: 328</li>
+<li>Détective Noir: 329</li>
+<li>Fists of Steel: 329</li>
+<li>Nunhood: 329</li>
+<li>Trophy Belt: 329</li>
 <li>Killing Gloves of Boxing: 333</li>
-<li>K-9 Mane: 334</li>
 <li>Cleaner's Carbine: 335</li>
-<li>Australium Scattergun: 336</li>
-<li>Chieftain's Challenge: 337</li>
-<li>Vive La France: 337</li>
-<li>Ethereal Hood: 338</li>
-<li>Shogun's Shoulder Guard: 338</li>
-<li>Chargin' Targe: 339</li>
-<li>Tough Stuff Muffs: 343</li>
-<li>Aperture Labs Hard Hat: 344</li>
-<li>Unarmed Combat: 344</li>
-<li>A Brush with Death: 345</li>
-<li>Righteous Bison: 345</li>
-<li>Demoman's Fro: 347</li>
-<li>Splendid Screen: 348</li>
-<li>Old Guadalajara: 350</li>
-<li>Safe'n'Sound: 351</li>
-<li>Hat of Cards: 352</li>
-<li>Scotsman's Stove Pipe: 354</li>
-<li>Festive Gloves of Running Urgently: 357</li>
-<li>Ebenezer: 359</li>
-<li>Respectless Rubber Glove: 359</li>
-<li>Homewrecker: 360</li>
+<li>Australium Scattergun: 337</li>
+<li>K-9 Mane: 339</li>
+<li>Vive La France: 339</li>
+<li>Chargin' Targe: 341</li>
+<li>Ethereal Hood: 341</li>
+<li>Shogun's Shoulder Guard: 341</li>
+<li>Chieftain's Challenge: 343</li>
+<li>Aperture Labs Hard Hat: 345</li>
+<li>Tough Stuff Muffs: 345</li>
+<li>Unarmed Combat: 345</li>
+<li>A Brush with Death: 347</li>
+<li>Righteous Bison: 347</li>
+<li>Splendid Screen: 350</li>
+<li>Demoman's Fro: 354</li>
+<li>Hat of Cards: 354</li>
+<li>Old Guadalajara: 355</li>
+<li>Safe'n'Sound: 355</li>
+<li>Festive Gloves of Running Urgently: 358</li>
+<li>Scotsman's Stove Pipe: 358</li>
 <li>Australium Grenade Launcher: 362</li>
-<li>Equalizer: 362</li>
-<li>Wanga Prick: 362</li>
-<li>Camera Beard: 365</li>
-<li>Rust Botkiller Minigun Mk.I: 368</li>
-<li>Cross-Comm Express: 369</li>
-<li>Idiot Box: 369</li>
-<li>Bonk Helm: 370</li>
-<li>Southie Shinobi: 371</li>
-<li>Rust Botkiller Sniper Rifle Mk.I: 372</li>
-<li>Earbuds: 373</li>
+<li>Ebenezer: 362</li>
+<li>Homewrecker: 363</li>
+<li>Respectless Rubber Glove: 363</li>
+<li>Equalizer: 364</li>
+<li>Wanga Prick: 364</li>
+<li>Camera Beard: 369</li>
+<li>Idiot Box: 371</li>
+<li>Rust Botkiller Minigun Mk.I: 371</li>
+<li>Bonk Helm: 372</li>
+<li>Southie Shinobi: 373</li>
+<li>Cross-Comm Express: 374</li>
 <li>Mantreads: 374</li>
-<li>Dillinger's Duffel: 375</li>
-<li>Ornament Armament: 380</li>
-<li>Australium Black Box: 381</li>
-<li>Silver Botkiller Flame Thrower Mk.I: 382</li>
+<li>Earbuds: 377</li>
+<li>Dillinger's Duffel: 378</li>
+<li>Rust Botkiller Sniper Rifle Mk.I: 381</li>
+<li>Australium Black Box: 382</li>
 <li>Gold Digger: 384</li>
-<li>Voodoo Juju: 386</li>
+<li>Ornament Armament: 384</li>
 <li>Cosa Nostra Cap: 387</li>
-<li>Silver Botkiller Knife Mk.II: 388</li>
+<li>Silver Botkiller Flame Thrower Mk.I: 387</li>
+<li>Silver Botkiller Knife Mk.II: 390</li>
 <li>Vintage Merryweather: 390</li>
-<li>Byte'd Beak: 391</li>
-<li>Officer's Ushanka: 391</li>
-<li>Rust Botkiller Flame Thrower Mk.I: 391</li>
-<li>Your Worst Nightmare: 391</li>
-<li>Boston Basher: 393</li>
-<li>Lone Survivor: 393</li>
-<li>Rogue's Col Roule: 393</li>
-<li>Front Runner: 395</li>
-<li>Heat of Winter: 397</li>
-<li>Silver Botkiller Sniper Rifle Mk.I: 398</li>
-<li>Tough Guy's Toque: 402</li>
-<li>Modest Pile of Hat: 403</li>
-<li>Silver Botkiller Minigun Mk.I: 405</li>
-<li>Last Breath: 406</li>
+<li>Voodoo Juju: 391</li>
+<li>Your Worst Nightmare: 392</li>
+<li>Byte'd Beak: 393</li>
+<li>Boston Basher: 394</li>
+<li>Rogue's Col Roule: 396</li>
+<li>Rust Botkiller Flame Thrower Mk.I: 396</li>
+<li>Front Runner: 397</li>
+<li>Lone Survivor: 397</li>
+<li>Officer's Ushanka: 397</li>
+<li>Heat of Winter: 398</li>
+<li>Silver Botkiller Sniper Rifle Mk.I: 403</li>
+<li>Modest Pile of Hat: 406</li>
+<li>Tough Guy's Toque: 406</li>
+<li>Last Breath: 408</li>
+<li>Silver Botkiller Minigun Mk.I: 409</li>
 <li>Solemn Vow: 409</li>
-<li>Buccaneer's Bicorne: 413</li>
-<li>Fists: 415</li>
-<li>Pain Train: 416</li>
-<li>Classified Coif: 417</li>
-<li>Cockfighter: 417</li>
-<li>Head Warmer: 418</li>
-<li>Level Three Chin: 419</li>
-<li>Reggaelator: 420</li>
-<li>Syringe Gun: 422</li>
-<li>Dr's Dapper Topper: 424</li>
-<li>Little Drummer Mann: 425</li>
-<li>Defiant Spartan: 429</li>
-<li>Deep Cover Operator: 434</li>
-<li>Menpo: 434</li>
-<li>Batter's Helmet: 437</li>
-<li>RoBro 3000: 438</li>
-<li>Three-Rune Blade: 440</li>
-<li>Champ Stamp: 444</li>
+<li>Fists: 416</li>
+<li>Pain Train: 417</li>
+<li>Buccaneer's Bicorne: 418</li>
+<li>Cockfighter: 418</li>
+<li>Classified Coif: 419</li>
+<li>Head Warmer: 419</li>
+<li>Reggaelator: 421</li>
+<li>Level Three Chin: 423</li>
+<li>Syringe Gun: 428</li>
+<li>Little Drummer Mann: 430</li>
+<li>Dr's Dapper Topper: 432</li>
+<li>Defiant Spartan: 433</li>
+<li>Deep Cover Operator: 435</li>
+<li>Menpo: 437</li>
+<li>Batter's Helmet: 440</li>
+<li>RoBro 3000: 440</li>
+<li>Three-Rune Blade: 442</li>
 <li>Back Scratcher: 445</li>
-<li>Neon Annihilator: 448</li>
-<li>Amputator: 449</li>
-<li>Napper's Respite: 451</li>
-<li>Unshaved Bear: 453</li>
-<li>Birdman of Australiacatraz: 454</li>
+<li>Champ Stamp: 447</li>
+<li>Neon Annihilator: 450</li>
+<li>Amputator: 452</li>
+<li>Unshaved Bear: 455</li>
+<li>Birdman of Australiacatraz: 456</li>
 <li>Festive Wrangler: 456</li>
-<li>Carbonado Botkiller Knife Mk.I: 457</li>
-<li>Beep Man: 458</li>
-<li>Breakneck Baggies: 458</li>
-<li>Brigade Helm: 463</li>
-<li>Cute Suit: 464</li>
-<li>Silver Botkiller Minigun Mk.II: 465</li>
+<li>Napper's Respite: 456</li>
+<li>Breakneck Baggies: 461</li>
+<li>Carbonado Botkiller Knife Mk.I: 461</li>
+<li>Beep Man: 462</li>
+<li>Brigade Helm: 465</li>
 <li>Bread Bite: 468</li>
-<li>Australium Wrench: 469</li>
-<li>Hound Dog: 470</li>
-<li>Rust Botkiller Stickybomb Launcher Mk.I: 470</li>
-<li>Frickin' Sweet Ninja Hood: 476</li>
-<li>Physician's Procedure Mask: 477</li>
-<li>Bat: 478</li>
-<li>Holy Mackerel: 478</li>
+<li>Cute Suit: 468</li>
+<li>Australium Wrench: 471</li>
+<li>Silver Botkiller Minigun Mk.II: 471</li>
+<li>Hound Dog: 473</li>
+<li>Rust Botkiller Stickybomb Launcher Mk.I: 473</li>
+<li>Frickin' Sweet Ninja Hood: 477</li>
 <li>Horseless Headless Horsemann's Headtaker: 480</li>
-<li>Scotsman's Skullcutter: 480</li>
-<li>Festive Holy Mackerel: 483</li>
-<li>Wraith Wrap: 483</li>
-<li>Bottle: 485</li>
-<li>Fancy Dress Uniform: 485</li>
-<li>Cut Throat Concierge: 486</li>
-<li>Grand Duchess Fairy Wings: 487</li>
+<li>Bat: 481</li>
+<li>Scotsman's Skullcutter: 482</li>
+<li>Physician's Procedure Mask: 483</li>
+<li>Festive Holy Mackerel: 485</li>
+<li>Holy Mackerel: 485</li>
+<li>Fancy Dress Uniform: 487</li>
 <li>Australium Flame Thrower: 488</li>
-<li>Backstabber's Boomslang: 490</li>
-<li>Festive Axtinguisher: 490</li>
-<li>Snow Scoper: 490</li>
-<li>Brawling Buccaneer: 491</li>
-<li>Desert Marauder: 494</li>
-<li>Grand Duchess Tiara: 494</li>
-<li>Silver Botkiller Flame Thrower Mk.II: 502</li>
-<li>Silver Botkiller Sniper Rifle Mk.II: 502</li>
-<li>Silver Botkiller Stickybomb Launcher Mk.I: 502</li>
-<li>Lunatic's Leathers: 503</li>
-<li>Delinquent's Down Vest: 505</li>
-<li>Triboniophorus Tyrannus: 507</li>
+<li>Cut Throat Concierge: 488</li>
+<li>Grand Duchess Fairy Wings: 489</li>
+<li>Wraith Wrap: 489</li>
+<li>Bottle: 492</li>
+<li>Snow Scoper: 492</li>
+<li>Festive Axtinguisher: 494</li>
+<li>Brawling Buccaneer: 495</li>
+<li>Backstabber's Boomslang: 498</li>
+<li>Grand Duchess Tiara: 499</li>
+<li>Desert Marauder: 500</li>
+<li>Lunatic's Leathers: 505</li>
+<li>Silver Botkiller Sniper Rifle Mk.II: 506</li>
+<li>Silver Botkiller Stickybomb Launcher Mk.I: 507</li>
 <li>Classic: 508</li>
-<li>Professor's Pineapple: 510</li>
-<li>Cool Cat Cardigan: 512</li>
-<li>Hustler's Hallmark: 514</li>
-<li>Haunted Hat: 515</li>
-<li>El Jefe: 517</li>
-<li>Detonator: 523</li>
-<li>Exquisite Rack: 528</li>
-<li>Soldier's Stash: 531</li>
-<li>Point and Shoot: 535</li>
-<li>Blood Banker: 536</li>
+<li>Delinquent's Down Vest: 509</li>
+<li>Silver Botkiller Flame Thrower Mk.II: 512</li>
+<li>Professor's Pineapple: 513</li>
+<li>Cool Cat Cardigan: 514</li>
+<li>Triboniophorus Tyrannus: 514</li>
+<li>Hustler's Hallmark: 519</li>
+<li>Haunted Hat: 521</li>
+<li>El Jefe: 524</li>
+<li>Detonator: 526</li>
+<li>Exquisite Rack: 532</li>
+<li>Soldier's Stash: 535</li>
 <li>Cold Killer: 538</li>
-<li>Grand Duchess Tutu: 538</li>
-<li>Pretty Boy's Pocket Pistol: 543</li>
-<li>Brown Bomber: 544</li>
-<li>Flamboyant Flamenco: 546</li>
-<li>Vintage Tyrolean: 546</li>
-<li>Rust Botkiller Scattergun Mk.I: 547</li>
-<li>Hard-Headed Hardware: 548</li>
-<li>L'Etranger: 549</li>
-<li>Killer's Kabuto: 550</li>
-<li>Diamondback: 555</li>
-<li>Festive Frontier Justice: 557</li>
-<li>Festive Knife: 557</li>
-<li>Winter Wonderland Wrap: 559</li>
-<li>Alien Swarm Parasite: 562</li>
-<li>Big Earner: 563</li>
-<li>Back Scatter: 570</li>
-<li>Dogfighter: 572</li>
-<li>Carbonado Botkiller Minigun Mk.I: 574</li>
-<li>Holiday Punch: 575</li>
-<li>That '70s Chapeau: 575</li>
-<li>Marxman: 580</li>
-<li>Plutonidome: 583</li>
-<li>Merc's Mohawk: 584</li>
-<li>Carbonado Botkiller Sniper Rifle Mk.I: 588</li>
-<li>Australium Rocket Launcher: 593</li>
-<li>Dashin' Hashshashin: 598</li>
-<li>Festive Minigun: 603</li>
-<li>Voodoo JuJu (Slight Return): 603</li>
-<li>Backwards Ballcap: 606</li>
-<li>Bearded Bombardier: 609</li>
-<li>Law: 611</li>
-<li>Bigg Mann on Campus: 613</li>
-<li>War Pig: 616</li>
-<li>Balloonicorn: 622</li>
-<li>SMG: 624</li>
-<li>Silver Botkiller Stickybomb Launcher Mk.II: 625</li>
-<li>Rust Botkiller Wrench Mk.I: 632</li>
-<li>Hero's Tail: 633</li>
-<li>Silver Botkiller Scattergun Mk.I: 637</li>
-<li>Spooky Shoes: 640</li>
-<li>Tribalman's Shiv: 640</li>
-<li>Festive Sniper Rifle: 651</li>
-<li>Weight Room Warmer: 655</li>
-<li>Festive Flare Gun: 656</li>
-<li>Disciplinary Action: 660</li>
-<li>Conjurer's Cowl: 663</li>
-<li>Kukri: 664</li>
-<li>Hong Kong Cone: 674</li>
-<li>Antarctic Parka: 675</li>
-<li>Widowmaker: 680</li>
-<li>Scorch Shot: 682</li>
-<li>Cobber Chameleon: 683</li>
-<li>Outback Intellectual: 683</li>
-<li>Festive Ubersaw: 689</li>
-<li>Silver Botkiller Wrench Mk.I: 696</li>
-<li>Festive Eyelander: 698</li>
-<li>Mishap Mercenary: 698</li>
-<li>Teufort Tooth Kicker: 699</li>
-<li>Hornblower: 707</li>
-<li>Rump-o'-Lantern: 711</li>
+<li>Grand Duchess Tutu: 539</li>
+<li>Blood Banker: 540</li>
+<li>Point and Shoot: 541</li>
+<li>Pretty Boy's Pocket Pistol: 546</li>
+<li>Brown Bomber: 547</li>
+<li>Flamboyant Flamenco: 551</li>
+<li>Rust Botkiller Scattergun Mk.I: 552</li>
+<li>L'Etranger: 554</li>
+<li>Vintage Tyrolean: 554</li>
+<li>Hard-Headed Hardware: 556</li>
+<li>Killer's Kabuto: 559</li>
+<li>Diamondback: 560</li>
+<li>Festive Frontier Justice: 560</li>
+<li>Winter Wonderland Wrap: 563</li>
+<li>Alien Swarm Parasite: 566</li>
+<li>Festive Knife: 566</li>
+<li>Big Earner: 567</li>
+<li>Dogfighter: 575</li>
+<li>Holiday Punch: 576</li>
+<li>Back Scatter: 577</li>
+<li>That '70s Chapeau: 581</li>
+<li>Carbonado Botkiller Minigun Mk.I: 583</li>
+<li>Marxman: 586</li>
+<li>Plutonidome: 587</li>
+<li>Merc's Mohawk: 589</li>
+<li>Australium Rocket Launcher: 595</li>
+<li>Carbonado Botkiller Sniper Rifle Mk.I: 598</li>
+<li>Dashin' Hashshashin: 605</li>
+<li>Festive Minigun: 607</li>
+<li>Voodoo JuJu (Slight Return): 608</li>
+<li>Backwards Ballcap: 612</li>
+<li>Bearded Bombardier: 612</li>
+<li>Bigg Mann on Campus: 615</li>
+<li>Law: 616</li>
+<li>War Pig: 619</li>
+<li>Balloonicorn: 624</li>
+<li>SMG: 626</li>
+<li>Silver Botkiller Stickybomb Launcher Mk.II: 631</li>
+<li>Hero's Tail: 638</li>
+<li>Rust Botkiller Wrench Mk.I: 640</li>
+<li>Spooky Shoes: 642</li>
+<li>Tribalman's Shiv: 643</li>
+<li>Silver Botkiller Scattergun Mk.I: 647</li>
+<li>Weight Room Warmer: 658</li>
+<li>Festive Flare Gun: 661</li>
+<li>Disciplinary Action: 664</li>
+<li>Festive Sniper Rifle: 664</li>
+<li>Kukri: 668</li>
+<li>Conjurer's Cowl: 669</li>
+<li>Antarctic Parka: 680</li>
+<li>Hong Kong Cone: 680</li>
+<li>Outback Intellectual: 686</li>
+<li>Widowmaker: 689</li>
+<li>Cobber Chameleon: 690</li>
+<li>Scorch Shot: 691</li>
+<li>Festive Ubersaw: 702</li>
+<li>Teufort Tooth Kicker: 704</li>
+<li>Silver Botkiller Wrench Mk.I: 705</li>
+<li>Mishap Mercenary: 707</li>
+<li>Hornblower: 708</li>
+<li>Festive Eyelander: 710</li>
+<li>Rump-o'-Lantern: 714</li>
 <li>Pomson 6000: 720</li>
-<li>Viking Braider: 726</li>
-<li>Distinguished Rogue: 729</li>
-<li>Magical Mercenary: 743</li>
-<li>Silver Botkiller Scattergun Mk.II: 743</li>
-<li>Track Terrorizer: 743</li>
-<li>Foster's Facade: 745</li>
-<li>Foppish Physician: 747</li>
-<li>The Essential Accessories: 747</li>
-<li>B.M.O.C.: 758</li>
-<li>Charmer's Chapeau: 758</li>
-<li>Boo Balloon: 760</li>
-<li>Carbonado Botkiller Stickybomb Launcher Mk.I: 760</li>
-<li>Poacher's Safari Jacket: 765</li>
+<li>Viking Braider: 733</li>
+<li>Distinguished Rogue: 735</li>
+<li>Magical Mercenary: 748</li>
+<li>Track Terrorizer: 748</li>
+<li>Foppish Physician: 752</li>
+<li>Silver Botkiller Scattergun Mk.II: 753</li>
+<li>The Essential Accessories: 754</li>
+<li>Foster's Facade: 757</li>
+<li>Boo Balloon: 762</li>
+<li>Charmer's Chapeau: 765</li>
+<li>B.M.O.C.: 767</li>
+<li>Carbonado Botkiller Stickybomb Launcher Mk.I: 771</li>
+<li>Poacher's Safari Jacket: 773</li>
 <li>Conniver's Kunai: 777</li>
-<li>Virtual Viewfinder: 797</li>
 <li>Eureka Effect: 800</li>
-<li>Bazaar Bargain: 801</li>
-<li>Max's Severed Head: 805</li>
-<li>Festive Ambassador: 808</li>
-<li>Festive Scattergun: 812</li>
-<li>Voodoo-Cursed Pyro Soul: 825</li>
-<li>Natascha: 836</li>
-<li>Tyrant's Helm: 837</li>
-<li>Voodoo-Cursed Medic Soul: 838</li>
+<li>Virtual Viewfinder: 802</li>
+<li>Bazaar Bargain: 807</li>
+<li>Max's Severed Head: 812</li>
+<li>Festive Ambassador: 815</li>
+<li>Festive Scattergun: 822</li>
+<li>Voodoo-Cursed Pyro Soul: 828</li>
+<li>Voodoo-Cursed Medic Soul: 841</li>
 <li>Blutsauger: 843</li>
-<li>Buck Turner All-Stars: 847</li>
-<li>Escape Plan: 847</li>
-<li>Sub Zero Suit: 850</li>
-<li>Silver Botkiller Wrench Mk.II: 856</li>
-<li>Festive Force-A-Nature: 862</li>
-<li>Festive Crusader's Crossbow: 863</li>
-<li>Voodoo-Cursed Sniper Soul: 864</li>
-<li>Rust Botkiller Rocket Launcher Mk.I: 876</li>
-<li>Rescue Ranger: 877</li>
-<li>Voodoo-Cursed Engineer Soul: 884</li>
-<li>Bushwacka: 895</li>
-<li>Voodoo-Cursed Heavy Soul: 895</li>
-<li>Festive Wrench: 902</li>
-<li>Festive Stickybomb Launcher: 911</li>
-<li>Carbonado Botkiller Scattergun Mk.I: 914</li>
-<li>Ellis' Cap: 927</li>
-<li>Flapjack: 928</li>
-<li>Enforcer: 934</li>
-<li>Voodoo-Cursed Spy Soul: 936</li>
-<li>Frontier Justice: 945</li>
-<li>Fancy Fedora: 951</li>
-<li>Sydney Sleeper: 953</li>
-<li>Thirst Blood: 957</li>
-<li>Voodoo-Cursed Soldier Soul: 960</li>
-<li>Axtinguisher: 968</li>
-<li>Macho Mann: 972</li>
-<li>Your Eternal Reward: 991</li>
-<li>Persian Persuader: 996</li>
-<li>Lady Killer: 997</li>
-<li>Carbonado Botkiller Wrench Mk.I: 998</li>
-<li>Voodoo-Cursed Demoman Soul: 1001</li>
-<li>Festive Huntsman: 1002</li>
-<li>Wilson Weave: 1004</li>
-<li>Silver Botkiller Rocket Launcher Mk.I: 1005</li>
-<li>Bird-Man of Aberdeen: 1007</li>
-<li>Revolver: 1014</li>
-<li>Team Captain: 1020</li>
-<li>Doublecross-Comm: 1021</li>
-<li>Apparition's Aspect: 1033</li>
-<li>Sandman: 1037</li>
-<li>Carbonado Botkiller Flame Thrower Mk.I: 1042</li>
-<li>Voodoo-Cursed Scout Soul: 1043</li>
-<li>Sir Hootsalot: 1044</li>
-<li>Brass Beast: 1064</li>
-<li>Brütal Bouffant: 1087</li>
-<li>Mann of the Seven Sees: 1090</li>
-<li>Nostromo Napalmer: 1091</li>
-<li>Blighted Beak: 1104</li>
-<li>Reserve Shooter: 1153</li>
-<li>Half-Zatoichi: 1162</li>
-<li>Lord Cockswain's Novelty Mutton Chops and Pipe: 1164</li>
-<li>Silver Botkiller Rocket Launcher Mk.II: 1177</li>
-<li>Texas Ten Gallon: 1180</li>
-<li>Festive Flame Thrower: 1189</li>
-<li>Flying Guillotine: 1201</li>
-<li>Spooky Sleeves: 1256</li>
-<li>Cow Mangler 5000: 1273</li>
-<li>Bonedolier: 1278</li>
-<li>Shortstop: 1304</li>
-<li>Tomislav: 1315</li>
-<li>Powerjack: 1331</li>
-<li>Carbonado Botkiller Rocket Launcher Mk.I: 1352</li>
-<li>Festive Rocket Launcher: 1378</li>
-<li>Crusader's Crossbow: 1384</li>
-<li>Minigun: 1393</li>
-<li>Machina: 1396</li>
-<li>Fortified Compound: 1415</li>
-<li>Villain's Veil: 1442</li>
-<li>Air Strike: 1445</li>
-<li>Summer Shades: 1496</li>
-<li>Filamental: 1499</li>
-<li>Pyromancer's Mask: 1541</li>
+<li>Natascha: 844</li>
+<li>Tyrant's Helm: 844</li>
+<li>Buck Turner All-Stars: 852</li>
+<li>Escape Plan: 852</li>
+<li>Sub Zero Suit: 854</li>
+<li>Silver Botkiller Wrench Mk.II: 866</li>
+<li>Voodoo-Cursed Sniper Soul: 866</li>
+<li>Festive Crusader's Crossbow: 873</li>
+<li>Festive Force-A-Nature: 874</li>
+<li>Rescue Ranger: 881</li>
+<li>Voodoo-Cursed Engineer Soul: 887</li>
+<li>Rust Botkiller Rocket Launcher Mk.I: 891</li>
+<li>Voodoo-Cursed Heavy Soul: 901</li>
+<li>Bushwacka: 902</li>
+<li>Festive Wrench: 910</li>
+<li>Festive Stickybomb Launcher: 913</li>
+<li>Carbonado Botkiller Scattergun Mk.I: 923</li>
+<li>Flapjack: 933</li>
+<li>Ellis' Cap: 935</li>
+<li>Voodoo-Cursed Spy Soul: 938</li>
+<li>Enforcer: 943</li>
+<li>Fancy Fedora: 958</li>
+<li>Frontier Justice: 959</li>
+<li>Sydney Sleeper: 959</li>
+<li>Voodoo-Cursed Soldier Soul: 963</li>
+<li>Thirst Blood: 967</li>
+<li>Macho Mann: 978</li>
+<li>Axtinguisher: 984</li>
+<li>Your Eternal Reward: 995</li>
+<li>Lady Killer: 1003</li>
+<li>Voodoo-Cursed Demoman Soul: 1007</li>
+<li>Persian Persuader: 1009</li>
+<li>Bird-Man of Aberdeen: 1014</li>
+<li>Carbonado Botkiller Wrench Mk.I: 1014</li>
+<li>Festive Huntsman: 1014</li>
+<li>Silver Botkiller Rocket Launcher Mk.I: 1017</li>
+<li>Revolver: 1018</li>
+<li>Wilson Weave: 1022</li>
+<li>Team Captain: 1029</li>
+<li>Doublecross-Comm: 1030</li>
+<li>Apparition's Aspect: 1035</li>
+<li>Sandman: 1048</li>
+<li>Carbonado Botkiller Flame Thrower Mk.I: 1051</li>
+<li>Voodoo-Cursed Scout Soul: 1051</li>
+<li>Sir Hootsalot: 1053</li>
+<li>Brass Beast: 1071</li>
+<li>Nostromo Napalmer: 1096</li>
+<li>Brütal Bouffant: 1097</li>
+<li>Mann of the Seven Sees: 1101</li>
+<li>Blighted Beak: 1112</li>
+<li>Reserve Shooter: 1166</li>
+<li>Half-Zatoichi: 1173</li>
+<li>Lord Cockswain's Novelty Mutton Chops and Pipe: 1176</li>
+<li>Silver Botkiller Rocket Launcher Mk.II: 1193</li>
+<li>Texas Ten Gallon: 1193</li>
+<li>Festive Flame Thrower: 1197</li>
+<li>Flying Guillotine: 1211</li>
+<li>Spooky Sleeves: 1269</li>
+<li>Cow Mangler 5000: 1280</li>
+<li>Bonedolier: 1287</li>
+<li>Shortstop: 1317</li>
+<li>Tomislav: 1330</li>
+<li>Powerjack: 1338</li>
+<li>Carbonado Botkiller Rocket Launcher Mk.I: 1366</li>
+<li>Festive Rocket Launcher: 1390</li>
+<li>Crusader's Crossbow: 1395</li>
+<li>Machina: 1403</li>
+<li>Minigun: 1420</li>
+<li>Fortified Compound: 1432</li>
+<li>Villain's Veil: 1452</li>
+<li>Air Strike: 1455</li>
+<li>Filamental: 1506</li>
+<li>Summer Shades: 1511</li>
 <li>Ham Shank: 1542</li>
-<li>Troublemaker's Tossle Cap: 1547</li>
-<li>Ubersaw: 1562</li>
-<li>Bat Outta Hell: 1588</li>
-<li>Flare Gun: 1594</li>
-<li>Brotherhood of Arms: 1613</li>
+<li>Pyromancer's Mask: 1559</li>
+<li>Ubersaw: 1567</li>
+<li>Troublemaker's Tossle Cap: 1568</li>
+<li>Bat Outta Hell: 1596</li>
+<li>Flare Gun: 1606</li>
 <li>Huo-Long Heater: 1619</li>
-<li>Graybanns: 1695</li>
-<li>Sharp Dresser: 1746</li>
-<li>Killer Exclusive: 1771</li>
+<li>Brotherhood of Arms: 1627</li>
+<li>Graybanns: 1704</li>
+<li>Sharp Dresser: 1762</li>
+<li>Killer Exclusive: 1779</li>
 <li>Conscientious Objector: 1788</li>
-<li>Liberty Launcher: 1794</li>
-<li>Hitman's Heatmaker: 1799</li>
-<li>Ullapool Caber: 1811</li>
-<li>Executioner: 1819</li>
-<li>Rainblower: 1829</li>
-<li>All-Father: 1835</li>
-<li>Festive Black Box: 1845</li>
-<li>Fast Learner: 1891</li>
-<li>Anger: 1911</li>
-<li>Soda Popper: 1922</li>
-<li>Eyelander: 1978</li>
-<li>Scottish Resistance: 2012</li>
-<li>Ambassador: 2031</li>
-<li>Spy-cicle: 2119</li>
-<li>Pistol: 2196</li>
-<li>Huntsman: 2197</li>
-<li>Bruiser's Bandanna: 2261</li>
-<li>Market Gardener: 2462</li>
-<li>Festive Grenade Launcher: 2511</li>
-<li>Merc's Muffler: 2549</li>
-<li>Baby Face's Blaster: 2575</li>
-<li>Knife: 2730</li>
-<li>Wrench: 2741</li>
-<li>AWPer Hand: 2762</li>
-<li>Ghastlierest Gibus: 2768</li>
-<li>Force-A-Nature: 3115</li>
+<li>Liberty Launcher: 1813</li>
+<li>Hitman's Heatmaker: 1814</li>
+<li>Ullapool Caber: 1832</li>
+<li>Executioner: 1833</li>
+<li>Rainblower: 1850</li>
+<li>All-Father: 1856</li>
+<li>Festive Black Box: 1866</li>
+<li>Fast Learner: 1907</li>
+<li>Anger: 1924</li>
+<li>Soda Popper: 1939</li>
+<li>Eyelander: 2004</li>
+<li>Scottish Resistance: 2029</li>
+<li>Ambassador: 2054</li>
+<li>Spy-cicle: 2140</li>
+<li>Pistol: 2214</li>
+<li>Huntsman: 2227</li>
+<li>Bruiser's Bandanna: 2274</li>
+<li>Market Gardener: 2475</li>
+<li>Festive Grenade Launcher: 2547</li>
+<li>Merc's Muffler: 2564</li>
+<li>Baby Face's Blaster: 2600</li>
+<li>Knife: 2757</li>
+<li>Wrench: 2760</li>
+<li>Ghastlierest Gibus: 2783</li>
+<li>AWPer Hand: 2791</li>
+<li>Force-A-Nature: 3142</li>
 <li>Beggar's Bazooka: 3179</li>
-<li>Direct Hit: 3295</li>
-<li>Southern Hospitality: 3369</li>
-<li>Bill's Hat: 3538</li>
-<li>Backburner: 3556</li>
-<li>Loose Cannon: 3616</li>
-<li>Gunslinger: 3684</li>
-<li>Frying Pan: 3908</li>
-<li>Phlogistinator: 3970</li>
-<li>Crone's Dome: 4141</li>
-<li>Original: 4193</li>
-<li>Flame Thrower: 4450</li>
-<li>Sniper Rifle: 4856</li>
-<li>Loch-n-Load: 5208</li>
-<li>Shotgun: 5275</li>
-<li>Black Box: 6394</li>
-<li>Stickybomb Launcher: 6476</li>
-<li>Jag: 7006</li>
-<li>Grenade Launcher: 7210</li>
-<li>Degreaser: 8575</li>
-<li>Scattergun: 9076</li>
-<li>Rocket Launcher: 12566</li>
+<li>Direct Hit: 3313</li>
+<li>Southern Hospitality: 3397</li>
+<li>Backburner: 3584</li>
+<li>Bill's Hat: 3585</li>
+<li>Loose Cannon: 3639</li>
+<li>Gunslinger: 3705</li>
+<li>Frying Pan: 3927</li>
+<li>Phlogistinator: 3988</li>
+<li>Crone's Dome: 4169</li>
+<li>Original: 4238</li>
+<li>Flame Thrower: 4502</li>
+<li>Sniper Rifle: 4916</li>
+<li>Loch-n-Load: 5280</li>
+<li>Shotgun: 5321</li>
+<li>Black Box: 6472</li>
+<li>Stickybomb Launcher: 6549</li>
+<li>Jag: 7071</li>
+<li>Grenade Launcher: 7288</li>
+<li>Degreaser: 8639</li>
+<li>Scattergun: 9185</li>
+<li>Rocket Launcher: 12709</li>
 </ul>
-<footer class="svelte-1mqzehu"><div class="finalfooter">
-            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Jan 16 2022</p>
-        </div></footer>
+</main><footer class="svelte-1mqzehu"><div class="finalfooter">
+            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Apr 03 2022</p>
+        </div></footer></body></html>

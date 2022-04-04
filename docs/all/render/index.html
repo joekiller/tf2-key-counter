@@ -11,10 +11,33 @@
     <link rel="stylesheet" href="../../../build/bundle.css">
     <link rel="shortcut icon" href="../../../key-solid.svg" type="image/png">
     <title>All Spells Index</title>
+    <script>
+        function searchLi() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('spellSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("spellList");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main class="spell-list">
+    <input type="text" id="spellSearch" onkeyup="searchLi()" placeholder="Search for names..">
+        <ul id="spellList">
 <li><a href="all/ghastlierest_gibus.html">all spelled ghastlierest gibus</a></li>
 <li><a href="all/strange_ghastlierest_gibus.html">all spelled strange ghastlierest gibus</a></li>
 <li><a href="all/gentle_manne's_service_medal.html">all spelled gentle manne's service medal</a></li>
@@ -251,6 +274,7 @@
 <li><a href="all/fists.html">all spelled fists</a></li>
 <li><a href="all/bottle.html">all spelled bottle</a></li>
 <li><a href="all/shotgun.html">all spelled shotgun</a></li>
+<li><a href="all/tippler's_tricorne.html">all spelled tippler's tricorne</a></li>
 <li><a href="all/blutsauger.html">all spelled blutsauger</a></li>
 <li><a href="all/pistol.html">all spelled pistol</a></li>
 <li><a href="all/revolver.html">all spelled revolver</a></li>
@@ -269,6 +293,7 @@
 <li><a href="all/unusual_backbiter's_billycock.html">all spelled unusual backbiter's billycock</a></li>
 <li><a href="all/kukri.html">all spelled kukri</a></li>
 <li><a href="all/fire_axe.html">all spelled fire axe</a></li>
+<li><a href="all/backbiter's_billycock.html">all spelled backbiter's billycock</a></li>
 <li><a href="all/unusual_troublemaker's_tossle_cap.html">all spelled unusual troublemaker's tossle cap</a></li>
 <li><a href="all/unusual_old_guadalajara.html">all spelled unusual old guadalajara</a></li>
 <li><a href="all/unusual_napper's_respite.html">all spelled unusual napper's respite</a></li>
@@ -276,7 +301,6 @@
 <li><a href="all/unusual_handyman's_handle.html">all spelled unusual handyman's handle</a></li>
 <li><a href="all/unusual_hotrod.html">all spelled unusual hotrod</a></li>
 <li><a href="all/otolaryngologist's_mirror.html">all spelled otolaryngologist's mirror</a></li>
-<li><a href="all/tippler's_tricorne.html">all spelled tippler's tricorne</a></li>
 <li><a href="all/unusual_sober_stuntman.html">all spelled unusual sober stuntman</a></li>
 <li><a href="all/tough_guy's_toque.html">all spelled tough guy's toque</a></li>
 <li><a href="all/rimmed_raincatcher.html">all spelled rimmed raincatcher</a></li>
@@ -295,7 +319,6 @@
 <li><a href="all/unusual_hard_counter.html">all spelled unusual hard counter</a></li>
 <li><a href="all/bounty_hat.html">all spelled bounty hat</a></li>
 <li><a href="all/unusual_shooter's_sola_topi.html">all spelled unusual shooter's sola topi</a></li>
-<li><a href="all/backbiter's_billycock.html">all spelled backbiter's billycock</a></li>
 <li><a href="all/professional's_panama.html">all spelled professional's panama</a></li>
 <li><a href="all/vintage_foster's_facade.html">all spelled vintage foster's facade</a></li>
 <li><a href="all/vintage_stockbroker's_scarf.html">all spelled vintage stockbroker's scarf</a></li>
@@ -403,15 +426,17 @@
 <li><a href="all/equalizer.html">all spelled equalizer</a></li>
 <li><a href="all/sharpened_volcano_fragment.html">all spelled sharpened volcano fragment</a></li>
 <li><a href="all/unusual_noh_mercy.html">all spelled unusual noh mercy</a></li>
+<li><a href="all/genuine_dread_knot.html">all spelled genuine dread knot</a></li>
 <li><a href="all/strange_unusual_big_chief.html">all spelled strange unusual big chief</a></li>
 <li><a href="all/syringe_gun.html">all spelled syringe gun</a></li>
 <li><a href="all/natascha.html">all spelled natascha</a></li>
 <li><a href="all/unusual_rimmed_raincatcher.html">all spelled unusual rimmed raincatcher</a></li>
 <li><a href="all/genuine_aperture_labs_hard_hat.html">all spelled genuine aperture labs hard hat</a></li>
+<li><a href="all/vintage_earbuds.html">all spelled vintage earbuds</a></li>
 <li><a href="all/sight_for_sore_eyes.html">all spelled sight for sore eyes</a></li>
 <li><a href="all/unusual_ol'_snaggletooth.html">all spelled unusual ol' snaggletooth</a></li>
-<li><a href="all/resurrection_associate_pin.html">all spelled resurrection associate pin</a></li>
 <li><a href="all/charmer's_chapeau.html">all spelled charmer's chapeau</a></li>
+<li><a href="all/resurrection_associate_pin.html">all spelled resurrection associate pin</a></li>
 <li><a href="all/reggaelator.html">all spelled reggaelator</a></li>
 <li><a href="all/professor's_peculiarity.html">all spelled professor's peculiarity</a></li>
 <li><a href="all/googly_gazer.html">all spelled googly gazer</a></li>
@@ -539,11 +564,11 @@
 <li><a href="all/unusual_brain_bucket.html">all spelled unusual brain bucket</a></li>
 <li><a href="all/security_shades.html">all spelled security shades</a></li>
 <li><a href="all/unusual_cosa_nostra_cap.html">all spelled unusual cosa nostra cap</a></li>
+<li><a href="all/unusual_desert_marauder.html">all spelled unusual desert marauder</a></li>
 <li><a href="all/stately_steel_toe.html">all spelled stately steel toe</a></li>
 <li><a href="all/strange_unusual_private_eye.html">all spelled strange unusual private eye</a></li>
 <li><a href="all/unusual_medic's_mountain_cap.html">all spelled unusual medic's mountain cap</a></li>
 <li><a href="all/baseball_bill's_sports_shine.html">all spelled baseball bill's sports shine</a></li>
-<li><a href="all/unusual_desert_marauder.html">all spelled unusual desert marauder</a></li>
 <li><a href="all/strange_knife.html">all spelled strange knife</a></li>
 <li><a href="all/strange_pistol.html">all spelled strange pistol</a></li>
 <li><a href="all/strange_sandman.html">all spelled strange sandman</a></li>
@@ -610,8 +635,8 @@
 <li><a href="all/genuine_company_man.html">all spelled genuine company man</a></li>
 <li><a href="all/strange_jag.html">all spelled strange jag</a></li>
 <li><a href="all/company_man.html">all spelled company man</a></li>
-<li><a href="all/genuine_widowmaker.html">all spelled genuine widowmaker</a></li>
 <li><a href="all/strange_bushwacka.html">all spelled strange bushwacka</a></li>
+<li><a href="all/genuine_widowmaker.html">all spelled genuine widowmaker</a></li>
 <li><a href="all/strange_crusader's_crossbow.html">all spelled strange crusader's crossbow</a></li>
 <li><a href="all/strange_sniper_rifle.html">all spelled strange sniper rifle</a></li>
 <li><a href="all/strange_sydney_sleeper.html">all spelled strange sydney sleeper</a></li>
@@ -678,9 +703,9 @@
 <li><a href="all/unusual_pencil_pusher.html">all spelled unusual pencil pusher</a></li>
 <li><a href="all/strange_ullapool_caber.html">all spelled strange ullapool caber</a></li>
 <li><a href="all/sun-on-a-stick.html">all spelled sun-on-a-stick</a></li>
+<li><a href="all/strange_gunslinger.html">all spelled strange gunslinger</a></li>
 <li><a href="all/unusual_hermes.html">all spelled unusual hermes</a></li>
 <li><a href="all/unusual_swagman's_swatter.html">all spelled unusual swagman's swatter</a></li>
-<li><a href="all/strange_gunslinger.html">all spelled strange gunslinger</a></li>
 <li><a href="all/strange_machina.html">all spelled strange machina</a></li>
 <li><a href="all/a_whiff_of_the_old_brimstone.html">all spelled a whiff of the old brimstone</a></li>
 <li><a href="all/unusual_tavish_degroot_experience.html">all spelled unusual tavish degroot experience</a></li>
@@ -765,6 +790,7 @@
 <li><a href="all/prancer's_pride.html">all spelled prancer's pride</a></li>
 <li><a href="all/tribalman's_shiv.html">all spelled tribalman's shiv</a></li>
 <li><a href="all/unusual_surgeon's_stahlhelm.html">all spelled unusual surgeon's stahlhelm</a></li>
+<li><a href="all/unusual_l'inspecteur.html">all spelled unusual l'inspecteur</a></li>
 <li><a href="all/apoco-fists.html">all spelled apoco-fists</a></li>
 <li><a href="all/genuine_apoco-fists.html">all spelled genuine apoco-fists</a></li>
 <li><a href="all/genuine_cold_war_luchador.html">all spelled genuine cold war luchador</a></li>
@@ -787,7 +813,6 @@
 <li><a href="all/strange_scottish_resistance.html">all spelled strange scottish resistance</a></li>
 <li><a href="all/strange_amputator.html">all spelled strange amputator</a></li>
 <li><a href="all/itsy_bitsy_spyer.html">all spelled itsy bitsy spyer</a></li>
-<li><a href="all/unusual_l'inspecteur.html">all spelled unusual l'inspecteur</a></li>
 <li><a href="all/unusual_outdoorsman.html">all spelled unusual outdoorsman</a></li>
 <li><a href="all/sharp_dresser.html">all spelled sharp dresser</a></li>
 <li><a href="all/point_and_shoot.html">all spelled point and shoot</a></li>
@@ -840,8 +865,8 @@
 <li><a href="all/big_elfin_deal.html">all spelled big elfin deal</a></li>
 <li><a href="all/stocking_stuffer.html">all spelled stocking stuffer</a></li>
 <li><a href="all/strange_sandvich_safe.html">all spelled strange sandvich safe</a></li>
-<li><a href="all/unusual_brown_bomber.html">all spelled unusual brown bomber</a></li>
 <li><a href="all/unusual_big_elfin_deal.html">all spelled unusual big elfin deal</a></li>
+<li><a href="all/unusual_brown_bomber.html">all spelled unusual brown bomber</a></li>
 <li><a href="all/b.m.o.c..html">all spelled b.m.o.c.</a></li>
 <li><a href="all/ebenezer.html">all spelled ebenezer</a></li>
 <li><a href="all/holiday_headcase.html">all spelled holiday headcase</a></li>
@@ -922,8 +947,8 @@
 <li><a href="all/black_rose.html">all spelled black rose</a></li>
 <li><a href="all/barely-melted_capacitor.html">all spelled barely-melted capacitor</a></li>
 <li><a href="all/vintage_escape_plan.html">all spelled vintage escape plan</a></li>
-<li><a href="all/strange_escape_plan.html">all spelled strange escape plan</a></li>
 <li><a href="all/escape_plan.html">all spelled escape plan</a></li>
+<li><a href="all/strange_escape_plan.html">all spelled strange escape plan</a></li>
 <li><a href="all/vintage_pyrovision_goggles.html">all spelled vintage pyrovision goggles</a></li>
 <li><a href="all/beggar's_bazooka.html">all spelled beggar's bazooka</a></li>
 <li><a href="all/strange_pretty_boy's_pocket_pistol.html">all spelled strange pretty boy's pocket pistol</a></li>
@@ -1467,10 +1492,11 @@
 <li><a href="all/das_naggenvatcher.html">all spelled das naggenvatcher</a></li>
 <li><a href="all/greased_lightning.html">all spelled greased lightning</a></li>
 <li><a href="all/black_watch.html">all spelled black watch</a></li>
+<li><a href="all/harmburg.html">all spelled harmburg</a></li>
 <li><a href="all/delinquent's_down_vest.html">all spelled delinquent's down vest</a></li>
 <li><a href="all/hive_minder.html">all spelled hive minder</a></li>
+<li><a href="all/tartan_spartan.html">all spelled tartan spartan</a></li>
 <li><a href="all/das_ubersternmann.html">all spelled das ubersternmann</a></li>
-<li><a href="all/harmburg.html">all spelled harmburg</a></li>
 <li><a href="all/gaelic_golf_bag.html">all spelled gaelic golf bag</a></li>
 <li><a href="all/das_maddendoktor.html">all spelled das maddendoktor</a></li>
 <li><a href="all/blood_banker.html">all spelled blood banker</a></li>
@@ -1480,7 +1506,6 @@
 <li><a href="all/compatriot.html">all spelled compatriot</a></li>
 <li><a href="all/dry_gulch_gulp.html">all spelled dry gulch gulp</a></li>
 <li><a href="all/tsarboosh.html">all spelled tsarboosh</a></li>
-<li><a href="all/tartan_spartan.html">all spelled tartan spartan</a></li>
 <li><a href="all/wet_works.html">all spelled wet works</a></li>
 <li><a href="all/rebel_rouser.html">all spelled rebel rouser</a></li>
 <li><a href="all/red_army_robin.html">all spelled red army robin</a></li>
@@ -1522,6 +1547,7 @@
 <li><a href="all/unusual_tartan_spartan.html">all spelled unusual tartan spartan</a></li>
 <li><a href="all/unusual_pampered_pyro.html">all spelled unusual pampered pyro</a></li>
 <li><a href="all/unusual_katyusha.html">all spelled unusual katyusha</a></li>
+<li><a href="all/unusual_pardner's_pompadour.html">all spelled unusual pardner's pompadour</a></li>
 <li><a href="all/unusual_wet_works.html">all spelled unusual wet works</a></li>
 <li><a href="all/unusual_hive_minder.html">all spelled unusual hive minder</a></li>
 <li><a href="all/unusual_das_naggenvatcher.html">all spelled unusual das naggenvatcher</a></li>
@@ -1540,7 +1566,6 @@
 <li><a href="all/unusual_black_watch.html">all spelled unusual black watch</a></li>
 <li><a href="all/unusual_rebel_rouser.html">all spelled unusual rebel rouser</a></li>
 <li><a href="all/unusual_whirly_warrior.html">all spelled unusual whirly warrior</a></li>
-<li><a href="all/unusual_pardner's_pompadour.html">all spelled unusual pardner's pompadour</a></li>
 <li><a href="all/hong_kong_cone.html">all spelled hong kong cone</a></li>
 <li><a href="all/special_eyes.html">all spelled special eyes</a></li>
 <li><a href="all/bone_dome.html">all spelled bone dome</a></li>
@@ -2171,9 +2196,9 @@
 <li><a href="all/collector's_back_scatter.html">all spelled collector's back scatter</a></li>
 <li><a href="all/strange_collector's_classic.html">all spelled strange collector's classic</a></li>
 <li><a href="all/unusual_danger.html">all spelled unusual danger</a></li>
+<li><a href="all/first_american.html">all spelled first american</a></li>
 <li><a href="all/die_regime-panzerung.html">all spelled die regime-panzerung</a></li>
 <li><a href="all/der_maschinensoldaten-helm.html">all spelled der maschinensoldaten-helm</a></li>
-<li><a href="all/first_american.html">all spelled first american</a></li>
 <li><a href="all/unusual_allbrero.html">all spelled unusual allbrero</a></li>
 <li><a href="all/strange_genuine_camera_beard.html">all spelled strange genuine camera beard</a></li>
 <li><a href="all/big_daddy.html">all spelled big daddy</a></li>
@@ -2207,8 +2232,8 @@
 <li><a href="all/thirst_blood.html">all spelled thirst blood</a></li>
 <li><a href="all/strange_lady_killer.html">all spelled strange lady killer</a></li>
 <li><a href="all/strange_poacher's_safari_jacket.html">all spelled strange poacher's safari jacket</a></li>
-<li><a href="all/mishap_mercenary.html">all spelled mishap mercenary</a></li>
 <li><a href="all/lady_killer.html">all spelled lady killer</a></li>
+<li><a href="all/mishap_mercenary.html">all spelled mishap mercenary</a></li>
 <li><a href="all/hillbilly_speed-bump.html">all spelled hillbilly speed-bump</a></li>
 <li><a href="all/strange_mishap_mercenary.html">all spelled strange mishap mercenary</a></li>
 <li><a href="all/poacher's_safari_jacket.html">all spelled poacher's safari jacket</a></li>
@@ -2799,6 +2824,7 @@
 <li><a href="single/fists.html">single spelled fists</a></li>
 <li><a href="single/bottle.html">single spelled bottle</a></li>
 <li><a href="single/shotgun.html">single spelled shotgun</a></li>
+<li><a href="single/tippler's_tricorne.html">single spelled tippler's tricorne</a></li>
 <li><a href="single/blutsauger.html">single spelled blutsauger</a></li>
 <li><a href="single/pistol.html">single spelled pistol</a></li>
 <li><a href="single/revolver.html">single spelled revolver</a></li>
@@ -2816,6 +2842,7 @@
 <li><a href="single/unusual_backbiter's_billycock.html">single spelled unusual backbiter's billycock</a></li>
 <li><a href="single/kukri.html">single spelled kukri</a></li>
 <li><a href="single/fire_axe.html">single spelled fire axe</a></li>
+<li><a href="single/backbiter's_billycock.html">single spelled backbiter's billycock</a></li>
 <li><a href="single/wrench.html">single spelled wrench</a></li>
 <li><a href="single/unusual_old_guadalajara.html">single spelled unusual old guadalajara</a></li>
 <li><a href="single/unusual_respectless_rubber_glove.html">single spelled unusual respectless rubber glove</a></li>
@@ -2825,7 +2852,6 @@
 <li><a href="single/unusual_hotrod.html">single spelled unusual hotrod</a></li>
 <li><a href="single/otolaryngologist's_mirror.html">single spelled otolaryngologist's mirror</a></li>
 <li><a href="single/pyro's_beanie.html">single spelled pyro's beanie</a></li>
-<li><a href="single/tippler's_tricorne.html">single spelled tippler's tricorne</a></li>
 <li><a href="single/tough_guy's_toque.html">single spelled tough guy's toque</a></li>
 <li><a href="single/rimmed_raincatcher.html">single spelled rimmed raincatcher</a></li>
 <li><a href="single/hotrod.html">single spelled hotrod</a></li>
@@ -2847,7 +2873,6 @@
 <li><a href="single/handyman's_handle.html">single spelled handyman's handle</a></li>
 <li><a href="single/bounty_hat.html">single spelled bounty hat</a></li>
 <li><a href="single/unusual_hustler's_hallmark.html">single spelled unusual hustler's hallmark</a></li>
-<li><a href="single/backbiter's_billycock.html">single spelled backbiter's billycock</a></li>
 <li><a href="single/professional's_panama.html">single spelled professional's panama</a></li>
 <li><a href="single/vintage_foster's_facade.html">single spelled vintage foster's facade</a></li>
 <li><a href="single/vintage_stockbroker's_scarf.html">single spelled vintage stockbroker's scarf</a></li>
@@ -2904,9 +2929,9 @@
 <li><a href="single/magnificent_mongolian.html">single spelled magnificent mongolian</a></li>
 <li><a href="single/madame_dixie.html">single spelled madame dixie</a></li>
 <li><a href="single/noble_amassment_of_hats.html">single spelled noble amassment of hats</a></li>
+<li><a href="single/unusual_magnificent_mongolian.html">single spelled unusual magnificent mongolian</a></li>
 <li><a href="single/unusual_hard_counter.html">single spelled unusual hard counter</a></li>
 <li><a href="single/unusual_german_gonzila.html">single spelled unusual german gonzila</a></li>
-<li><a href="single/unusual_magnificent_mongolian.html">single spelled unusual magnificent mongolian</a></li>
 <li><a href="single/unusual_buckaroo's_hat.html">single spelled unusual buckaroo's hat</a></li>
 <li><a href="single/industrial_festivizer.html">single spelled industrial festivizer</a></li>
 <li><a href="single/unusual_pyromancer's_mask.html">single spelled unusual pyromancer's mask</a></li>
@@ -2957,15 +2982,17 @@
 <li><a href="single/equalizer.html">single spelled equalizer</a></li>
 <li><a href="single/sharpened_volcano_fragment.html">single spelled sharpened volcano fragment</a></li>
 <li><a href="single/unusual_noh_mercy.html">single spelled unusual noh mercy</a></li>
+<li><a href="single/genuine_dread_knot.html">single spelled genuine dread knot</a></li>
 <li><a href="single/unusual_prussian_pickelhaube.html">single spelled unusual prussian pickelhaube</a></li>
 <li><a href="single/strange_unusual_big_chief.html">single spelled strange unusual big chief</a></li>
 <li><a href="single/syringe_gun.html">single spelled syringe gun</a></li>
 <li><a href="single/natascha.html">single spelled natascha</a></li>
 <li><a href="single/unusual_rimmed_raincatcher.html">single spelled unusual rimmed raincatcher</a></li>
 <li><a href="single/genuine_aperture_labs_hard_hat.html">single spelled genuine aperture labs hard hat</a></li>
+<li><a href="single/vintage_earbuds.html">single spelled vintage earbuds</a></li>
 <li><a href="single/sight_for_sore_eyes.html">single spelled sight for sore eyes</a></li>
-<li><a href="single/resurrection_associate_pin.html">single spelled resurrection associate pin</a></li>
 <li><a href="single/charmer's_chapeau.html">single spelled charmer's chapeau</a></li>
+<li><a href="single/resurrection_associate_pin.html">single spelled resurrection associate pin</a></li>
 <li><a href="single/reggaelator.html">single spelled reggaelator</a></li>
 <li><a href="single/professor's_peculiarity.html">single spelled professor's peculiarity</a></li>
 <li><a href="single/googly_gazer.html">single spelled googly gazer</a></li>
@@ -3091,10 +3118,11 @@
 <li><a href="single/unusual_brain_bucket.html">single spelled unusual brain bucket</a></li>
 <li><a href="single/security_shades.html">single spelled security shades</a></li>
 <li><a href="single/unusual_cosa_nostra_cap.html">single spelled unusual cosa nostra cap</a></li>
+<li><a href="single/unusual_desert_marauder.html">single spelled unusual desert marauder</a></li>
+<li><a href="single/unusual_team_captain.html">single spelled unusual team captain</a></li>
 <li><a href="single/stately_steel_toe.html">single spelled stately steel toe</a></li>
 <li><a href="single/strange_unusual_private_eye.html">single spelled strange unusual private eye</a></li>
 <li><a href="single/baseball_bill's_sports_shine.html">single spelled baseball bill's sports shine</a></li>
-<li><a href="single/unusual_desert_marauder.html">single spelled unusual desert marauder</a></li>
 <li><a href="single/strange_knife.html">single spelled strange knife</a></li>
 <li><a href="single/strange_pistol.html">single spelled strange pistol</a></li>
 <li><a href="single/strange_sandman.html">single spelled strange sandman</a></li>
@@ -3163,8 +3191,8 @@
 <li><a href="single/genuine_company_man.html">single spelled genuine company man</a></li>
 <li><a href="single/strange_jag.html">single spelled strange jag</a></li>
 <li><a href="single/company_man.html">single spelled company man</a></li>
-<li><a href="single/genuine_widowmaker.html">single spelled genuine widowmaker</a></li>
 <li><a href="single/strange_bushwacka.html">single spelled strange bushwacka</a></li>
+<li><a href="single/genuine_widowmaker.html">single spelled genuine widowmaker</a></li>
 <li><a href="single/strange_crusader's_crossbow.html">single spelled strange crusader's crossbow</a></li>
 <li><a href="single/strange_sniper_rifle.html">single spelled strange sniper rifle</a></li>
 <li><a href="single/strange_sydney_sleeper.html">single spelled strange sydney sleeper</a></li>
@@ -3183,8 +3211,8 @@
 <li><a href="single/unusual_villain's_veil.html">single spelled unusual villain's veil</a></li>
 <li><a href="single/brain_bucket.html">single spelled brain bucket</a></li>
 <li><a href="single/el_jefe.html">single spelled el jefe</a></li>
-<li><a href="single/strange_black_box.html">single spelled strange black box</a></li>
 <li><a href="single/strange_axtinguisher.html">single spelled strange axtinguisher</a></li>
+<li><a href="single/strange_black_box.html">single spelled strange black box</a></li>
 <li><a href="single/genuine_killer_exclusive.html">single spelled genuine killer exclusive</a></li>
 <li><a href="single/unusual_el_jefe.html">single spelled unusual el jefe</a></li>
 <li><a href="single/flamboyant_flamenco.html">single spelled flamboyant flamenco</a></li>
@@ -3224,16 +3252,15 @@
 <li><a href="single/unusual_pencil_pusher.html">single spelled unusual pencil pusher</a></li>
 <li><a href="single/strange_ullapool_caber.html">single spelled strange ullapool caber</a></li>
 <li><a href="single/sun-on-a-stick.html">single spelled sun-on-a-stick</a></li>
+<li><a href="single/strange_gunslinger.html">single spelled strange gunslinger</a></li>
 <li><a href="single/salty_dog.html">single spelled salty dog</a></li>
 <li><a href="single/outdoorsman.html">single spelled outdoorsman</a></li>
 <li><a href="single/unusual_hermes.html">single spelled unusual hermes</a></li>
 <li><a href="single/unusual_swagman's_swatter.html">single spelled unusual swagman's swatter</a></li>
-<li><a href="single/strange_gunslinger.html">single spelled strange gunslinger</a></li>
 <li><a href="single/tavish_degroot_experience.html">single spelled tavish degroot experience</a></li>
 <li><a href="single/stereoscopic_shades.html">single spelled stereoscopic shades</a></li>
 <li><a href="single/strange_machina.html">single spelled strange machina</a></li>
 <li><a href="single/a_whiff_of_the_old_brimstone.html">single spelled a whiff of the old brimstone</a></li>
-<li><a href="single/unusual_team_captain.html">single spelled unusual team captain</a></li>
 <li><a href="single/unusual_gym_rat.html">single spelled unusual gym rat</a></li>
 <li><a href="single/unusual_salty_dog.html">single spelled unusual salty dog</a></li>
 <li><a href="single/strange_l'etranger.html">single spelled strange l'etranger</a></li>
@@ -3315,6 +3342,7 @@
 <li><a href="single/prancer's_pride.html">single spelled prancer's pride</a></li>
 <li><a href="single/birdcage.html">single spelled birdcage</a></li>
 <li><a href="single/tribalman's_shiv.html">single spelled tribalman's shiv</a></li>
+<li><a href="single/unusual_l'inspecteur.html">single spelled unusual l'inspecteur</a></li>
 <li><a href="single/apoco-fists.html">single spelled apoco-fists</a></li>
 <li><a href="single/genuine_apoco-fists.html">single spelled genuine apoco-fists</a></li>
 <li><a href="single/genuine_cold_war_luchador.html">single spelled genuine cold war luchador</a></li>
@@ -3389,9 +3417,8 @@
 <li><a href="single/big_elfin_deal.html">single spelled big elfin deal</a></li>
 <li><a href="single/stocking_stuffer.html">single spelled stocking stuffer</a></li>
 <li><a href="single/strange_sandvich_safe.html">single spelled strange sandvich safe</a></li>
-<li><a href="single/unusual_brown_bomber.html">single spelled unusual brown bomber</a></li>
 <li><a href="single/unusual_big_elfin_deal.html">single spelled unusual big elfin deal</a></li>
-<li><a href="single/unusual_l'inspecteur.html">single spelled unusual l'inspecteur</a></li>
+<li><a href="single/unusual_brown_bomber.html">single spelled unusual brown bomber</a></li>
 <li><a href="single/b.m.o.c..html">single spelled b.m.o.c.</a></li>
 <li><a href="single/ebenezer.html">single spelled ebenezer</a></li>
 <li><a href="single/holiday_headcase.html">single spelled holiday headcase</a></li>
@@ -3475,8 +3502,8 @@
 <li><a href="single/black_rose.html">single spelled black rose</a></li>
 <li><a href="single/barely-melted_capacitor.html">single spelled barely-melted capacitor</a></li>
 <li><a href="single/vintage_escape_plan.html">single spelled vintage escape plan</a></li>
-<li><a href="single/strange_escape_plan.html">single spelled strange escape plan</a></li>
 <li><a href="single/escape_plan.html">single spelled escape plan</a></li>
+<li><a href="single/strange_escape_plan.html">single spelled strange escape plan</a></li>
 <li><a href="single/vintage_pyrovision_goggles.html">single spelled vintage pyrovision goggles</a></li>
 <li><a href="single/beggar's_bazooka.html">single spelled beggar's bazooka</a></li>
 <li><a href="single/strange_pretty_boy's_pocket_pistol.html">single spelled strange pretty boy's pocket pistol</a></li>
@@ -3975,6 +4002,7 @@
 <li><a href="single/pom-pommed_provocateur.html">single spelled pom-pommed provocateur</a></li>
 <li><a href="single/unusual_well-rounded_rifleman.html">single spelled unusual well-rounded rifleman</a></li>
 <li><a href="single/tyurtlenek.html">single spelled tyurtlenek</a></li>
+<li><a href="single/unusual_ye_oiled_baker_boy.html">single spelled unusual ye oiled baker boy</a></li>
 <li><a href="single/unusual_tungsten_toque.html">single spelled unusual tungsten toque</a></li>
 <li><a href="single/well-rounded_rifleman.html">single spelled well-rounded rifleman</a></li>
 <li><a href="single/unusual_cyborg_stunt_helmet.html">single spelled unusual cyborg stunt helmet</a></li>
@@ -4017,9 +4045,10 @@
 <li><a href="single/das_naggenvatcher.html">single spelled das naggenvatcher</a></li>
 <li><a href="single/greased_lightning.html">single spelled greased lightning</a></li>
 <li><a href="single/black_watch.html">single spelled black watch</a></li>
+<li><a href="single/harmburg.html">single spelled harmburg</a></li>
 <li><a href="single/delinquent's_down_vest.html">single spelled delinquent's down vest</a></li>
 <li><a href="single/hive_minder.html">single spelled hive minder</a></li>
-<li><a href="single/harmburg.html">single spelled harmburg</a></li>
+<li><a href="single/tartan_spartan.html">single spelled tartan spartan</a></li>
 <li><a href="single/gaelic_golf_bag.html">single spelled gaelic golf bag</a></li>
 <li><a href="single/birdman_of_australiacatraz.html">single spelled birdman of australiacatraz</a></li>
 <li><a href="single/das_maddendoktor.html">single spelled das maddendoktor</a></li>
@@ -4031,13 +4060,11 @@
 <li><a href="single/compatriot.html">single spelled compatriot</a></li>
 <li><a href="single/dry_gulch_gulp.html">single spelled dry gulch gulp</a></li>
 <li><a href="single/tsarboosh.html">single spelled tsarboosh</a></li>
-<li><a href="single/tartan_spartan.html">single spelled tartan spartan</a></li>
 <li><a href="single/wet_works.html">single spelled wet works</a></li>
 <li><a href="single/rebel_rouser.html">single spelled rebel rouser</a></li>
 <li><a href="single/red_army_robin.html">single spelled red army robin</a></li>
 <li><a href="single/lieutenant_bites.html">single spelled lieutenant bites</a></li>
 <li><a href="single/colonial_clogs.html">single spelled colonial clogs</a></li>
-<li><a href="single/unusual_ye_oiled_baker_boy.html">single spelled unusual ye oiled baker boy</a></li>
 <li><a href="single/crosslinker's_coil.html">single spelled crosslinker's coil</a></li>
 <li><a href="single/baron_von_havenaplane.html">single spelled baron von havenaplane</a></li>
 <li><a href="single/rogue's_brogues.html">single spelled rogue's brogues</a></li>
@@ -4052,9 +4079,9 @@
 <li><a href="single/bolshevik_biker.html">single spelled bolshevik biker</a></li>
 <li><a href="single/genuine_tartantaloons.html">single spelled genuine tartantaloons</a></li>
 <li><a href="single/genuine_tartan_shade.html">single spelled genuine tartan shade</a></li>
+<li><a href="single/unusual_horrific_headsplitter.html">single spelled unusual horrific headsplitter</a></li>
 <li><a href="single/heavy_artillery_officer's_cap.html">single spelled heavy artillery officer's cap</a></li>
 <li><a href="single/genuine_hardy_laurel.html">single spelled genuine hardy laurel</a></li>
-<li><a href="single/unusual_horrific_headsplitter.html">single spelled unusual horrific headsplitter</a></li>
 <li><a href="single/unusual_cadaver's_cranium.html">single spelled unusual cadaver's cranium</a></li>
 <li><a href="single/strange_hitman's_heatmaker.html">single spelled strange hitman's heatmaker</a></li>
 <li><a href="single/strange_loose_cannon.html">single spelled strange loose cannon</a></li>
@@ -4068,6 +4095,7 @@
 <li><a href="single/unusual_pampered_pyro.html">single spelled unusual pampered pyro</a></li>
 <li><a href="single/unusual_federal_casemaker.html">single spelled unusual federal casemaker</a></li>
 <li><a href="single/unusual_katyusha.html">single spelled unusual katyusha</a></li>
+<li><a href="single/unusual_pardner's_pompadour.html">single spelled unusual pardner's pompadour</a></li>
 <li><a href="single/unusual_wet_works.html">single spelled unusual wet works</a></li>
 <li><a href="single/unusual_hive_minder.html">single spelled unusual hive minder</a></li>
 <li><a href="single/unusual_das_naggenvatcher.html">single spelled unusual das naggenvatcher</a></li>
@@ -4302,7 +4330,6 @@
 <li><a href="single/unusual_baron_von_havenaplane.html">single spelled unusual baron von havenaplane</a></li>
 <li><a href="single/unusual_infernal_impaler.html">single spelled unusual infernal impaler</a></li>
 <li><a href="single/hyperbaric_bowler.html">single spelled hyperbaric bowler</a></li>
-<li><a href="single/unusual_pardner's_pompadour.html">single spelled unusual pardner's pompadour</a></li>
 <li><a href="single/unusual_burning_bandana.html">single spelled unusual burning bandana</a></li>
 <li><a href="single/shaman's_skull.html">single spelled shaman's skull</a></li>
 <li><a href="single/unusual_tsarboosh.html">single spelled unusual tsarboosh</a></li>
@@ -4710,9 +4737,9 @@
 <li><a href="single/collector's_back_scatter.html">single spelled collector's back scatter</a></li>
 <li><a href="single/strange_collector's_classic.html">single spelled strange collector's classic</a></li>
 <li><a href="single/unusual_danger.html">single spelled unusual danger</a></li>
+<li><a href="single/first_american.html">single spelled first american</a></li>
 <li><a href="single/die_regime-panzerung.html">single spelled die regime-panzerung</a></li>
 <li><a href="single/der_maschinensoldaten-helm.html">single spelled der maschinensoldaten-helm</a></li>
-<li><a href="single/first_american.html">single spelled first american</a></li>
 <li><a href="single/unusual_allbrero.html">single spelled unusual allbrero</a></li>
 <li><a href="single/big_daddy.html">single spelled big daddy</a></li>
 <li><a href="single/genuine_engineer's_cap.html">single spelled genuine engineer's cap</a></li>
@@ -5111,8 +5138,8 @@
 <li><a href="double/vintage_football_helmet.html">double spelled vintage football helmet</a></li>
 <li><a href="double/vintage_trophy_belt.html">double spelled vintage trophy belt</a></li>
 <li><a href="double/vintage_mining_light.html">double spelled vintage mining light</a></li>
-<li><a href="double/vintage_prussian_pickelhaube.html">double spelled vintage prussian pickelhaube</a></li>
 <li><a href="double/vintage_fancy_fedora.html">double spelled vintage fancy fedora</a></li>
+<li><a href="double/vintage_prussian_pickelhaube.html">double spelled vintage prussian pickelhaube</a></li>
 <li><a href="double/vintage_demoman's_fro.html">double spelled vintage demoman's fro</a></li>
 <li><a href="double/vintage_batter's_helmet.html">double spelled vintage batter's helmet</a></li>
 <li><a href="double/vintage_soldier's_stash.html">double spelled vintage soldier's stash</a></li>
@@ -5211,6 +5238,7 @@
 <li><a href="double/unusual_bonk_helm.html">double spelled unusual bonk helm</a></li>
 <li><a href="double/unusual_soldier's_stash.html">double spelled unusual soldier's stash</a></li>
 <li><a href="double/unusual_vintage_tyrolean.html">double spelled unusual vintage tyrolean</a></li>
+<li><a href="double/hustler's_hallmark.html">double spelled hustler's hallmark</a></li>
 <li><a href="double/dealer's_visor.html">double spelled dealer's visor</a></li>
 <li><a href="double/texas_ten_gallon.html">double spelled texas ten gallon</a></li>
 <li><a href="double/hound_dog.html">double spelled hound dog</a></li>
@@ -5243,6 +5271,7 @@
 <li><a href="double/vintage_foster's_facade.html">double spelled vintage foster's facade</a></li>
 <li><a href="double/treasure_hat.html">double spelled treasure hat</a></li>
 <li><a href="double/foster's_facade.html">double spelled foster's facade</a></li>
+<li><a href="double/triboniophorus_tyrannus.html">double spelled triboniophorus tyrannus</a></li>
 <li><a href="double/strange_stockbroker's_scarf.html">double spelled strange stockbroker's scarf</a></li>
 <li><a href="double/vintage_loch-n-load.html">double spelled vintage loch-n-load</a></li>
 <li><a href="double/vintage_ullapool_caber.html">double spelled vintage ullapool caber</a></li>
@@ -5285,6 +5314,7 @@
 <li><a href="double/handyman's_handle.html">double spelled handyman's handle</a></li>
 <li><a href="double/unusual_ye_olde_baker_boy.html">double spelled unusual ye olde baker boy</a></li>
 <li><a href="double/strange_vintage_stockbroker's_scarf.html">double spelled strange vintage stockbroker's scarf</a></li>
+<li><a href="double/flipped_trilby.html">double spelled flipped trilby</a></li>
 <li><a href="double/saxton_hale_mask.html">double spelled saxton hale mask</a></li>
 <li><a href="double/unusual_carouser's_capotain.html">double spelled unusual carouser's capotain</a></li>
 <li><a href="double/unusual_ze_goggles.html">double spelled unusual ze goggles</a></li>
@@ -5318,7 +5348,6 @@
 <li><a href="double/genuine_aperture_labs_hard_hat.html">double spelled genuine aperture labs hard hat</a></li>
 <li><a href="double/unusual_ol'_snaggletooth.html">double spelled unusual ol' snaggletooth</a></li>
 <li><a href="double/unusual_glengarry_bonnet.html">double spelled unusual glengarry bonnet</a></li>
-<li><a href="double/hustler's_hallmark.html">double spelled hustler's hallmark</a></li>
 <li><a href="double/reggaelator.html">double spelled reggaelator</a></li>
 <li><a href="double/rimmed_raincatcher.html">double spelled rimmed raincatcher</a></li>
 <li><a href="double/professor's_peculiarity.html">double spelled professor's peculiarity</a></li>
@@ -5355,7 +5384,6 @@
 <li><a href="double/genuine_planeswalker_goggles.html">double spelled genuine planeswalker goggles</a></li>
 <li><a href="double/medic's_mountain_cap.html">double spelled medic's mountain cap</a></li>
 <li><a href="double/unusual_ol'_geezer.html">double spelled unusual ol' geezer</a></li>
-<li><a href="double/triboniophorus_tyrannus.html">double spelled triboniophorus tyrannus</a></li>
 <li><a href="double/strange_teddy_roosebelt.html">double spelled strange teddy roosebelt</a></li>
 <li><a href="double/strange_unusual_villain's_veil.html">double spelled strange unusual villain's veil</a></li>
 <li><a href="double/big_country.html">double spelled big country</a></li>
@@ -5456,6 +5484,7 @@
 <li><a href="double/genuine_killer_exclusive.html">double spelled genuine killer exclusive</a></li>
 <li><a href="double/tough_guy's_toque.html">double spelled tough guy's toque</a></li>
 <li><a href="double/pugilist's_protector.html">double spelled pugilist's protector</a></li>
+<li><a href="double/unusual_attendant.html">double spelled unusual attendant</a></li>
 <li><a href="double/unusual_backbiter's_billycock.html">double spelled unusual backbiter's billycock</a></li>
 <li><a href="double/hermes.html">double spelled hermes</a></li>
 <li><a href="double/photo_badge.html">double spelled photo badge</a></li>
@@ -5489,7 +5518,6 @@
 <li><a href="double/magnificent_mongolian.html">double spelled magnificent mongolian</a></li>
 <li><a href="double/flamboyant_flamenco.html">double spelled flamboyant flamenco</a></li>
 <li><a href="double/genuine_ball-kicking_boots.html">double spelled genuine ball-kicking boots</a></li>
-<li><a href="double/unusual_attendant.html">double spelled unusual attendant</a></li>
 <li><a href="double/unusual_tavish_degroot_experience.html">double spelled unusual tavish degroot experience</a></li>
 <li><a href="double/unusual_nanobalaclava.html">double spelled unusual nanobalaclava</a></li>
 <li><a href="double/unusual_sultan's_ceremonial.html">double spelled unusual sultan's ceremonial</a></li>
@@ -5565,7 +5593,6 @@
 <li><a href="double/all-father.html">double spelled all-father</a></li>
 <li><a href="double/ornament_armament.html">double spelled ornament armament</a></li>
 <li><a href="double/bootie_time.html">double spelled bootie time</a></li>
-<li><a href="double/flipped_trilby.html">double spelled flipped trilby</a></li>
 <li><a href="double/strange_all-father.html">double spelled strange all-father</a></li>
 <li><a href="double/head_warmer.html">double spelled head warmer</a></li>
 <li><a href="double/big_elfin_deal.html">double spelled big elfin deal</a></li>
@@ -5687,6 +5714,7 @@
 <li><a href="double/void_monk_hair.html">double spelled void monk hair</a></li>
 <li><a href="double/gentleman's_gatsby.html">double spelled gentleman's gatsby</a></li>
 <li><a href="double/ninja_cowl.html">double spelled ninja cowl</a></li>
+<li><a href="double/gym_rat.html">double spelled gym rat</a></li>
 <li><a href="double/strange_silver_botkiller_wrench_mk.i.html">double spelled strange silver botkiller wrench mk.i</a></li>
 <li><a href="double/strange_gold_botkiller_wrench_mk.i.html">double spelled strange gold botkiller wrench mk.i</a></li>
 <li><a href="double/strange_silver_botkiller_rocket_launcher_mk.i.html">double spelled strange silver botkiller rocket launcher mk.i</a></li>
@@ -5890,7 +5918,6 @@
 <li><a href="double/genuine_blind_justice.html">double spelled genuine blind justice</a></li>
 <li><a href="double/genuine_pounding_father.html">double spelled genuine pounding father</a></li>
 <li><a href="double/last_straw.html">double spelled last straw</a></li>
-<li><a href="double/gym_rat.html">double spelled gym rat</a></li>
 <li><a href="double/hanger-on_hood.html">double spelled hanger-on hood</a></li>
 <li><a href="double/croft's_crest.html">double spelled croft's crest</a></li>
 <li><a href="double/pyrotechnic_tote.html">double spelled pyrotechnic tote</a></li>
@@ -6123,8 +6150,8 @@
 <li><a href="double/a_brush_with_death.html">double spelled a brush with death</a></li>
 <li><a href="double/escapist.html">double spelled escapist</a></li>
 <li><a href="double/samur-eye.html">double spelled samur-eye</a></li>
-<li><a href="double/unusual_cotton_head.html">double spelled unusual cotton head</a></li>
 <li><a href="double/pop-eyes.html">double spelled pop-eyes</a></li>
+<li><a href="double/unusual_cotton_head.html">double spelled unusual cotton head</a></li>
 <li><a href="double/ward.html">double spelled ward</a></li>
 <li><a href="double/itsy_bitsy_spyer.html">double spelled itsy bitsy spyer</a></li>
 <li><a href="double/industrial_festivizer.html">double spelled industrial festivizer</a></li>
@@ -6291,6 +6318,7 @@
 <li><a href="double/unusual_full_metal_drill_hat.html">double spelled unusual full metal drill hat</a></li>
 <li><a href="double/collector's_eureka_effect.html">double spelled collector's eureka effect</a></li>
 <li><a href="double/strange_collector's_cow_mangler_5000.html">double spelled strange collector's cow mangler 5000</a></li>
+<li><a href="double/armored_authority.html">double spelled armored authority</a></li>
 <li><a href="double/unusual_das_naggenvatcher.html">double spelled unusual das naggenvatcher</a></li>
 <li><a href="double/collector's_original.html">double spelled collector's original</a></li>
 <li><a href="double/collector's_rainblower.html">double spelled collector's rainblower</a></li>
@@ -6399,6 +6427,7 @@
 <li><a href="double/strange_trash_man.html">double spelled strange trash man</a></li>
 <li><a href="double/strange_teutonic_toque.html">double spelled strange teutonic toque</a></li>
 <li><a href="double/combat_slacks.html">double spelled combat slacks</a></li>
+<li><a href="double/strange_combat_slacks.html">double spelled strange combat slacks</a></li>
 <li><a href="double/strange_antarctic_researcher.html">double spelled strange antarctic researcher</a></li>
 <li><a href="double/heer's_helmet.html">double spelled heer's helmet</a></li>
 <li><a href="double/toowoomba_tunic.html">double spelled toowoomba tunic</a></li>
@@ -6416,7 +6445,6 @@
 <li><a href="double/strange_heavy_lifter.html">double spelled strange heavy lifter</a></li>
 <li><a href="double/ground_control.html">double spelled ground control</a></li>
 <li><a href="double/strange_sangu_sleeves.html">double spelled strange sangu sleeves</a></li>
-<li><a href="double/strange_combat_slacks.html">double spelled strange combat slacks</a></li>
 <li><a href="double/colonel's_coat.html">double spelled colonel's coat</a></li>
 <li><a href="double/ticket_boy.html">double spelled ticket boy</a></li>
 <li><a href="double/unusual_nunhood.html">double spelled unusual nunhood</a></li>
@@ -6545,6 +6573,7 @@
 <li><a href="double/genuine_texas_ten_gallon.html">double spelled genuine texas ten gallon</a></li>
 <li><a href="double/genuine_camera_beard.html">double spelled genuine camera beard</a></li>
 <li><a href="double/unusual_frontier_djustice.html">double spelled unusual frontier djustice</a></li>
+<li><a href="double/unusual_scout_shako.html">double spelled unusual scout shako</a></li>
 <li><a href="double/collector's_rogue's_col_roule.html">double spelled collector's rogue's col roule</a></li>
 <li><a href="double/freedom_feathers.html">double spelled freedom feathers</a></li>
 <li><a href="double/unusual_vive_la_france.html">double spelled unusual vive la france</a></li>
@@ -6560,19 +6589,18 @@
 <li><a href="double/genuine_alien_cranium.html">double spelled genuine alien cranium</a></li>
 <li><a href="double/genuine_nostromo_napalmer.html">double spelled genuine nostromo napalmer</a></li>
 <li><a href="double/genuine_mk_50.html">double spelled genuine mk 50</a></li>
-<li><a href="double/trencher's_tunic.html">double spelled trencher's tunic</a></li>
 <li><a href="double/mustachioed_mann.html">double spelled mustachioed mann</a></li>
 <li><a href="double/sangu_sleeves.html">double spelled sangu sleeves</a></li>
 <li><a href="double/genuine_xeno_suit.html">double spelled genuine xeno suit</a></li>
 <li><a href="double/genuine_horace.html">double spelled genuine horace</a></li>
 <li><a href="double/antarctic_researcher.html">double spelled antarctic researcher</a></li>
+<li><a href="double/trencher's_tunic.html">double spelled trencher's tunic</a></li>
 <li><a href="double/genuine_biomech_backpack.html">double spelled genuine biomech backpack</a></li>
 <li><a href="double/hound's_hood.html">double spelled hound's hood</a></li>
-<li><a href="double/teddy_roosebelt.html">double spelled teddy roosebelt</a></li>
 <li><a href="double/die_regime-panzerung.html">double spelled die regime-panzerung</a></li>
 <li><a href="double/strange_poacher's_safari_jacket.html">double spelled strange poacher's safari jacket</a></li>
-<li><a href="double/strange_lady_killer.html">double spelled strange lady killer</a></li>
 <li><a href="double/lady_killer.html">double spelled lady killer</a></li>
+<li><a href="double/strange_lady_killer.html">double spelled strange lady killer</a></li>
 <li><a href="double/poacher's_safari_jacket.html">double spelled poacher's safari jacket</a></li>
 <li><a href="double/mann_of_the_seven_sees.html">double spelled mann of the seven sees</a></li>
 <li><a href="double/strange_unshaved_bear.html">double spelled strange unshaved bear</a></li>
@@ -6596,7 +6624,6 @@
 <li><a href="double/cauterizer's_caudal_appendage.html">double spelled cauterizer's caudal appendage</a></li>
 <li><a href="double/monster's_stompers.html">double spelled monster's stompers</a></li>
 <li><a href="double/unusual_frickin'_sweet_ninja_hood.html">double spelled unusual frickin' sweet ninja hood</a></li>
-<li><a href="double/stylish_degroot.html">double spelled stylish degroot</a></li>
 <li><a href="double/pyrobotics_pack.html">double spelled pyrobotics pack</a></li>
 <li><a href="double/collector's_googly_gazer.html">double spelled collector's googly gazer</a></li>
 <li><a href="double/dead_little_buddy.html">double spelled dead little buddy</a></li>
@@ -6604,6 +6631,8 @@
 <li><a href="double/haunted_futankhamun.html">double spelled haunted futankhamun</a></li>
 <li><a href="double/collector's_nanobalaclava.html">double spelled collector's nanobalaclava</a></li>
 <li><a href="double/futankhamun.html">double spelled futankhamun</a></li>
+<li><a href="double/der_maschinensoldaten-helm.html">double spelled der maschinensoldaten-helm</a></li>
+<li><a href="double/stylish_degroot.html">double spelled stylish degroot</a></li>
 <li><a href="double/strange_haunted_hundkopf.html">double spelled strange haunted hundkopf</a></li>
 <li><a href="double/strange_haunted_tiny_texan.html">double spelled strange haunted tiny texan</a></li>
 <li><a href="double/fowl_fists.html">double spelled fowl fists</a></li>
@@ -6681,7 +6710,6 @@
 <li><a href="double/herzensbrecher.html">double spelled herzensbrecher</a></li>
 <li><a href="double/strange_haunted_iron_fist.html">double spelled strange haunted iron fist</a></li>
 <li><a href="double/dadliest_catch.html">double spelled dadliest catch</a></li>
-<li><a href="double/unusual_scout_shako.html">double spelled unusual scout shako</a></li>
 <li><a href="double/strange_haunted_wings_of_purity.html">double spelled strange haunted wings of purity</a></li>
 <li><a href="double/xeno_suit.html">double spelled xeno suit</a></li>
 <li><a href="double/wings_of_purity.html">double spelled wings of purity</a></li>
@@ -6752,7 +6780,7 @@
 <li><a href="processed-Q-S.html">processed-Q-S</a></li>
 <li><a href="processed-S.html">processed-S</a></li>
 <li><a href="processed-Empty.html">processed-Empty</a></li>
-</ul>
+</ul></main>
 <footer class="svelte-1mqzehu"><div class="finalfooter">
-            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Jan 16 2022</p>
-        </div></footer>
+            <p>Copyright 2022 <a href="https://www.counter.tf/">counter.tf</a></p><p>all counts are approximate</p><p>last updated: Sun Apr 03 2022</p>
+        </div></footer></body></html>
